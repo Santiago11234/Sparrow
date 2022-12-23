@@ -86,7 +86,7 @@
         <form>
         <input type="text" placeholder='Email' class='text' id='email' required><br><br>
       <input type="text" placeholder='Username' class='text' id='username' required><br>
-      <input type="password" placeholder='••••••••••••••' class='password'><br>
+      <input type="password" placeholder='••••••••••••••' id = "password" class='password'><br>
       
       <a href="#" class='btn-login' id='do-login'>Sign up</a>
       
@@ -112,6 +112,89 @@
   <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+  <script type = "module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyD-F4Lqjy9TjFxYmCmQpm4HSb74GSPE41I",
+        authDomain: "newtest-561c2.firebaseapp.com",
+        databaseURL: "https://newtest-561c2-default-rtdb.firebaseio.com",
+        projectId: "newtest-561c2",
+        storageBucket: "newtest-561c2.appspot.com",
+        messagingSenderId: "841219402391",
+        appId: "1:841219402391:web:6d04ab18255508fcb217d2"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    import{getDatabase, set, get, update, remove, ref, child}
+    from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+    const db = getDatabase();
+
+    function InsertData(){
+        set(ref(db, ""+document.getElementById('username').value), {Name: document.getElementById('username').value, Email: document.getElementById('email').value, Password: document.getElementById('password').value})
+        .then((userCredential) => {
+            // Signed up
+            alert("Successfully signed up!");
+            // ...
+        })
+        .catch((error) => {
+            alert(error);
+        });
+    }
+    function FindData() {
+        const dbref = ref(db);
+
+        get(child(dbref, "" + document.getElementById('nameBoxSignIn').value))
+        .then((snapshot)=>{
+            if(snapshot.exists()){
+                if(snapshot.val().Password == document.getElementById('passwordBoxSignIn').value && snapshot.val().Email == document.getElementById('emailBoxSignIn').value){
+                    document.getElementById('info').innerHTML =  "Welcome Back " + snapshot.val().Name;
+                }else{
+                    console.log(snapshot.val().Password)
+                    console.log(document.getElementById('passwordBoxSignIn').value)
+                    document.getElementById('info').innerHTML =  "Incorrect Password";
+                }
+                
+            } else {
+                alert("This Account Does not exist");
+            }
+        })
+        .catch((error)=>{
+            alert(error)
+        })
+        
+    }
+    function clearFields(){
+      /*
+        document.getElementById('nameBox').innerHTML =  "";
+        document.getElementById('passwordBox').innerHTML =  "";
+        document.getElementById('emailBox').innerHTML =  "";
+        document.getElementById('nameBoxSignIn').innerHTML =  "";
+        document.getElementById('passwordBoxSignIn').innerHTML =  "";
+        document.getElementById('emailBoxSignIn').innerHTML =  "";
+        */
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        let btn = document.getElementById('do-login')
+        btn.addEventListener('click', function (evt) {
+            console.log("clicked");
+            InsertData();
+            clearFields();
+        })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+        let btn = document.getElementById('btnSignIn')
+        btn.addEventListener('click', function (evt) {
+            console.log("clicked");
+            FindData();
+            clearFields();
+        })
+    })
+</script>
 </html> 
 
