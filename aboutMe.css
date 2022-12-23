@@ -44,6 +44,7 @@
     margin: center;
 }
 .pic{
+    margin: 5% 24%;
     width: 50%;
     border-radius: 50%;
 }
@@ -58,10 +59,11 @@
     padding-top: 10%;
     color:#0c0c0cbf;
     font-size: 200%;
+    text-align: center;
     text-size-adjust: 50%;
 }
 .pics h6{
     color:#0c0c0cbf;
-  
+    text-align: center;
     text-size-adjust: 50%;
 }
