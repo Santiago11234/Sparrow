@@ -1,0 +1,129 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    box-shadow: 50px;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+.homeBody {
+  background-image: url(background1.png);     
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+@media (max-width: 992px) {
+  nav.navbar {
+    background-color: #a3b18a;
+  }
+}
+
+nav.navbar {
+    background-color: #a3b18a;
+  }
+/*#1d5aab */
+.nav-item{
+  font-weight: normal;
+  text-align: left;
+  margin-right: 5px;
+  width: max-content;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  background: rgb(255, 255, 255);
+  content: '';
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in;
+  width: 100%;
+  height: 2%px;
+  bottom: 0;
+  right: 0;
+}
+
+.nav-link:hover::before {
+  transform-origin: center;
+  transform: scaleX(1);
+}
+
+.nav-active::before {
+  height: 2.2px;
+  bottom: 0;
+  left: 0;
+  background: white;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: center; 
+}
+
+
+
+
+
+
+.btn:hover {
+    background-position: right center;
+    color: #344e41;
+    box-shadow: 0 0 8px #9c8774;
+}
+
+.btn {
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+.vg-button {
+    appearance: none;
+    background: linear-gradient(to right, #9c8774 0, #dad7cd 30%);
+    background-size: 200% auto;
+    border: 0;
+    border-radius: 4rem;
+    color: #344e41;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 0.75rem;
+    padding: 1em 1em;
+    text-align: center;
+    transition: all .7s ease;
+}
+
+
+.login-signup {
+  appearance: none;
+  background-color: #f8db75;
+  background-size: 200% auto;
+  border-width: 100%;
+  border-radius: 5rem;
+  border-color:rgb(255, 255, 255);
+  color: #344e41;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.75rem;
+  padding: 1em 1em;
+  text-align: center;
+  transition: all .7s ease;
+  font-size: 2rem;
+}
+
+.login-signup:hover {
+  color: #344e41;
+  box-shadow: 0 0 100% yellow;
+}

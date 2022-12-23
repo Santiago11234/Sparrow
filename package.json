@@ -1,0 +1,29 @@
+{
+  "name": "sparrow",
+  "version": "1.0.0",
+  "description": "Learning For The Future",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santiago11234/Sparrow.git"
+  },
+  "keywords": [
+    "keywords"
+  ],
+  "author": "Santiago11234",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santiago11234/Sparrow/issues"
+  },
+  "homepage": "https://github.com/Santiago11234/Sparrow#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "pm2": "^4.5.5"
+  },
+  "resolutions": {
+    "pm2/**/debug": "^4.3.1"
+  }
+}
