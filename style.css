@@ -158,3 +158,34 @@ nav.navbar {
   -o-background-size: cover;
   background-size: cover;
 }
+
+
+.branchBody {
+  width: 100%;
+  height: 100%;
+  background-color: darkgreen;
+}
+
+
+.carousel-style {
+  background-color: #b5ae94;
+  border-radius: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 80%;
+  height: 85%;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+}
+
+.carousel-inner {
+  display: inline-block;
+  position: relative;
+  height:100%;
+  position: absolute;   
+  top: 50%;
+  transform: translateY(-50%);
+}
