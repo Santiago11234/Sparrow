@@ -2,64 +2,66 @@
     margin: 0;
     padding: 0;
     font-family: 'Courier New';
-    font: white;
 }
 .back{
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(#6f6f66bf, rgba(90, 138, 80, 0.75)), url(Assets/Bird.PNG);
-    background-repeat:no-repeat;
-   background-size:cover;
-}
-.content{
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:75%;
-    transform:translateY(-50%);
-    text-align: center;
-}
-.content h1{
-    transition: transform 0.5s;
-        width: 100%;
-        font-size:70px;
-        margin-top:100px;
-        color: rgb(244, 243, 242);
+    height: 100%;
+    background: linear-gradient(to left, rgb(247, 237, 237), rgb(93, 125, 92));
 
-        position: relative;
+    background-size:cover;
+    background-repeat: repeat;
 }
-h1:hover{
+.background{
+    margin: 5% 5%;
     width: 100%;
-    transform: translateY(-110px);
-    color: rgb(244, 243, 242);
-}    
-.content p{
-    padding: 80px 75px;
-    font-size: 20px;
-    font-weight: 30;
+    height: 90%;
+    background: rgba(64, 69, 67, 0.4);
+    background-size:auto;
     text-align: center;
-    color: rgb(244, 243, 242);
-
+    color:rgba(250, 242, 238, 0.75);
 }
-.content h1{
-    font-size: 50px;
-    padding: 20px 300px;
-    text-align: center;
+.background p{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    color:#fefcfcbf;
+     font-size: 150%;
+    text-size-adjust: 50%;
+}
+
+.background h1{
+    font-size: 750%;
+}
+.text{
+    display: inline-block;
+    margin: 25% 10%;
+    color:rgba(250, 242, 238, 0.75);
 }
 .pics{
-    width: 300px;
-    display: inline-block;
-   margin: 40px 20px;
+    width: 50%;
+   margin: 5% 30%;
    transition: transform 0.5s;
-
+    margin: center;
 }
 .pic{
-    width: 200px;
+    width: 50%;
     border-radius: 50%;
 }
-.pics:hover{
-    transform: translateY(-40px);
+.pic2{
+    width: 20%;
+    border-radius: 70%;
 }
-h5{
-    font-size:20px;
+.pics:hover{
+    transform: translateY(-10%);
+}
+.pics h5{
+    padding-top: 10%;
+    color:#0c0c0cbf;
+    font-size: 200%;
+    text-size-adjust: 50%;
+}
+.pics h6{
+    color:#0c0c0cbf;
+  
+    text-size-adjust: 50%;
 }
