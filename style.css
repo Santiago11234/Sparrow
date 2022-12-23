@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   margin: 0;
 }
-.homeBody {
+.indexBody {
   background-image: url(background1.png);     
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -39,6 +39,7 @@ nav.navbar {
   text-align: left;
   margin-right: 5px;
   width: max-content;
+  
 }
 
 .nav-link {
@@ -52,7 +53,7 @@ nav.navbar {
   transform: scaleX(0);
   transition: transform 0.4s ease-in;
   width: 100%;
-  height: 2%px;
+  height: 4%;
   bottom: 0;
   right: 0;
 }
@@ -63,7 +64,7 @@ nav.navbar {
 }
 
 .nav-active::before {
-  height: 2.2px;
+  height: 4%;
   bottom: 0;
   left: 0;
   background: white;
@@ -106,7 +107,22 @@ nav.navbar {
     transition: all .7s ease;
 }
 /* end of abt me button */
-
+.how-to-play {
+  appearance: none;
+  background: white;
+  background-size: 200% auto;
+  border: 0;
+  border-radius: 4rem;
+  color: #344e41;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.75rem;
+  padding: 1em 1em;
+  text-align: center;
+  transition: all .7s ease;
+}
 
 /* login button */
 .login-signup {
@@ -134,3 +150,13 @@ nav.navbar {
 }
 
 /* end of login button */
+
+
+/*home page */
+.homeBody {
+  background-image: url(homeBackground.png);     
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
