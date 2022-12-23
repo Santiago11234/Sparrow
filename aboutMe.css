@@ -49,7 +49,7 @@ h1:hover{
 .pics{
     width: 300px;
     display: inline-block;
-   margin: 0px 0px;
+   margin: 40px 20px;
    transition: transform 0.5s;
 
 }
