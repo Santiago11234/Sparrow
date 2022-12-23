@@ -16,10 +16,13 @@ body {
 }
 .homeBody {
   background-image: url(background1.png);     
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
+/* nav bar stuff */
 
 @media (max-width: 992px) {
   nav.navbar {
@@ -70,12 +73,12 @@ nav.navbar {
   transform: scaleX(1);
   transform-origin: center; 
 }
+/* end of nav bar stuff */
 
 
 
 
-
-
+/* abt me button */
 .btn:hover {
     background-position: right center;
     color: #344e41;
@@ -102,8 +105,10 @@ nav.navbar {
     text-align: center;
     transition: all .7s ease;
 }
+/* end of abt me button */
 
 
+/* login button */
 .login-signup {
   appearance: none;
   background-color: #f8db75;
@@ -127,3 +132,5 @@ nav.navbar {
   color: #344e41;
   box-shadow: 0 0 100% yellow;
 }
+
+/* end of login button */

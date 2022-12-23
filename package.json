@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Santiago11234/Sparrow#readme",
   "dependencies": {
+    "firebase": "^9.15.0",
     "node-sass": "^8.0.0",
     "pm2": "^4.5.5"
   },
