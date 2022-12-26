@@ -3,5 +3,5 @@ var animation = bodymovin.loadAnimation({
     rederer: 'svg',
     loop: true,
     autoplay: true, 
-    path: 'Animationz/birdtalk.json'
+    path: 'Animationz/sadbird.json'
 })
