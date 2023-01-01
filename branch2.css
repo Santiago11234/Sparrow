@@ -69,3 +69,12 @@
 .swiper .swiper-pagination{
     color:black;
 }
+#anim{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+    margin-top: -430px;
+    margin-left:0%;
+    clip-path: inset(120px 70px 120px 85px);
+}

@@ -96,11 +96,13 @@
     <body class ="back">
         
         <div class="container">
+          
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
             <!-- Slider main container -->
         <div class="swiper">
         <!-- Additional required wrapper -->
+        
         <div class="swiper-wrapper">
             
           <!-- Slides -->
@@ -113,7 +115,7 @@
           <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""></div>
           <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""></div>
           <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""></div>
-
+              
           
         </div>
         <!-- If we need pagination -->
@@ -145,7 +147,16 @@
             // And if we need scrollbar
             
           });</script>
-        
+          <div id="anim"></div>
+          <script src="Animationz/lottie.js"></script>
+          <script>var animation = bodymovin.loadAnimation({
+            container: document.getElementById('anim'),
+            rederer: 'svg',
+            loop: true,
+            autoplay: true, 
+            path: 'Animationz/birdtalk.json'
+        });</script>
+          
     </body>
         
 </html>

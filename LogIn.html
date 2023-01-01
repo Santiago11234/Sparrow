@@ -79,7 +79,7 @@
 
     <section class='login' id='login'>
       <div class='head'>
-      <h1 class='company'>Bird Baby</h1>
+      <h1 class='company'>Sparrow</h1>
       </div>
       <p class='msg'>Welcome back</p>
       <div class='form'>
@@ -151,14 +151,14 @@
         .then((snapshot)=>{
             if(snapshot.exists()){
                 if(snapshot.val().Password == document.getElementById('password').value){
-                  document.getElementById('login').innerHTML = '<p>We\'re happy to see you again, </p><h1>' +username.value+ '</h1>';
+                  document.getElementById('login').innerHTML = '<p>We\'re happy to see you again, </p><h1>' +username.value+ '</h1> <a href="HomePage.html" class="btn-login">Start Coding</a>';
                   alert("Sign in Successful");
                 }else{
                     alert("Password is incorrect");
                 }
                 
             } else {
-                alert("This Account Does not exist");
+                alert("This account does not exist");
             }
         })
         .catch((error)=>{
