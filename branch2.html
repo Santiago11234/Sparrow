@@ -98,7 +98,7 @@
         <div class="container">
           
             <div class="swiper-button-prev" ></div>
-            <div class="swiper-button-next" onclick="typeWriter2()"></div>
+            <div onclick="increase()" class="swiper-button-next"></div>
             <!-- Slider main container -->
         <div class="swiper">
         <!-- Additional required wrapper -->
@@ -138,6 +138,19 @@
           var txt2 = 'as;dlfkas;dlfkajsdf;j';
           var speed = 50;
           var j = 0;
+
+          var slide = 0;
+
+          function typeWriter() {
+            if (i < txt.length) {
+              document.getElementById("demo").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+
+            console.log(slide);
+          }
+
           function typeWriter2() {
             if (j < txt2.length) {
               document.getElementById("demo2").innerHTML += txt2.charAt(j);
@@ -146,15 +159,18 @@
 
             }
           }
-         
-          function typeWriter() {
-            if (i < txt.length) {
-              document.getElementById("demo").innerHTML += txt.charAt(i);
-              i++;
-              setTimeout(typeWriter, speed);
-            }
+
+
+          function increase() {
+            slide++;
           }
-          typeWriter();
+
+          if(slide == 0) {
+            typeWriter2();
+          } else if(slide == 1) {
+            typeWriter();
+          }
+          
       
         </script>
         <script>const swiper = new Swiper('.swiper', {
