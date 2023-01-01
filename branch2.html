@@ -97,7 +97,7 @@
         
         <div class="container">
           
-            <div class="swiper-button-prev" ></div>
+            <div class="swiper-button-prev"></div>
             <div class="swiper-button-next" onclick="typeWriter2()"></div>
             <!-- Slider main container -->
         <div class="swiper">
@@ -108,12 +108,14 @@
           <!-- Slides -->
           
           <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-            <h1>Booleans</h1> <div class="test"><img id="light" src="Assets/dark lightbulb.png" /><button id="switchbutton" onclick="changeImage();"><img id="switch" src="Assets/off.png" border="0"/></button></div><button onclick="typeWriter()">Click me</button>
+            <h1>Booleans</h1> <div class="test"><img id="light" src="Assets/dark lightbulb.png" /><button id="switchbutton" onclick="changeImage();"><img id="switch" src="Assets/off.png" border="0"/></button></div>
+            <button onclick="typeWriter('hiii', 'demo')">Click me</button>
 
                 <p id="demo"></p></div>
           <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
             <h1>Booleans</h1> <div class="test"></div>
-            <p id="demo2"></p>
+            <p id="demo2">            <button onclick="typeWriter('lala', 'demo2')">Click me</button>
+            </p>
           </div>
        
           <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""></div>
@@ -135,26 +137,18 @@
         <script>
           var i = 0;
           var txt = 'On to branch 2, where you’ll be learning about booleans. Booleans are a type of variable. Think of a boolean as a light switch- it can be on or off, but never both! Booleans can be either true or false depending on how you set them!';
-          var txt2 = 'as;dlfkas;dlfkajsdf;j';
           var speed = 50;
           var j = 0;
-          function typeWriter2() {
-            if (j < txt2.length) {
-              document.getElementById("demo2").innerHTML += txt2.charAt(j);
+          function typeWriter(text, id) {
+            if (j < text.length) {
+              document.getElementById(id).innerHTML += text.charAt(j);
               j++;
-              setTimeout(typeWriter2, speed);
-
+              setTimeout(typeWriter.bind(null, text, id), speed);
             }
+            return false;
           }
          
-          function typeWriter() {
-            if (i < txt.length) {
-              document.getElementById("demo").innerHTML += txt.charAt(i);
-              i++;
-              setTimeout(typeWriter, speed);
-            }
-          }
-          typeWriter();
+          
       
         </script>
         <script>const swiper = new Swiper('.swiper', {
