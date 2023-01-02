@@ -50,23 +50,6 @@
     <style>
       #anim{max-width: 30%;margin: 0 auto; margin-top: -3%;}
   </style>
-  <script> 
-
-    function changeImage()
-    {
-    var swtch = document.getElementById("switch");
-    var lght = document.getElementById("light")
-    if(swtch.src.match("Assets/off.png")){
-        lght.src="Assets/openlightbulb.png";
-        swtch.src="Assets/on.png"
-    }else {
-        swtch.src="Assets/off.png";
-        lght.src="Assets/dark lightbulb.png"
-    }
-    return false;
-    }
-    
-    </script>
     </head>
 </html>
 
@@ -108,7 +91,7 @@
       <!-- Slides -->
       
       <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-        <h1>Booleans</h1> <div class="test"><img id="light" src="Assets/dark lightbulb.png" /><button id="switchbutton" onclick="changeImage();"><img id="switch" src="Assets/off.png" border="0"/></button></div>
+        <h1>Booleans</h1> <div class="test"><img id="light" src="Assets/dark lightbulb.png" /><button id="switchbutton" onclick="basic();"><img id="switch" src="Assets/off.png" border="0"/></button></div>
         
 
             <p id="slide0"></p></div>
@@ -163,7 +146,19 @@
         return false;
       }
       
-  
+      function basic()
+    {
+    var swtch = document.getElementById("switch");
+    var lght = document.getElementById("light")
+    if(swtch.src.match("Assets/off.png")){
+        lght.src="Assets/openlightbulb.png";
+        swtch.src="Assets/on.png"
+    }else {
+        swtch.src="Assets/off.png";
+        lght.src="Assets/dark lightbulb.png"
+    }
+    return false;
+    }
     </script>
     <script>const swiper = new Swiper('.swiper', {
         // Optional parameters
