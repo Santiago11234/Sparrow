@@ -114,6 +114,61 @@
         light3.src = "Assets/openlightbulb.png";
       }
     }
+    function changeImage4(num) {
+      var switch1 = document.getElementById("gswitch1");
+      var switch2 = document.getElementById("gswitch2");
+      var switch3 = document.getElementById("gswitch3");
+      var switch4 = document.getElementById("gswitch4");
+
+      var count = 0;
+      if (num == 1) {
+        if (switch1.src.match("Assets/off.png")) {
+          switch1.src = "Assets/on.png"
+        } else {
+          switch1.src = "Assets/off.png";
+        }
+      }
+      if (num == 2) {
+        if (switch2.src.match("Assets/off.png")) {
+          switch2.src = "Assets/on.png"
+        } else {
+          switch2.src = "Assets/off.png";
+        }
+      }
+      if (num == 3) {
+        if (switch3.src.match("Assets/off.png")) {
+          switch3.src = "Assets/on.png"
+        } else {
+          switch3.src = "Assets/off.png";
+        }
+      }
+      if (num == 4) {
+        if (switch4.src.match("Assets/off.png")) {
+          switch4.src = "Assets/on.png"
+        } else {
+          switch4.src = "Assets/off.png";
+        }
+      }
+      if (switch1.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch2.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch3.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch4.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (count>2) {
+        light4.src = "Assets/openlightbulb.png";
+      }
+      else{
+        light4.src = "Assets/dark lightbulb.png";
+
+      }
+    }
   </script>
 </head>
 
@@ -189,9 +244,19 @@
         
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Operators</h1>
-          <div class="test"></div>
-          <p id="slide3">
-          </p>
+          <div class="test"><img id="light4" src="Assets/dark lightbulb.png" />
+            <button id="gbutton1" onclick="changeImage4(1);"><img id="gswitch1" src="Assets/off.png"
+                border="0" /></button>
+            <button id="gbutton2" onclick="changeImage4(2);"><img id="gswitch2" src="Assets/off.png"
+                border="0" /></button>
+            <button id="gbutton3" onclick="changeImage4(3);"><img id="gswitch3" src="Assets/off.png"
+                  border="0" /></button>
+            <button id="gbutton4" onclick="changeImage4(4);"><img id="gswitch4" src="Assets/off.png"
+                    border="0" /></button>
+            
+          </div>
+        
+          <p id="slide3"></p>
         </div>
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Operators</h1>
