@@ -48,6 +48,21 @@
     width:5px;
     background-color: inherit;
 }
+#switch2{
+    width: 100px;
+}
+#light2{
+    width: 150px;
+    margin-top: -20px;
+    margin-right: 150px;
+}
+#switch22{
+    width: 100px;
+}
+.switchbutton2{
+    width:5px;
+    background-color: inherit;
+}
 .swiper p{
     padding-left: 5%;
     padding-right: 5%;
@@ -75,7 +90,7 @@
     overflow: hidden;
     z-index: 9;
     top: -60%;
-    margin-left:0%;
+    margin-left:-6%;
     
     clip-path: inset(120px 70px 120px 85px);
 }

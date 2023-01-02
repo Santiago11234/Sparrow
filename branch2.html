@@ -65,7 +65,33 @@
     }
     return false;
     }
-    
+    function changeImage2()
+    {
+  
+    var swtch2 = document.getElementById("switch22");
+    var swtch = document.getElementById("switch2");
+    var lght = document.getElementById("light2");
+    if(swtch2.src.match("Assets/off.png")){
+      swtch2.src="Assets/on.png"
+    }
+    else if(swtch.src.match("Assets/off.png")){
+      swtch.src="Assets/on.png"
+    }
+    else if(swtch2.src.match("Assets/on.png")){
+      swtch2.src="Assets/off.png"
+      lght.src = "Assets/dark lightbulb.png"
+      bool = true;
+    }
+    else if(swtch.src.match("Assets/on.png")){
+      swtch.src="Assets/off.png"
+      lght.src = "Assets/dark lightbulb.png"
+
+    }
+    if(swtch.src.match("Assets/on.png") && swtch2.src.match("Assets/on.png")){
+        lght.src="Assets/openlightbulb.png";
+    }
+    return false;
+    }
     </script>
     </head>
 </html>
@@ -106,31 +132,30 @@
     <div class="swiper-wrapper">
         
       <!-- Slides -->
-      
+    
       <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
         <h1>Booleans</h1> <div class="test"><img id="light" src="Assets/dark lightbulb.png" /><button id="switchbutton" onclick="changeImage();"><img id="switch" src="Assets/off.png" border="0"/></button></div>
         
 
             <p id="slide0"></p></div>
       <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-        <h1>Booleans</h1> <div class="test"></div>
-        <p id="slide1">            
-        </p>
-      </div>
-   
-      <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""><h1>Booleans</h1> <div class="test"></div>
+      
+        <h1>Operators</h1> <div class="test"><img id="light2" src="Assets/dark lightbulb.png" /><button id="switchbutton2" onclick="changeImage2();"><img id="switch22" src="Assets/off.png" border="0"/><img id="switch2" src="Assets/off.png" border="0"/></button></div>
+        <p id="slide1"></p></div>
+       
+      <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""><h1>Operators</h1> <div class="test"></div>
       <p id="slide2">            
       </p></div>
-      <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""><h1>Booleans</h1> <div class="test"></div>
+      <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""><h1>Operators</h1> <div class="test"></div>
       <p id="slide3">            
       </p></div>
-      <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""><h1>Booleans</h1> <div class="test"></div>
+      <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""><h1>Operators</h1> <div class="test"></div>
       <p id="slide4">            
       </p></div>
-      <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""></div>
-          
-      
-    </div>
+      <div class="swiper-slide"><img src="Assets/background lesson.png" alt=""><h1>Operators</h1> <div class="test"></div>
+      <p id="slide5">            
+      </p></div>
+     
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
 
@@ -143,7 +168,10 @@
     <script>
       const talk = ["On to branch 2, where you’ll be learning about booleans. Booleans are a type of variable. Think of a boolean as a light switch- it can be on or off, but never both!\nBooleans can be either true or false depending on how you set them, and programmers use booleans to check conditions. There are some tools we can use to set them. Why don't you try setting the lightbulb to true or false?", 
       "The AND operator (&&) means that both conditions must be true in order to make the boolean true. For example, a lightbulb that will only turn on if both light switches are on. If either of them are off, the lightbulb will be dark", 
-      "On the other hand, the OR operator (||) means that only one of the conditions must be true. It can be a little hard to find, so all you have to do is hold shift and “\\” (it’s under backspace). For example, a lightbulb that will light up as long as a lightswitch is on. ", "hfdaskjhdsakjfklsdak", "jfkdsljflkdasjklfjkldasjfkladsjfjkd;s"];
+      "On the other hand, the OR operator (||) means that only one of the conditions must be true. It can be a little hard to find, so all you have to do is hold shift and “\\” (it’s under backspace). For example, a lightbulb that will light up as long as a lightswitch is on. ", 
+      "The greater and less than operators (< and >) are only used for comparing two numbers. For example, a lightbulb will turn on only if the amount of switches that are on is greater than the amount that is off.",
+      "Last but not least, we have the equal operator (==). This is used to check if two variables are the same. For example, a lightbulb will turn on only if the amount of “off” switches is equal to the amount of “on” switches. On the other hand, the NOT operator (!=) is used to check if two variables are unequal.", 
+      "Conditional statements are used to control our program using booleans. It’s a lot like how we make decisions! We can use tools to control how our program runs. If statements will only run if the condition inside is true. Sometimes, we want to do something else when the if statement is false. We can use else statements for that! Operators and conditionals are a powerful tool that you can use to control your program and do some neat stuff! Why don’t you give it a try?"];
       var slide= 0;
       function increase(){
         slide++;
