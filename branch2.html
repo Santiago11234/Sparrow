@@ -90,6 +90,30 @@
         light2.src = "Assets/openlightbulb.png";
       }
     }
+    function changeImage3(num) {
+      var switch1 = document.getElementById("orswitch1");
+      var switch2 = document.getElementById("orswitch2");
+      var count = 0;
+      if (num == 1) {
+        if (switch1.src.match("Assets/off.png")) {
+          switch1.src = "Assets/on.png"
+        } else {
+          switch1.src = "Assets/off.png";
+          light2.src = "Assets/dark lightbulb.png"
+        }
+      }
+      if (num == 2) {
+        if (switch2.src.match("Assets/off.png")) {
+          switch2.src = "Assets/on.png"
+        } else {
+          switch2.src = "Assets/off.png";
+          light3.src = "Assets/dark lightbulb.png"
+        }
+      }
+      if (switch2.src.match("Assets/on.png") || switch1.src.match("Assets/on.png")) {
+        light3.src = "Assets/openlightbulb.png";
+      }
+    }
   </script>
 </head>
 
@@ -154,10 +178,15 @@
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Operators</h1>
-          <div class="test"></div>
-          <p id="slide2">
-          </p>
+          <div class="test"><img id="light3" src="Assets/dark lightbulb.png" />
+            <button id="orbutton1" onclick="changeImage3(1);"><img id="orswitch1" src="Assets/off.png"
+                border="0" /></button>
+            <button id="orbutton2" onclick="changeImage3(2);"><img id="orswitch2" src="Assets/off.png"
+                border="0" /></button>
+          </div>
+            <p id="slide2"></p>
         </div>
+        
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Operators</h1>
           <div class="test"></div>

@@ -56,7 +56,18 @@
     margin-top: -20px;
     margin-right: 150px;
 }
+#light3{
+    width: 150px;
+    margin-top: -20px;
+    margin-right: 150px;
+}
 #andswitch1{
+    width: 100px;
+}
+#orswitch1{
+    width: 100px;
+}
+#orswitch2{
     width: 100px;
 }
 .switchbutton2{
