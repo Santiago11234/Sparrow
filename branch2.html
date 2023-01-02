@@ -169,6 +169,62 @@
 
       }
     }
+    function changeImage5(num) {
+      var switch1 = document.getElementById("sswitch1");
+      var switch2 = document.getElementById("sswitch2");
+      var switch3 = document.getElementById("sswitch3");
+      var switch4 = document.getElementById("sswitch4");
+
+      var count = 0;
+      if (num == 1) {
+        if (switch1.src.match("Assets/off.png")) {
+          switch1.src = "Assets/on.png"
+        } else {
+          switch1.src = "Assets/off.png";
+        }
+      }
+      if (num == 2) {
+        if (switch2.src.match("Assets/off.png")) {
+          switch2.src = "Assets/on.png"
+        } else {
+          switch2.src = "Assets/off.png";
+        }
+      }
+      if (num == 3) {
+        if (switch3.src.match("Assets/off.png")) {
+          switch3.src = "Assets/on.png"
+        } else {
+          switch3.src = "Assets/off.png";
+        }
+      }
+      if (num == 4) {
+        if (switch4.src.match("Assets/off.png")) {
+          switch4.src = "Assets/on.png"
+        } else {
+          switch4.src = "Assets/off.png";
+        }
+      }
+      if (switch1.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch2.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch3.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch4.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (count==2) {
+        light5.src = "Assets/openlightbulb.png";
+      }
+      else{
+        light5.src = "Assets/dark lightbulb.png";
+
+      }
+    }
+    
   </script>
 </head>
 
@@ -260,7 +316,18 @@
         </div>
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Operators</h1>
-          <div class="test"></div>
+          <div class="test"><img id="light5" src="Assets/dark lightbulb.png" />
+            <button id="sbutton1" onclick="changeImage5(1);"><img id="sswitch1" src="Assets/off.png"
+                border="0" /></button>
+            <button id="sbutton2" onclick="changeImage5(2);"><img id="sswitch2" src="Assets/off.png"
+                border="0" /></button>
+            <button id="sbutton3" onclick="changeImage5(3);"><img id="sswitch3" src="Assets/off.png"
+                  border="0" /></button>
+            <button id="sbutton4" onclick="changeImage5(4);"><img id="sswitch4" src="Assets/off.png"
+                    border="0" /></button>
+            
+          </div>
+        
           <p id="slide4">
           </p>
         </div>

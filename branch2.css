@@ -66,6 +66,11 @@
     margin-top: -20px;
     margin-right: 150px;
 }
+#light5{
+    width: 150px;
+    margin-top: -20px;
+    margin-right: 150px;
+}
 #andswitch1{
     width: 100px;
 }
@@ -79,6 +84,19 @@
     width: 100px;
 }
 #gswitch4{
+    width: 100px;
+}
+
+#sswitch1{
+    width: 100px;
+}
+#sswitch2{
+    width: 100px;
+}
+#sswitch3{
+    width: 100px;
+}
+#sswitch4{
     width: 100px;
 }
 #orswitch1{
