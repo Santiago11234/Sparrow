@@ -93,7 +93,7 @@
       </header>
 
 <html>
-  <body class ="back" onload = "typeWriter(0)">
+  <body class ="back" onload = "typeWriter(0, 0)">
         
     <div class="container">
       
@@ -141,23 +141,24 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-      const talk = [" hiiiisdfgi", " meosdfgrefgsdnderagsfww", " wosdgbfsgdfbgsfhdoof", "hfdaskjhdsakjfklsdak", "jfkdsljflkdasjklfjkldasjfkladsjfjkd;s"];
+      const talk = ["On to branch 2, where you’ll be learning about booleans. Booleans are a type of variable. Think of a boolean as a light switch- it can be on or off, but never both!\nBooleans can be either true or false depending on how you set them, and programmers use booleans to check conditions. There are some tools we can use to set them. Why don't you try setting the lightbulb to true or false?", 
+      "The AND operator (&&) means that both conditions must be true in order to make the boolean true. For example, a lightbulb that will only turn on if both light switches are on. If either of them are off, the lightbulb will be dark", 
+      "On the other hand, the OR operator (||) means that only one of the conditions must be true. It can be a little hard to find, so all you have to do is hold shift and “\\” (it’s under backspace). For example, a lightbulb that will light up as long as a lightswitch is on. ", "hfdaskjhdsakjfklsdak", "jfkdsljflkdasjklfjkldasjfkladsjfjkd;s"];
       var slide= 0;
-      typeWriter(slide);
       function increase(){
         slide++;
         j=0;
-        typeWriter(slide);
+        typeWriter(slide, 0);
       }
       
-      var speed = 50;
+      var speed = 10;
       var j = 0;
       
-      function typeWriter(num) {
+      function typeWriter(num, j) {
         if (j < talk[num].length) {
           document.getElementById('slide'+num).innerHTML += talk[num].charAt(j);
           j++;
-          setTimeout(typeWriter.bind(null, num), speed);
+          setTimeout(typeWriter.bind(null, num, j), speed);
         }
         return false;
       }
