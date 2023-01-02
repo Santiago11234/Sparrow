@@ -69,7 +69,6 @@
     function changeImage2(num) {
       var switch1 = document.getElementById("andswitch1");
       var switch2 = document.getElementById("andswitch2");
-      var count = 0;
       if (num == 1) {
         if (switch1.src.match("Assets/off.png")) {
           switch1.src = "Assets/on.png"
@@ -93,13 +92,12 @@
     function changeImage3(num) {
       var switch1 = document.getElementById("orswitch1");
       var switch2 = document.getElementById("orswitch2");
-      var count = 0;
       if (num == 1) {
         if (switch1.src.match("Assets/off.png")) {
           switch1.src = "Assets/on.png"
         } else {
           switch1.src = "Assets/off.png";
-          light2.src = "Assets/dark lightbulb.png"
+          light3.src = "Assets/dark lightbulb.png"
         }
       }
       if (num == 2) {
