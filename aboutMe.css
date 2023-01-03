@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New';
+}
+.back{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(247, 237, 237), rgb(93, 125, 92));
+
+    background-size:cover;
+    background-repeat: repeat;
+}
+.background{
+    margin: 5% 5%;
+    width: 100%;
+    height: 90%;
+    background: rgba(64, 69, 67, 0.4);
+    background-size:auto;
+    text-align: center;
+    color:rgba(250, 242, 238, 0.75);
+}
+.background p{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    color:#fefcfcbf;
+     font-size: 150%;
+    text-size-adjust: 50%;
+}
+
+.background h1{
+    font-size: 750%;
+}
+.text{
+    display: inline-block;
+    margin: 25% 10%;
+    color:rgba(250, 242, 238, 0.75);
+}
+.pics{
+    width: 50%;
+   margin: 5% 30%;
+   transition: transform 0.5s;
+    margin: center;
+}
+.pic{
+    margin: 5% 24%;
+    width: 50%;
+    border-radius: 50%;
+}
+.pic2{
+    width: 20%;
+    border-radius: 70%;
+}
+.pics:hover{
+    transform: translateY(-10%);
+}
+.pics h5{
+    padding-top: 2%;
+    color:#0c0c0cbf;
+    font-size: 200%;
+    text-align: center;
+    text-size-adjust: 50%;
+}
+.pics h6{
+    color:#0c0c0cbf;
+    text-align: center;
+    text-size-adjust: 50%;
+}
