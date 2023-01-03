@@ -165,8 +165,10 @@ nav.navbar {
 
 .branchBody {
   width: 100%;
-  height: 100%;
   background-color: darkgreen;
+  height:100%;
+  clear: both;
+  overflow: auto;
 }
 
 

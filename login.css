@@ -3,7 +3,7 @@
     font-family: Assistant, sans-serif;
     
   }
-  .login {
+  .login{
     color: white;
     background:  #a3b18a;
     margin: auto;
@@ -15,7 +15,9 @@
     padding: 5%;
     height: 20%;
     margin: 40%;
-    margin-top: 10%;
+    margin-top: 5%;
+    text-align: center;
+    
   }
   .login .head {
     display: flex;
@@ -27,6 +29,8 @@
   }
   .login .msg {
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .login .form input[type=text].text {
     border: none;
@@ -54,16 +58,36 @@
   .login .form .password::placeholder {
     color: #D3D3D3;
   }
-  .login .form .btn-login {
+  .login .form .btn-login{
     background: none;
     text-decoration: none;
     color: white;
     box-shadow: 0px 0px 0px 2px white;
     border-radius: 3px;
     padding: 5px 2em;
+    padding-left: 5px;
+    padding-right:5px;
     transition: 0.5s;
   }
-  .login .form .btn-login:hover {
+
+  .start{
+    background:none;
+    text-decoration: none;
+    color:white;
+    border: solid white 1px;
+    border-radius: 3px;
+    padding: 5px 2em;
+    padding-left: 5px;
+    padding-right:5px;
+    transition: 0.5s;
+    
+  }
+  .start:hover{
+    background: white;
+    color: dimgray;
+    transition: 0.5s;
+  }
+  .login .form .btn-login:hover{
     background: white;
     color: dimgray;
     transition: 0.5s;
