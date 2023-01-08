@@ -12,13 +12,13 @@
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 250%;
+    font-size: 200%;
   }
   .title{
     padding: 0% 10%;
     place-items: center;
     font-family: monospace;
-    font-size: 600%;
+    font-size: 500%;
   }
   @keyframes typing {
     from {
