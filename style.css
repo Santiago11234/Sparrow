@@ -7,6 +7,7 @@
 
 html {
     height: 100%;
+    width: 100;
     margin: 0;
 }
 
@@ -16,11 +17,13 @@ body {
 }
 .indexBody {
   background-image: url(background1.png);     
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+
 }
+
 
 /* nav bar stuff */
 
@@ -37,7 +40,7 @@ nav.navbar {
 .nav-item{
   font-weight: normal;
   text-align: left;
-  margin-right: 5px;
+  margin-right: 0;
   width: max-content;
   
 }
@@ -53,7 +56,7 @@ nav.navbar {
   transform: scaleX(0);
   transition: transform 0.4s ease-in;
   width: 100%;
-  height: 4%;
+  height: 2%px;
   bottom: 0;
   right: 0;
 }
@@ -145,7 +148,7 @@ nav.navbar {
 }
 
 .login-signup:hover {
-  color: #344e41;
+  color: #000000;
   box-shadow: 0 0 100% yellow;
 }
 
