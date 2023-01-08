@@ -95,14 +95,17 @@
         <!-- Slides -->
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Methods Intro</h1>
+          <h1>Iteration Intro</h1>
           <p id="slide0"></p>
         </div>
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Methods parameters</h1>
+          <h1>Loops</h1>
           <p id="slide1"></p>
         </div>
-
+        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
+            <h1>For loops</h1>
+            <p id="slide2"></p>
+          </div>
     >
        
 
@@ -117,8 +120,9 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
 
-    const talk = ["As programmers you will have pieces of code you call multiple times. Is there a way that we can call the code an easier way? Yes! A method is a name, set of statements. It can be called elsewhere in the code by a name given to the method. ",
-     "Parameters are variables that you can use inside a method. For example: we have a method that makes a sandwich: How will we know what ingredients to add? Well, we can add parameters of different toppings to add. Then, we can call this method multiple times throughout our code. Say you wanted a peanut butter and jelly sandwich: the makeSandwich(peanut butter, jelly) voila"];
+    const talk = ["Imagine you have to take 20 customers in your code. Would you want to copy and paste code 20 times in your program? Probably not. In programming, we can use iteration to execute a certain segment of code multiple times. ",
+     "One type of loop is a while loop. This can be thought of as “As long as ___- is true, execute the code” For example, if you have 50 dollars to spend at a store, you would keep spending money until you have none left.",
+    "In programming, a for each loop executes a set of instructions for each item in a given collection, or a set of instructions for a specified number of times. We can iterate through lists, every character in a string, etc. "];
     var slide = 0;
     function increase() {
       slide++;
