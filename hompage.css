@@ -31,3 +31,32 @@
       border-color: transparent
     }
   }
+
+  .home-page-buttons {
+    width:10%;
+    margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+  
+  .bt1 {
+    top: 70%;
+    left: 63%;
+  }
+  .bt2 {
+    top: 65%;
+  left: 35%;
+  }
+  .bt3 {
+    top: 50%;
+  left: 63%;
+  }
+  .bt4 {
+    top: 40%;
+  left: 40%;
+  }
+  .bt5 {
+    top: 30%;
+  left: 55%;
+  }

@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 1</title>
+  <title>Variables</title>
   <link rel="stylesheet" href="branch1.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="icon" type="image/x-icon" href="Assets/logo.png">
@@ -45,13 +45,7 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="login.css">
-  <style>
-    #anim {
-      max-width: 30%;
-      margin: 0 auto;
-      margin-top: -3%;
-    }
-  </style>
+  
 </head>
 
 </html>
@@ -91,96 +85,14 @@
 
 
 <html>
-
-<body class="back" onload="typeWriter(0, 0)">
-
-  <div class="container">
-
-    <div class="swiper-button-prev" onclick="decrease()"></div>
-    <div class="swiper-button-next" onclick="increase()"></div>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-
-      <div class="swiper-wrapper">
-
-        <!-- Slides -->
-
-        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Methods Intro</h1>
-          <p id="slide0"></p>
-        </div>
-        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Methods parameters</h1>
-          <p id="slide1"></p>
-        </div>
-
-    >
-       
-
-        <!-- If we need pagination -->
-
-        <!-- If we need navigation buttons -->
-
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-
-    const talk = ["As programmers you will have pieces of code you call multiple times. Is there a way that we can call the code an easier way? Yes! A method is a name, set of statements. It can be called elsewhere in the code by a name given to the method. ",
-     "Parameters are variables that you can use inside a method. For example: we have a method that makes a sandwich: How will we know what ingredients to add? Well, we can add parameters of different toppings to add. Then, we can call this method multiple times throughout our code. Say you wanted a peanut butter and jelly sandwich: the makeSandwich(peanut butter, jelly) voila"];
-    var slide = 0;
-    function increase() {
-      slide++;
-      j = 0;
-      typeWriter(slide, 0);
-    }
-
-    var speed = 10;
-    var j = 0;
-
-    function typeWriter(num, j) {
-      if (j < talk[num].length) {
-        document.getElementById('slide' + num).innerHTML += talk[num].charAt(j);
-        j++;
-        setTimeout(typeWriter.bind(null, num, j), speed);
-      }
-      return false;
-    }
-
-
-  </script>
-  <script>const swiper = new Swiper('.swiper', {
-      // Optional parameters
-      loop: false,
-
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-
-    });</script>
-  <div id="anim"></div>
-  <script src="Animationz/lottie.js"></script>
-  <script>var animation = bodymovin.loadAnimation({
-      container: document.getElementById('anim'),
-      rederer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'Animationz/birdtalk.json'
-    });</script>
-
+<body class="variables-body" >
+    <a href="branch2.html">
+        <button type="button" class="btn btn-lg carousel-button"style="text-align: center;"> Learning Portion </button>
+    </a>
+    <a href="branch1.html">
+        <button type="button" class="btn btn-lg carousel-button"style="text-align: center;"> Test It Out! </button>
+    </a>
 </body>
+
 
 </html>

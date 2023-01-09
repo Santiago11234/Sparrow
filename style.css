@@ -111,20 +111,19 @@ nav.navbar {
 }
 /* end of abt me button */
 .how-to-play {
-  appearance: none;
   background: white;
   background-size: 200% auto;
   border: 0;
   border-radius: 4rem;
-  color: #344e41;
-  cursor: pointer;
   display: block;
   width: 100%;
   height: 100%;
   font-size: 0.75rem;
   padding: 1em 1em;
   text-align: center;
-  transition: all .7s ease;
+}
+button.how-to-play:hover {
+  background: rgb(240, 240, 240);
 }
 
 /* login button */
@@ -155,7 +154,7 @@ nav.navbar {
 /* end of login button */
 /*home page */
 .homeBody {
-  background-image: url(homeBackground.png);     
+  background-image: url(homeBackground1.png);     
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -193,4 +192,13 @@ nav.navbar {
   position: absolute;   
   top: 50%;
   transform: translateY(-50%);
+}
+
+.carousel-button {
+  width: 48.5%;
+  height: 90%;
+}
+
+.variables-body {
+  height: 100%;
 }
