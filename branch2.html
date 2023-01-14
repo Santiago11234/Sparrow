@@ -363,13 +363,22 @@
       "On the other hand, the OR operator (||) means that only one of the conditions must be true. It can be a little hard to find, so all you have to do is hold shift and “\\” (it’s under backspace). For example, a lightbulb that will light up as long as a lightswitch is on. ",
       "The greater and less than operators (< and >) are only used for comparing two numbers. For example, a lightbulb will turn on only if the amount of switches that are on is greater than the amount that is off.",
       "Last but not least, we have the equal operator (==). This is used to check if two variables are the same. For example, a lightbulb will turn on only if the amount of “off” switches is equal to the amount of “on” switches. On the other hand, the NOT operator (!=) is used to check if two variables are unequal.",
-      "Conditional statements are used to control our program using booleans. It’s a lot like how we make decisions! We can use tools to control how our program runs. If statements will only run if the condition inside is true. Sometimes, we want to do something else when the if statement is false. We can use else statements for that! Operators and conditionals are a powerful tool that you can use to control your program and do some neat stuff! Why don’t you give it a try?"];
+      "Conditional statements are used to control our program by executing blocks of code. This way, computers can make decisions and we can control how we want them to run. If statements will only run if the condition inside is true. However, if the condition is false, we can execute another block"];
     var slide = 0;
+    var max = slide;
     function increase() {
       slide++;
+      if(slide > max){
+        max = slide;
+        typeWriter(slide, 0);
+      }
       j = 0;
-      typeWriter(slide, 0);
     }
+
+    function decrease(){
+      slide--;
+    }
+
 
     var speed = 10;
     var j = 0;
