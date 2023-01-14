@@ -123,10 +123,18 @@
 
     const talk = ["Think of a grocery list: you put the items you want to buy on a sheet of paper, so that when you go to the store, you can remember easily what you need to buy. We do this In programming, as well! Lists are a basic data structure that stores multiple pieces of information. The values in a list can be accessed by indexes, where the first index starts at 0. If my program wanted me to access “banana”, I would use the index of 1 We can also add values by saying the list name, and the add function, or remove values by using the remove function"];
     var slide = 0;
+    var max = slide;
     function increase() {
       slide++;
+      if(slide > max){
+        max = slide;
+        typeWriter(slide, 0);
+      }
       j = 0;
-      typeWriter(slide, 0);
+    }
+
+    function decrease(){
+      slide--;
     }
 
     var speed = 10;

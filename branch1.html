@@ -141,13 +141,20 @@
      "How many data types do you know of? Data types are how computers classify information. They can include numbers, characters, words, or true/fase types! For example, if you have the number data type (8), the program will know that it can not be capitalized like a letter, but it can perform arithmetic (+, -, /, *) You can also combine variables if they’re the same type! All you have to do is add a plus sign (+) between your two variables! For example, Variable three = one + two",
       "A string is a very common data type. No, it is not the yarn string you may be thinking of. Think of a string of characters, a sequence of letters, spaces, numbers, or symbols, surrounded by double quotes. They are great for representing text and speech!",
        "Of course, we want our program to actually say what we want. We need input and output! We can take a user’s input and execute code with that input, then output what they need!"];
-    var slide = 0;
+       var slide = 0;
+    var max = slide;
     function increase() {
       slide++;
+      if(slide > max){
+        max = slide;
+        typeWriter(slide, 0);
+      }
       j = 0;
-      typeWriter(slide, 0);
     }
 
+    function decrease(){
+      slide--;
+    }
     var speed = 10;
     var j = 0;
 

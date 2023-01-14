@@ -136,12 +136,19 @@
      "One type of loop is a while loop. This can be thought of as “As long as ___- is true, execute the code” For example, if you have 50 dollars to spend at a store, you would keep spending money until you have none left.",
     "In programming, a for each loop executes a set of instructions for each item in a given collection, or a set of instructions for a specified number of times. We can iterate through lists, every character in a string, etc. "];
     var slide = 0;
+    var max = slide;
     function increase() {
       slide++;
+      if(slide > max){
+        max = slide;
+        typeWriter(slide, 0);
+      }
       j = 0;
-      typeWriter(slide, 0);
     }
 
+    function decrease(){
+      slide--;
+    }
     var speed = 10;
     var j = 0;
 

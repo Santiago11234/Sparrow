@@ -131,13 +131,20 @@
 
     const talk = ["As programmers you will have pieces of code you call multiple times. Is there a way that we can call the code an easier way? Yes! A method is a name, set of statements. It can be called elsewhere in the code by a name given to the method. ",
      "Parameters are variables that you can use inside a method. For example: we have a method that makes a sandwich: How will we know what ingredients to add? Well, we can add parameters of different toppings to add. Then, we can call this method multiple times throughout our code. Say you wanted a peanut butter and jelly sandwich: the makeSandwich(peanut butter, jelly) voila"];
-    var slide = 0;
+     var slide = 0;
+    var max = slide;
     function increase() {
       slide++;
+      if(slide > max){
+        max = slide;
+        typeWriter(slide, 0);
+      }
       j = 0;
-      typeWriter(slide, 0);
     }
 
+    function decrease(){
+      slide--;
+    }
     var speed = 10;
     var j = 0;
 
