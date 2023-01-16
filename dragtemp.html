@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dragdrop.css">
+  <style>
+    #div2{
+        background-color: gray;
+        width:50%;
+        position: relative;
+        float: left;
+        height:900px;
+    }
+    #div1{
+        background-color: rgb(255, 255, 255);
+        width: 50%;
+        position: relative;
+        float: right;
+        height: 900px;
+    }
+  </style>
+  <title>Document</title>
+  
+</head>
+<body>
+  <div id="div1">
+    <div class="empty"> 
+      <div class="fill" draggable="true"></div>
+    </div>
+  </div>
+  <div id="div2">  
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+  </div>
+
+  <script src="dragdrop.js"></script>
+</body>
+</html>
