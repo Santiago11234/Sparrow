@@ -229,26 +229,38 @@
 </html>
 
 
+
 <header>
-  <div class="header">
+  <div class="header">  
     <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top">
 
-      <a class="navbar-brand me-2" href="index.html">
-        <img src="Assets/logo.png" style="height: 60px" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
-        <a style="text-decoration: none" class="pt-0" href="AboutUs.html">
-          <button type="button" class="vg-button btn btn-outline-primary, rounded-pill">About Us</button>
+        <a class="navbar-brand me-2" href="HomePage.html">
+            <i class="fa-solid fa-home"></i>
         </a>
-      </div>
+        <a class="navbar-brand me-2" href="SignUp.html">
+            <i class="fa-solid fa-crow"></i>
+        </a>
+        <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+            <a style="text-decoration: none" class="pt-0" href="HowToPlay.html">
+                <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
+            </a>
+        </div>
 
+        <a class="navbar-brand me-2" href="SignUp.html">
+            <i class="fa-solid fa-gear"></i>
+        </a>
+        <a class="navbar-brand me-2" href="SignUp.html">
+            <i class="fa-solid fa-sign-out"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        
+     
     </nav>
   </div>
 </header>
+
 
 <html>
 
@@ -351,13 +363,22 @@
       "On the other hand, the OR operator (||) means that only one of the conditions must be true. It can be a little hard to find, so all you have to do is hold shift and “\\” (it’s under backspace). For example, a lightbulb that will light up as long as a lightswitch is on. ",
       "The greater and less than operators (< and >) are only used for comparing two numbers. For example, a lightbulb will turn on only if the amount of switches that are on is greater than the amount that is off.",
       "Last but not least, we have the equal operator (==). This is used to check if two variables are the same. For example, a lightbulb will turn on only if the amount of “off” switches is equal to the amount of “on” switches. On the other hand, the NOT operator (!=) is used to check if two variables are unequal.",
-      "Conditional statements are used to control our program using booleans. It’s a lot like how we make decisions! We can use tools to control how our program runs. If statements will only run if the condition inside is true. Sometimes, we want to do something else when the if statement is false. We can use else statements for that! Operators and conditionals are a powerful tool that you can use to control your program and do some neat stuff! Why don’t you give it a try?"];
+      "Conditional statements are used to control our program by executing blocks of code. This way, computers can make decisions and we can control how we want them to run. If statements will only run if the condition inside is true. However, if the condition is false, we can execute another block"];
     var slide = 0;
+    var max = slide;
     function increase() {
       slide++;
+      if(slide > max){
+        max = slide;
+        typeWriter(slide, 0);
+      }
       j = 0;
-      typeWriter(slide, 0);
     }
+
+    function decrease(){
+      slide--;
+    }
+
 
     var speed = 10;
     var j = 0;

@@ -1,0 +1,62 @@
+.wrapper {
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    width: 50%;
+    padding: 0% 10%;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 200%;
+  }
+  .title{
+    padding: 0% 10%;
+    place-items: center;
+    font-family: monospace;
+    font-size: 500%;
+  }
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  .home-page-buttons {
+    width:10%;
+    margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+  
+  .bt1 {
+    top: 80%;
+    left: 63%;
+  }
+  .bt2 {
+    top: 70%;
+  left: 35%;
+  }
+  .bt3 {
+    top: 55%;
+  left: 63%;
+  }
+  .bt4 {
+    top: 40%;
+  left: 38%;
+  }
+  .bt5 {
+    top: 30%;
+  left: 55%;
+  }

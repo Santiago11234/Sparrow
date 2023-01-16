@@ -152,7 +152,6 @@
             if(snapshot.exists()){
                 if(snapshot.val().Password == document.getElementById('password').value){
                   document.getElementById('login').innerHTML = '<p>We\'re happy to see you again,</p><h1>'+username.value+'</h1> <a href="HomePage.html" class="start">Let\'s Code</a>';
-                  alert("Sign in Successful");
                 }else{
                     alert("Password is incorrect");
                 }
