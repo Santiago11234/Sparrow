@@ -1,5 +1,6 @@
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
+const arr = []
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
@@ -48,18 +49,41 @@ function drop(event) {
   const draggableElementData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
   const droppableElementData = event.target.getAttribute("data-draggable-id");
   const isCorrectMatching = draggableElementData === droppableElementData;
-  if(isCorrectMatching) {
-    const draggableElement = document.getElementById(draggableElementData);
-    event.target.classList.add("dropped");
-    // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
-    event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
-    draggableElement.classList.add("dragged");
-    draggableElement.setAttribute("draggable", "false");
-    event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
+  arr.push(isCorrectMatching);
+  const draggableElement = document.getElementById(draggableElementData);
+  event.target.classList.add("dropped");
+  // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
+  event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
+  draggableElement.classList.add("dragged");
+  draggableElement.setAttribute("draggable", "false");
+  event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
+}
+
+function checkIfCorrect () {
+  for(var i = 0; i < arr.length; i++) {
+    if(!arr[i]) {
+      alert("your wrong")
+      window.location.reload();
+      return;
+    }
   }
+  alert("ur good")
+  window.location.reload();
 }
 
 function hint() {
   let drop = document.getElementsByClassName("droppable");
   drop.style.border ="thin dotted black";
 }
+
+
+
+ // if(isCorrectMatching) {
+  //   const draggableElement = document.getElementById(draggableElementData);
+  //   event.target.classList.add("dropped");
+  //   // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
+  //   event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
+  //   draggableElement.classList.add("dragged");
+  //   draggableElement.setAttribute("draggable", "false");
+  //   event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
+  // }

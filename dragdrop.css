@@ -7,10 +7,13 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #eee;
+  background-color: rgb(69, 65, 65);
   color: #111;
 }
 
+.div1 {
+  background-color: aliceblue;
+}
 .draggable-elements {
   justify-content: center;
   margin: 2rem;
@@ -19,15 +22,14 @@ body {
   height: 4rem;
   width: 10rem;
   overflow: hidden;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   font-size: 4rem;
   margin: 0rem 0.5rem;
   cursor: move;
   transition: opacity 0.2s;
   margin: 1rem auto;
   display: flex;
-
 }
 .draggable:hover {
   opacity: 0.5;
