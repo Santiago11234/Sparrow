@@ -84,27 +84,31 @@
 </header>
 
 <style>
-  #anim{max-width: 100%; padding-top: 70%; transform: translateX(8%);}
+   #read{max-width: 85%; transform: translateX(8%);}
+   #test{max-width: 100%; transform: translateX(10%); transform: translateY(-4%);}
+
 </style>
 <html>
   <body class="variables-body" >
     <a href="branch2.html">
-        <button type="button" class="btn btn-lg carousel-button"style="text-align: center; padding: 3%;"> <h2>Learning Portion</h2>Learn the topics here!<div id="anim"></div>
+        <button type="button" class="btn btn-lg carousel-button"style="text-align: center; color:black;"> <h1>Learning Portion</h1>Learn the topics here!<div id="read"></div>
+        
+          <div class = "bird">
           <script src="Animationz/lottie.js"></script>
           <script>var animation = bodymovin.loadAnimation({
-          container: document.getElementById('anim'),
+          container: document.getElementById('read'),
           rederer: 'svg',
           loop: true,
           autoplay: true,
           path: 'Animationz/read.json'
            });</script></button>
-  
+      </div>
       </a>
     <a href="branch1.html">
-        <button type="button" class="btn btn-lg carousel-button"style="text-align: center;"><h2>Test it out!</h2> Practice concepts here! </button>
+        <button type="button" class="btn btn-lg carousel-button"style="text-align: center; color:black;"><h1>Test it out!</h1> Practice concepts here!<div id="test"></div> 
         <script src="Animationz/lottie.js"></script>
           <script>var animation = bodymovin.loadAnimation({
-          container: document.getElementById('anim'),
+          container: document.getElementById('test'),
           rederer: 'svg',
           loop: true,
           autoplay: true,
@@ -112,6 +116,4 @@
            });</script></button>
     </a>
 </body>
-
-
 </html>
