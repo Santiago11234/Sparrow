@@ -54,12 +54,47 @@ rel="stylesheet"
 <!--Hammersmith One Font-->
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
   <title>Document</title>
-  
+ 
 </head>
-<body>
+</html>
 
-  
-  
+
+
+<header>
+  <div class="header">  
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top">
+
+        <a class="navbar-brand me-2" href="HomePage.html">
+            <i class="fa-solid fa-home"></i>
+        </a>
+        <a class="navbar-brand me-2" href="SignUp.html">
+            <i class="fa-solid fa-crow"></i>
+        </a>
+        <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+            <a style="text-decoration: none" class="pt-0" href="HowToPlay.html">
+                <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" style="background-color:white; border:none">How To Play</button>
+            </a>
+        </div>
+
+        <a class="navbar-brand me-2" href="SignUp.html">
+            <i class="fa-solid fa-gear"></i>
+        </a>
+        <a class="navbar-brand me-2" href="SignUp.html">
+            <i class="fa-solid fa-sign-out"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        
+     
+    </nav>
+  </div>
+</header>
+
+
+<html>
+
+<body style = "background-color: rgb(211, 214, 211);">
   <div class="draggable-elements div1">
     <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
     <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
@@ -82,7 +117,7 @@ rel="stylesheet"
       <i class="fa-solid fa-lightbulb"></i>
       <span>Hint</span>
     </a>
-    <a >
+    <a>
       <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.reload();">Restart</button>
     </a>
     <div class="runCode" onclick="checkIfCorrect()"><span>Run code</span></div>

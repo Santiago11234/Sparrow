@@ -83,16 +83,37 @@
   </div>
 </header>
 
+<style>
+   #read{max-width: 85%; transform: translateX(8%);}
+   #test{max-width: 100%; transform: translateX(10%); transform: translateY(-4%);}
 
+</style>
 <html>
-<body class="variables-body" >
+  <body class="variables-body" >
     <a href="branch5.html">
-        <button type="button" class="btn btn-lg carousel-button"style="text-align: center;"> Learning Portion </button>
-    </a>
-    <a href="branch1.html">
-        <button type="button" class="btn btn-lg carousel-button"style="text-align: center;"> Test It Out! </button>
+        <button type="button" class="btn btn-lg carousel-button"style="text-align: center; color:black;"> <h1>Learning Portion</h1>Learn the topics here!<div id="read"></div>
+        
+          <div class = "bird">
+          <script src="Animationz/lottie.js"></script>
+          <script>var animation = bodymovin.loadAnimation({
+          container: document.getElementById('read'),
+          rederer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'Animationz/read.json'
+           });</script></button>
+      </div>
+      </a>
+    <a href="branch5.html">
+        <button type="button" class="btn btn-lg carousel-button"style="text-align: center; color:black;"><h1>Test it out!</h1> Practice concepts here!<div id="test"></div> 
+        <script src="Animationz/lottie.js"></script>
+          <script>var animation = bodymovin.loadAnimation({
+          container: document.getElementById('test'),
+          rederer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'Animationz/testitout.json'
+           });</script></button>
     </a>
 </body>
-
-
 </html>

@@ -4,15 +4,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: rgb(69, 65, 65);
   color: #111;
 }
 
 .div1 {
   background-color: aliceblue;
+  height: 100px;
+  width: 1000px;
 }
 .draggable-elements {
   justify-content: center;
@@ -25,11 +27,11 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-  margin: 0rem 0.5rem;
+
   cursor: move;
   transition: opacity 0.2s;
-  margin: 1rem auto;
-  display: flex;
+   
+  display: inline-flex;
 }
 .draggable:hover {
   opacity: 0.5;
@@ -37,7 +39,7 @@ body {
 .droppable {
   height: 7rem;
   width: 15rem;
-  margin-left: 10%;
+  margin-left: 27%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +54,7 @@ body {
 .runCode {
     height: 7rem;
     width: 15rem;
-    margin-left: 20%;
+    margin-left: 27%;
   
     justify-content: center;
     align-items: center;
@@ -110,10 +112,10 @@ body {
     height:100%;
 }
 .div2{
-    background-color: rgb(255, 255, 255);
-    width: 10%;
-    margin-right:60%;
-    margin-top:-25%;
+    background-color: rgb(211, 214, 211);
+    width: 30%;
+    margin-right:10%;
+    /* margin-top:-23%; */
     position: relative;
     float: right;
     height: 100%;
@@ -136,12 +138,69 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   position: relative;
-  height: 300px;
+  height: 600px;
   width: 25%;
 }
 
 #next {
-  margin-left:40%;
-  margin-top:22%;
-  display:none;
+  margin-right:20%;
+  display: none;
 }
+
+
+
+/* nav bar stuff */
+
+@media (max-width: 992px) {
+  nav.navbar {
+    background-color: #a3b18a;
+  }
+}
+
+nav.navbar {
+    background-color: #a3b18a;
+  }
+/*#1d5aab */
+.nav-item{
+  font-weight: normal;
+  text-align: left;
+  margin-right: 0;
+  width: max-content;
+  
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  background: rgb(255, 255, 255);
+  content: '';
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in;
+  width: 100%;
+  height: 2%px;
+  bottom: 0;
+  right: 0;
+}
+
+.nav-link:hover::before {
+  transform-origin: center;
+  transform: scaleX(1);
+}
+
+.nav-active::before {
+  height: 4%;
+  bottom: 0;
+  left: 0;
+  background: white;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: center; 
+}
+/* end of nav bar stuff */
+
+
