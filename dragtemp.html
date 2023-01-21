@@ -59,6 +59,7 @@ rel="stylesheet"
 <body>
 
   
+  
   <div class="draggable-elements div1">
     <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
     <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
@@ -69,6 +70,13 @@ rel="stylesheet"
     <i class="fas fa-hippo draggable" draggable="true" style="color: #ff9f40;" id="hippo"></i>
     <i class="fas fa-spider draggable" draggable="true" style="color: #ff99cc;" id="spider"></i> 
   </div>
+
+  <p class="terminal" id="term-text">
+    
+  </p>
+  <a >
+    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next">next</button>
+  </a>
   <div class="droppable-elements div2">
     <a class="box" id="A" onclick="hint('A')">
       <i class="fa-solid fa-lightbulb"></i>
@@ -85,6 +93,10 @@ rel="stylesheet"
     <div class="droppable" data-draggable-id="spider"><span>Spider</span></div>
     <div class="droppable" data-draggable-id="horse"><span>Horse</span></div>
   </div>
+
+  
+
+  
   <script src="dragdrop.js"></script>
   
 </body>

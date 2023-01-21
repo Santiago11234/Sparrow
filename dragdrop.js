@@ -61,14 +61,16 @@ function drop(event) {
 
 function checkIfCorrect () {
   for(var i = 0; i < arr.length; i++) {
-    if(!arr[i]) {
-      alert("your wrong")
-      window.location.reload();
+    if(!arr[i] || arr[i] == null) {
+      document.getElementById("term-text").innerText = 'wrong, try again';
+      
       return;
     }
   }
-  alert("ur good")
-  window.location.reload();
+  let next = document.getElementById("next");
+  next.style.display = "inline";
+  document.getElementById("term-text").innerText = 'good job';
+
 }
 
 function hint() {
