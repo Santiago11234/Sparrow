@@ -54,9 +54,12 @@ rel="stylesheet"
 <!--Hammersmith One Font-->
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
   <title>Document</title>
- 
+  <style>
+    #anim{max-width: 10%; margin: auto; margin-top:25.5%; margin-right: 20%;}
+</style>
 </head>
 </html>
+
 
 
 
@@ -96,22 +99,24 @@ rel="stylesheet"
 
 <body style = "background-color: rgb(211, 214, 211);">
   <div class="draggable-elements div1">
-    <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
-    <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
-    <i class="fas fa-dove draggable" draggable="true" style="color: #ffce56;" id="dove"></i>
-    <i class="fas fa-fish draggable" draggable="true" style="color: #9966ff;" id="fish"></i>
-    <i class="fas fa-frog draggable" draggable="true" style="color: #4bc0c0;" id="frog"></i>
-    <i class="fas fa-horse draggable" draggable="true" style="color: #333333;" id="horse"></i>
-    <i class="fas fa-hippo draggable" draggable="true" style="color: #ff9f40;" id="hippo"></i>
-    <i class="fas fa-spider draggable" draggable="true" style="color: #ff99cc;" id="spider"></i> 
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="cat">String var = "Hello World"</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="dog">wave()</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="dove">asdfasdf</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="fish">outprint(var)</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="frog">run(5)</i>
+    <i class="draggable" draggable="true" style="color: #333333;font-size: 120%; font-family: 'Courier New';" id="horse">asdfasdf(hello)</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="hippo">loop(4)</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';">wave(4)</i> 
   </div>
 
   <p class="terminal" id="term-text">
-    
+    Time to make your first program! Help me greet the world assigning "Hello, World!" to a variable and printing it
   </p>
+  
   <a >
     <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next">next</button>
   </a>
+  
   <div class="droppable-elements div2">
     <a class="box" id="A" onclick="hint('A')">
       <i class="fa-solid fa-lightbulb"></i>
@@ -120,17 +125,17 @@ rel="stylesheet"
     <a>
       <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.reload();">Restart</button>
     <div class="runCode" onclick="checkIfCorrect()"><span>Run code</span></div>
-    <div class="droppable" data-draggable-id="dove"><span></span></div>
-    <div class="droppable" data-draggable-id="cat"><span></span></div>
-    <div class="droppable" data-draggable-id="fish"><span></span></div>
-    <div class="droppable" data-draggable-id="dog"><span></span></div>
-    <div class="droppable" data-draggable-id="spider"><span></span></div>
-    <div class="droppable" data-draggable-id="horse"><span></span></div>
+    <div class="droppable" data-draggable-id="cat"><span style="color:rgb(211, 214, 211)">String var = "Hello World</span></div>
+    <div class="droppable" data-draggable-id="fish"><span style="color:rgb(211, 214, 211)">outprint(var)</span></div>
+    <div class="droppable" data-draggable-id="dog"><span style="color:rgb(211, 214, 211)"> wave()</span></div>
+    
   </div>
 
-  
+  <div id="anim"></div>
+  <script src="Animationz/lottie.js"></script>
+  <script src="Animationz/script.js"></script>
+ </div>
 
-  
   <script src="dragdrop.js"></script>
   
 </body>

@@ -36,7 +36,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+.image{
+    margin-top: 40px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
 
 .swiper p{
     padding-left: 5%;

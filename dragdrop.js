@@ -49,14 +49,16 @@ function drop(event) {
   const draggableElementData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
   const droppableElementData = event.target.getAttribute("data-draggable-id");
   const isCorrectMatching = draggableElementData === droppableElementData;
-  arr.push(isCorrectMatching);
-  const draggableElement = document.getElementById(draggableElementData);
-  event.target.classList.add("dropped");
-  // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
-  event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
-  draggableElement.classList.add("dragged");
-  draggableElement.setAttribute("draggable", "false");
-  event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
+  if(isCorrectMatching) {
+    arr.push(isCorrectMatching);
+    const draggableElement = document.getElementById(draggableElementData);
+    event.target.classList.add("dropped");
+    // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
+    event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
+    draggableElement.classList.add("dragged");
+    draggableElement.setAttribute("draggable", "false"); //the image is fine we can just delete the image, but u cant drop any other blocks in 
+    event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
+  }
 }
 
 function checkIfCorrect () {
@@ -69,8 +71,8 @@ function checkIfCorrect () {
   }
   let next = document.getElementById("next");
   next.style.display = "inline";
-  document.getElementById("term-text").innerText = 'good job';
-
+  document.getElementById("term-text").innerText = 'Good job!!';
+  //here
 }
 
 function hint() {
@@ -88,4 +90,4 @@ function hint() {
   //   draggableElement.classList.add("dragged");
   //   draggableElement.setAttribute("draggable", "false");
   //   event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
-  // }
+  

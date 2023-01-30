@@ -134,9 +134,9 @@ body {
   padding-left:1%;
   font-size: 25px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #809164; 
+  color: #1f201d; 
   position: relative;
-  height: 600px;
+  height: 400px;
   width: 25%;
 }
 
@@ -200,5 +200,7 @@ nav.navbar {
   transform-origin: center; 
 }
 /* end of nav bar stuff */
-
+#spider {
+  background-color: aqua;
+}
 
