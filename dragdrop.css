@@ -12,7 +12,7 @@ body {
 }
 
 .div1 {
-  background-color:#ecf2e3;
+  background-color: rgb(196, 194, 169);
   height: 100px;
   width: 1000px;
 }
@@ -23,11 +23,11 @@ body {
 .draggable {
   height: 4rem;
   width: 10rem;
-  overflow: hidden;
+  overflow:visible;
   align-items: center;
+  text-align: center;
   justify-content: center;
   font-size: 4rem;
-
   cursor: move;
   transition: opacity 0.2s;
    
@@ -47,7 +47,7 @@ body {
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-  background-color: rgb(211, 214, 211);
+  background-color: white;
   transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
 }
 .runCode {
@@ -110,7 +110,7 @@ body {
     height:100%;
 }
 .div2{
-    background-color: rgb(211, 214, 211);
+    background-color: rgb(20, 85, 20);
     width: 30%;
     margin-right:10%;
     /* margin-top:-23%; */
@@ -130,14 +130,18 @@ body {
   float: right;
   margin-top:5%;
   margin-right:5%;
-  padding-top:1%;
-  padding-left:1%;
+  padding-top:2%;
+  padding-left:3%;
+  padding-bottom:2%;
+  padding-right:3%;
   font-size: 25px;
+
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   color: #1f201d; 
   position: relative;
-  height: 400px;
+  height: 90%;
   width: 25%;
+  border-radius: 10%;
 }
 
 #next {
