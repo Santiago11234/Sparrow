@@ -97,7 +97,7 @@ rel="stylesheet"
 
 <html>
 
-<body style = "background-color: rgb(211, 214, 211);">
+<body style = "background-color: rgb(130, 160, 130);">
   <div class="draggable-elements div1">
     <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="helloWorld">String var = "Hello World"</i>
     <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="wave">wave()</i>
@@ -114,7 +114,7 @@ rel="stylesheet"
   </p>
   
   <a >
-    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next">next</button>
+    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next" onclick="window.location.href = 'BooleansHomePage.html';">next</button>
   </a>
   
   <div class="droppable-elements div2">
@@ -127,14 +127,11 @@ rel="stylesheet"
     <div class="runCode" onclick="checkIfCorrect()"><span>Run code</span></div>
     <div class="droppable" data-draggable-id="helloWorld"><span style="color:rgb(211, 214, 211)">String var = "Hello World</span></div>
     <div class="droppable" data-draggable-id="outprint"><span style="color:rgb(211, 214, 211)">outprint(var)</span></div>
-    <div class="droppable" data-draggable-id="dog"><span style="color:rgb(211, 214, 211)"> wave()</span></div>
+    <div class="droppable" data-draggable-id="wave"><span style="color:rgb(211, 214, 211)"> wave()</span></div>
     
   </div>
-
-  <div id="anim"></div>
-  <script src="Animationz/lottie.js"></script>
-  <script src="Animationz/script.js"></script>
- </div>
+  
+  
 
   <script src="dragdrop.js"></script>
   

@@ -73,6 +73,7 @@ function checkIfCorrect () {
   next.style.display = "inline";
   let animation = document.getElementById("anim");
   animation.style.display = "inline"
+  document.getElementById("anim").style.width = "200px";
   document.getElementById("term-text").innerText = 'Good job!!';
   //here
 }

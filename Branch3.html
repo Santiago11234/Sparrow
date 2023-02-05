@@ -45,6 +45,7 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="Branch3.css">
   <style>
     #anim {
       max-width: 30%;
@@ -55,7 +56,22 @@
 </head>
 
 </html>
+<script>
+  var count = 0;
+  function changeImage() {
+    var swtch = document.getElementById("switch");
+    var lght = document.getElementById("light")
+    if (swtch.src.match("Assets/Methods1.PNG")) {
+      lght.src = "Assets/Method2.PNG";
+      swtch.src = "Assets/blank.PNG"
+    } else {
+      swtch.src = "Assets/Methods1.PNG";
+      lght.src = "Assets/blank.PNG"
+    }
+    return false;
+  }
 
+</script>
 
 
 <header>
@@ -108,6 +124,10 @@
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Methods Intro</h1>
+          <div class="test"><img id="light" src="Assets/blank.PNG" /><button id="switchbutton"
+            onclick="changeImage();"><img id="switch" src="Assets/Methods1.PNG"  /></button></div>
+
+
           <p id="slide0"></p>
         </div>
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
