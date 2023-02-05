@@ -99,23 +99,22 @@ rel="stylesheet"
 
 <body style = "background-color: rgb(130, 160, 130);">
   <div class="draggable-elements div1">
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="curMoney">int currentMoney=10"</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="price1">int price1 = 5</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="price2">int price2 = 6</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="price3">int price3 = 3</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="total>">if(total > currentMoney):</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="total<">if(total < currentMoney):</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="total">int total = price1 + price1 + price1</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="print">print("is enough")</i> 
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="printnot">print("isn't enough")</i> 
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="item1">String item1="asdf"</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="item2">String item2 = "qwertrep"</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="receipt">Method receipt(i1, i2):</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="print">print(item1 + "" + item2)</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="wrong>">print("hello")</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="wrong<">Method menu():</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="call">receipt(item1, item2)</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="print">print("receipt")</i> 
   </div>
 
   <p class="terminal" id="term-text">
-    Help me store the prices of the three items in the correct variables using the list! Add them up, and use a boolean statement to see if I am able to purchase them with ten dollars! 
+    I am working at a bakery! Help me print out a receipt of the order by making a new method and passing in the item that they ordered and their name! 
   </p>
   
   <a >
-    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next" onclick="window.location.href = 'MethodsHomePage.html';">next</button>
+    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next" onclick="window.location.href = 'ListsHomePage.html';">next</button>
   </a>
   
   <div class="droppable-elements div2">
@@ -126,13 +125,11 @@ rel="stylesheet"
     <a>
       <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.reload();">Restart</button>
     <div class="runCode" onclick="checkIfCorrect()"><span>Run code</span></div>
-    <div class="droppable" data-draggable-id="curMoney"><span style="color:rgb(211, 214, 211)">int currentMoney=10"</span></div>
-    <div class="droppable" data-draggable-id="price1"><span style="color:rgb(211, 214, 211)">int price1 = 5</span></div>
-    <div class="droppable" data-draggable-id="price2"><span style="color:rgb(211, 214, 211)">int price2 = 6</span></div>
-    <div class="droppable" data-draggable-id="price3"><span style="color:rgb(211, 214, 211)">int price3 = 3</span></div>
-    <div class="droppable" data-draggable-id="total"><span style="color:rgb(211, 214, 211)">int total = price1 + price1 + price1</span></div>
-    <div class="droppable" data-draggable-id="total>"><span style="color:rgb(211, 214, 211)">if(total > currentMoney):</span></div>
-    <div class="droppable" data-draggable-id="printnot"><span style="color:rgb(211, 214, 211)">print("isn't enough")</span></div>
+    <div class="droppable" data-draggable-id="item1"><span style="color:rgb(211, 214, 211)">String item1="asdf</span></div>
+    <div class="droppable" data-draggable-id="item2"><span style="color:rgb(211, 214, 211)">String item2 = "qwertrep"</span></div>
+    <div class="droppable" data-draggable-id="receipt"><span style="color:rgb(211, 214, 211)">Method receipt(i1, i2):</span></div>
+    <div class="droppable" data-draggable-id="print"><span style="color:rgb(211, 214, 211)">print(item1 + "" + item2)</span></div>
+    <div class="droppable" data-draggable-id="call"><span style="color:rgb(211, 214, 211)">receipt(item1, item2)</span></div>
     
   </div>
 
