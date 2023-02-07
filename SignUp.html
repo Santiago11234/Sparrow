@@ -138,7 +138,7 @@
     function InsertData(){
         set(ref(db, ""+document.getElementById('username').value), {Name: document.getElementById('username').value, Email: document.getElementById('email').value, Password: document.getElementById('password').value, Branch1: true, Branch2: false, Branch3: false, Branch4: false, Branch5: false})
         .then((userCredential) => {
-          window.location.href = "login.html";
+          window.location.href = "LogIn.html";
             // Signed up
             //document.getElementById('login').innerHTML = '<p>We\'re happy that you joined our adventure!,</p><h1>'+username.value+'</h1> <a href="HomePage.html" class="start">Let\'s Code</a>';
             // ...
