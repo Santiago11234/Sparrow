@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    
+    
+    
   },
   "repository": {
     "type": "git",
@@ -27,4 +30,6 @@
   "resolutions": {
     "pm2/**/debug": "^4.3.1"
   }
+  
 }
+

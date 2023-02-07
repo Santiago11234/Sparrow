@@ -79,22 +79,26 @@
 
     <section class='login' id='login'>
       <div class='head'>
-      <h1 class='company'>Sparrow</h1>
+      <h1 class='company'>Warning!</h1>
       </div>
-      <p class='msg'>Welcome back</p>
+      <p class='msg'>You are trying to access a lesson that is not next in store for you. Would you like to proceed to the lesson, or go back and complete prerequisite lessons?</p>
       <div class='form'>
         <form>
-      <input type="text" placeholder='Username' class='text' id='username' required><br>
-      <input type="password" placeholder='••••••••••••••' id = 'password' class='password'><br>
-      <a href="#" class='btn-login' id='btn'>Login</a>
-      <a href="#" class='forgot'>Forgot?</a>
+      <a href="HomePage.html" class='btn-login'>Go back</a>
+      <a id = 'btn' class='forgot'>Continue</a>
         </form>
       </div>
     </section>
     
     
-    <script type = "module" src = "login.js">
-      
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let btn = document.getElementById('btn')
+            btn.addEventListener('click', function (evt) {
+                localStorage.setItem("Track", false)
+                window.location.href=localStorage.getItem("CurrentLink");
+            })
+        })
 
     </script>
       
