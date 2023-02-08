@@ -121,7 +121,7 @@ rel="stylesheet"
 
 
     <button type="button" id="next" class="how-to-play btn btn-outline-primary, rounded-pill" data-toggle="modal" data-target="#exampleModalCenter">
-      Launch demo modal
+      Next Branch
     </button>
 
     <!-- Modal -->
@@ -138,8 +138,18 @@ rel="stylesheet"
       <div class="modal-body">
 
         <div id="anim"></div>
+
+
         <script src="Animationz/lottie.js"></script>
-        <script src="Animationz/script.js"></script>
+        <script >
+          var animation = bodymovin.loadAnimation({
+            container: document.getElementById('anim'),
+            rederer: 'svg',
+            loop: true,
+            autoplay: true, 
+            path: 'Animationz/birdfly.json'
+        })
+        </script>
       </div>
 
       <div class="modal-footer">
