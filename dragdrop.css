@@ -12,7 +12,7 @@ body {
 }
 
 .div1 {
-  background-color:#ecf2e3;
+  background-color: rgb(196, 194, 169);
   height: 100px;
   width: 1000px;
 }
@@ -21,17 +21,16 @@ body {
   margin: 2rem;
 }
 .draggable {
-  height: 4rem;
-  width: 10rem;
-  overflow: hidden;
+  height: 6rem;
+  width: 11rem;
+  overflow:visible;
   align-items: center;
+  text-align: center;
   justify-content: center;
   font-size: 4rem;
-
   cursor: move;
   transition: opacity 0.2s;
-   
-  display: inline-flex;
+  display: inline-table;
 }
 .draggable:hover {
   opacity: 0.5;
@@ -104,13 +103,13 @@ body {
 }
 
 .div1{
-    width:20%;
+    width: 21%;
     position: relative;
     float: left;
-    height:100%;
+    height:700px;
 }
 .div2{
-    background-color: rgb(211, 214, 211);
+    background-color:rgb(211, 214, 211);
     width: 30%;
     margin-right:10%;
     /* margin-top:-23%; */
@@ -130,14 +129,18 @@ body {
   float: right;
   margin-top:5%;
   margin-right:5%;
-  padding-top:1%;
-  padding-left:1%;
+  padding-top:2%;
+  padding-left:3%;
+  padding-bottom:2%;
+  padding-right:3%;
   font-size: 25px;
+
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #809164; 
+  color: #1f201d; 
   position: relative;
-  height: 600px;
+  height: 90%;
   width: 25%;
+  border-radius: 10%;
 }
 
 #next {
@@ -201,4 +204,6 @@ nav.navbar {
 }
 /* end of nav bar stuff */
 
-
+.anim{
+  width: 100px;
+}

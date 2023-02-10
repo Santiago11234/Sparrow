@@ -56,7 +56,7 @@
 
 
 
-
+<div id="alert"></div>
 <header>
   <div class="header">  
     <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top ">
@@ -106,34 +106,35 @@
 <html>
   <h1 class="title">Home Page</h1>
 
-  <div class="typing-demo">
+  <div id = 'welcome' class="typing-demo">
   Welcome!
   </div>
 <body class="homeBody">
-  <a style="text-decoration: none" class="pt-0 home-page-buttons bt1" href="VariablesHomePage.html">
-    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">Variables</button>
+  <a style="text-decoration: none" class="pt-0 home-page-buttons bt1" >
+    <button type="button" id = 'Branch1' class="how-to-play btn btn-outline-primary, rounded-pill">Variables</button>
 </a>
 
-<a style="text-decoration: none" class="pt-0 home-page-buttons bt2" href="BooleansHomePage.html">
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">Boolean</button>
+<a style="text-decoration: none" class="pt-0 home-page-buttons bt2" >
+  <button type="button" id = 'Branch2' class="how-to-play btn btn-outline-primary, rounded-pill">Boolean</button>
 </a>
 
-<a style="text-decoration: none" class="pt-0 home-page-buttons bt3" href="MethodsHomePage.html">
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">methods</button>
+<a style="text-decoration: none" class="pt-0 home-page-buttons bt3" >
+  <button type="button" id = 'Branch3' class="how-to-play btn btn-outline-primary, rounded-pill">methods</button>
 </a>
 
-<a style="text-decoration: none" class="pt-0 home-page-buttons bt4" href="ListsHomePage.html">
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">Lists</button>
+<a style="text-decoration: none" class="pt-0 home-page-buttons bt4" >
+  <button type="button" id = 'Branch4' class="how-to-play btn btn-outline-primary, rounded-pill">Lists</button>
 </a>
 
-<a style="text-decoration: none" class="pt-0 home-page-buttons bt5" href="IterationHomePage.html">
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">Iteration</button>
+<a style="text-decoration: none" class="pt-0 home-page-buttons bt5" >
+  <button type="button" id = 'Branch5' class="how-to-play btn btn-outline-primary, rounded-pill">Iteration</button>
 </a>
 
   <div id="anim"></div>
   <script src="Animationz/lottie.js"></script>
   <script src="Animationz/script.js"></script>
  </div>
+ 
 
     
 </body>
@@ -151,6 +152,212 @@
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
 ></script>
+<script type = 'module'>
+    
+    var data = localStorage.getItem("person");
+    document.getElementById('welcome').innerHTML = 'Welcome '+ data +'!';
 
+
+     // Import the functions you need from the SDKs you need
+     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+     // TODO: Add SDKs for Firebase products that you want to use
+     // https://firebase.google.com/docs/web/setup#available-libraries
+     
+     // Your web app's Firebase configuration
+     const firebaseConfig = {
+         apiKey: "AIzaSyD-F4Lqjy9TjFxYmCmQpm4HSb74GSPE41I",
+         authDomain: "newtest-561c2.firebaseapp.com",
+         databaseURL: "https://newtest-561c2-default-rtdb.firebaseio.com",
+         projectId: "newtest-561c2",
+         storageBucket: "newtest-561c2.appspot.com",
+         messagingSenderId: "841219402391",
+         appId: "1:841219402391:web:6d04ab18255508fcb217d2"
+     };
+     
+     // Initialize Firebase
+     const app = initializeApp(firebaseConfig);
+     import{getDatabase, set, get, update, remove, ref, child}
+     from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+     const db = getDatabase();
+     checkcss();
+     document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('Branch1')
+      btn.addEventListener('click', function (evt) {
+        const dbref = ref(db);
+        get(child(dbref, "" + localStorage.getItem("person")))
+           .then((snapshot)=>{
+               if(snapshot.exists()){
+                   if(snapshot.val().Branch1 == true){
+                      window.location.href="VariablesHomePage.html";
+                      localStorage.setItem("Track", true);
+                   }else{
+                    localStorage.setItem("Track", false);
+                      confirm("You have not completed previous branches yet, it is advised to do so before accessing this lesson.");
+                      window.location.href="VariablesHomePage.html";
+                   }
+                   
+               } else {
+                   alert("An error has occured");
+               }
+           })
+           .catch((error)=>{
+               alert(error)
+           })
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('Branch2')
+      btn.addEventListener('click', function (evt) {
+        const dbref = ref(db);
+        get(child(dbref, "" + localStorage.getItem("person")))
+           .then((snapshot)=>{
+               if(snapshot.exists()){
+                   if(snapshot.val().Branch2 == true){
+                    localStorage.setItem("Track", true);
+                      window.location.href="BooleansHomePage.html";
+                   }else{
+                    localStorage.setItem("Track", false);
+                    localStorage.setItem("CurrentLink", "BooleansHomePage.html");
+                    
+                    //confirm("You have not completed previous branches yet, it is advised to do so before accessing this lesson.");
+                     window.location.href="confirm.html";
+                   }
+                   
+               } else {
+                   alert("An error has occured");
+               }
+           })
+           .catch((error)=>{
+               alert(error)
+           })
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('Branch3')
+      btn.addEventListener('click', function (evt) {
+        const dbref = ref(db);
+        get(child(dbref, "" + localStorage.getItem("person")))
+           .then((snapshot)=>{
+               if(snapshot.exists()){
+                   if(snapshot.val().Branch3 == true){
+                    localStorage.setItem("Track", true);
+                      window.location.href="MethodsHomePage.html";
+                   }else{
+                    localStorage.setItem("Track", false);
+                    localStorage.setItem("CurrentLink", "MethodsHomePage.html");
+
+                    //confirm("You have not completed previous branches yet, it is advised to do so before accessing this lesson.");
+                     window.location.href="confirm.html";
+                   }
+                   
+               } else {
+                   alert("An error has occured");
+               }
+           })
+           .catch((error)=>{
+               alert(error)
+           })
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('Branch4')
+      btn.addEventListener('click', function (evt) {
+        const dbref = ref(db);
+        get(child(dbref, "" + localStorage.getItem("person")))
+           .then((snapshot)=>{
+               if(snapshot.exists()){
+                   if(snapshot.val().Branch4 == true){
+                    localStorage.setItem("Track", true);
+                      window.location.href="ListsHomePage.html";
+                   }else{
+                    localStorage.setItem("Track", false);
+                    localStorage.setItem("CurrentLink", "ListsHomePage.html");
+
+                     //confirm("You have not completed previous branches yet, it is advised to do so before accessing this lesson.");
+                      window.location.href="confirm.html";
+                   }
+                   
+               } else {
+                   alert("An error has occured");
+               }
+           })
+           .catch((error)=>{
+               alert(error)
+           })
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('Branch5')
+      btn.addEventListener('click', function (evt) {
+        const dbref = ref(db);
+        get(child(dbref, "" + localStorage.getItem("person")))
+           .then((snapshot)=>{
+               if(snapshot.exists()){
+                   if(snapshot.val().Branch5 == true){
+                    localStorage.setItem("Track", true);
+                      window.location.href="IterationHomePage.html";
+                   }else{
+                    localStorage.setItem("Track", false);
+                      localStorage.setItem("CurrentLink", "IterationHomePage.html");
+
+                     //confirm("You have not completed previous branches yet, it is advised to do so before accessing this lesson.");
+                      window.location.href="confirm.html";
+                   }
+                   
+               } else {
+                   alert("An error has occured");
+               }
+           })
+           .catch((error)=>{
+               alert(error)
+           })
+      })
+    })
+    
+    function updateData(){
+      update(ref(db, ""+localStorage.getItem("person")), {Branch2:true})
+      .then((userCredential) => {
+          // Signed up
+          alert("Successfully signed up!");
+          // ...
+      })
+      .catch((error) => {
+          alert(error);
+      });
+    }
+    function checkcss(){
+      const dbref = ref(db);
+      get(child(dbref, "" + localStorage.getItem("person")))
+         .then((snapshot)=>{
+             if(snapshot.exists()){
+                if(snapshot.val().Branch1 == false){
+                  document.getElementById("Branch1").style.backgroundColor = "pink";
+                }
+                if(snapshot.val().Branch2 == false){
+                  document.getElementById("Branch2").style.backgroundColor = "pink";
+                }
+                if(snapshot.val().Branch3 == false){
+                  document.getElementById("Branch3").style.backgroundColor = "pink";
+                }
+                if(snapshot.val().Branch4 == false){
+                  document.getElementById("Branch4").style.backgroundColor = "pink";
+                }
+                if(snapshot.val().Branch5 == false){
+                  document.getElementById("Branch5").style.backgroundColor = "pink";
+                }
+                 
+                 
+             } else {
+                 alert("An error has occured");
+             }
+         })
+         .catch((error)=>{
+             alert(error)
+         })
+    }
+
+
+ 
+</script>
 </html> 
 

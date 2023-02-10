@@ -108,22 +108,32 @@
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Variables</h1>
+          <div class="image">
+            <img src="Assets/Variable.PNG">
+          </div>
           <p id="slide0"></p>
+          
         </div>
         <div class="swiper-slide" style="height: 60%"><img src="Assets/background lesson.png" alt="">
           <h1>Data Types</h1>
+          <div class="image">
+            <img src="Assets/Variable2.PNG">
+          </div>
           <p id="slide1"></p>
         </div>
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Data Types - Strings</h1>
-
+          <div class="image">
+            <img src="Assets/Variables3.PNG">
+          </div>
             <p id="slide2"></p>
         </div>
         
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Printing</h1>
-
+         
+        
           <p id="slide3"></p>
         </div>
 
@@ -136,7 +146,8 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script>
+  <script >
+     
     const talk = ["Variables are a very important part of programming: they are used to assign a name to data, which you can reference elsewhere in the program. Variables are declared by giving it a name and a value using an equal sign “=”. Variables can be changed and reassigned to other values too!",
      "How many data types do you know of? Data types are how computers classify information. They can include numbers, characters, words, or true/fase types! For example, if you have the number data type (8), the program will know that it can not be capitalized like a letter, but it can perform arithmetic (+, -, /, *) You can also combine variables if they’re the same type! All you have to do is add a plus sign (+) between your two variables! For example, Variable three = one + two",
       "A string is a very common data type. No, it is not the yarn string you may be thinking of. Think of a string of characters, a sequence of letters, spaces, numbers, or symbols, surrounded by double quotes. They are great for representing text and speech!",
@@ -146,8 +157,11 @@
     function increase() {
       slide++;
       if(slide > max){
+
         max = slide;
         typeWriter(slide, 0);
+        
+        
       }
       j = 0;
     }
@@ -167,7 +181,7 @@
       return false;
     }
 
-
+    
   </script>
   <script>const swiper = new Swiper('.swiper', {
       // Optional parameters
@@ -197,7 +211,43 @@
       autoplay: true,
       path: 'Animationz/birdtalk.json'
     });</script>
-
+    <script type = "module">
+      // Import the functions you need from the SDKs you need
+     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+     // TODO: Add SDKs for Firebase products that you want to use
+     // https://firebase.google.com/docs/web/setup#available-libraries
+     
+     // Your web app's Firebase configuration
+     const firebaseConfig = {
+         apiKey: "AIzaSyD-F4Lqjy9TjFxYmCmQpm4HSb74GSPE41I",
+         authDomain: "newtest-561c2.firebaseapp.com",
+         databaseURL: "https://newtest-561c2-default-rtdb.firebaseio.com",
+         projectId: "newtest-561c2",
+         storageBucket: "newtest-561c2.appspot.com",
+         messagingSenderId: "841219402391",
+         appId: "1:841219402391:web:6d04ab18255508fcb217d2"
+     };
+     
+     // Initialize Firebase
+     const app = initializeApp(firebaseConfig);
+     import{getDatabase, set, get, update, remove, ref, child}
+     from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+     const db = getDatabase();
+     if(localStorage.getItem("Track")){
+      updateData();
+     }
+     
+      function updateData(){
+      update(ref(db, ""+localStorage.getItem("person")), {Branch2:true})
+      .then((userCredential) => {
+          // Signed up
+          // ...
+      })
+      .catch((error) => {
+          alert(error);
+      });
+    }
+    </script>
 </body>
 
 </html>

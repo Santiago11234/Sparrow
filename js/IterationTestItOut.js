@@ -71,9 +71,7 @@ function checkIfCorrect () {
   }
   let next = document.getElementById("next");
   next.style.display = "inline";
-  let animation = document.getElementById("anim");
-  animation.style.display = "inline"
-  document.getElementById("anim").style.width = "200px";
+  document.getElementById("anim").visibility = "shown"
   document.getElementById("term-text").innerText = 'Good job!!';
   //here
 }

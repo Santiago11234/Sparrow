@@ -99,22 +99,22 @@ rel="stylesheet"
 
 <body style = "background-color: rgb(130, 160, 130);">
   <div class="draggable-elements div1">
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="helloWorld">String var = "Hello World"</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="wave">wave()</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="adfasdf">asdfasdf</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="outprint">outprint(var)</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="run">run(5)</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="asdfds">asdfasdf(hello)</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="loop">loop(4)</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';">wave(4)</i> 
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 100%;  font-family: 'Courier New';" id="var">String var = "Hello World"</i>
+    <p class="draggable" draggable="true" style="color: #000000;font-size: 100%; font-family: 'Courier New';" id="if">if(item == served)  </p>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 100%; font-family: 'Courier New';" id="while">while(listIsNotEmpty())</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 100%; font-family: 'Courier New';" id="delete">delete()</i>
+    <i class="draggable" draggable="true" style="color: #333333;font-size: 100%; font-family: 'Courier New';" id="asf">output(served)</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 100%; font-family: 'Courier New';" id="list">output(list)</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 100%; font-family: 'Courier New';">wave(4)</i> 
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 100%; font-family: 'Courier New';" id="fish">item = nextItem() </i> 
   </div>
 
   <p class="terminal" id="term-text">
-    assigning "Hello, World!" to a variable and printing it
+    Chef Janne needs your help  to double check if she's already served an item on her restaurant list. Iterate through the list, and if the item has been served, delete it from the list. Lastly, output the new list back to Chef Janne. Good luck!
   </p>
   
   <a >
-    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next" onclick="window.location.href = 'BooleansHomePage.html';">next</button>
+    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next">next</button>
   </a>
   
   <div class="droppable-elements div2">
@@ -125,18 +125,31 @@ rel="stylesheet"
     <a>
       <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.reload();">Restart</button>
     <div class="runCode" onclick="checkIfCorrect()"><span>Run code</span></div>
-    <div class="droppable" data-draggable-id="helloWorld"><span style="color:rgb(211, 214, 211)">String var = "Hello World</span></div>
-    <div class="droppable" data-draggable-id="outprint"><span style="color:rgb(211, 214, 211)">outprint(var)</span></div>
-    <div class="droppable" data-draggable-id="wave"><span style="color:rgb(211, 214, 211)"> wave()</span></div>
-    
+    <div class="droppable" data-draggable-id="while"><span style="color:rgb(211, 214, 211)">while(listIsNotEmpty())</span></div>
+    <div class="droppable" data-draggable-id="if"><span style="color:rgb(211, 214, 211)">if(item == served)</span></div>
+    <div class="droppable" data-draggable-id="delete"><span style="color:rgb(211, 214, 211)"> delete()</span></div>
+    <div class="droppable" data-draggable-id="list"><span style="color:rgb(211, 214, 211)"> output(list)</span></div>
   </div>
-  
-  
+
+  <div id="anim"></div>
+  <script src="Animationz/lottie.js"></script>
+  <script>var animation = bodymovin.loadAnimation({
+      container: document.getElementById('anim'),
+      rederer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Animationz/birdtalk.json',
+    });</script>
+
+  <script>
+    if(document.getElementById('anim').style.display != none) {
+      document.getElementById('anim').style.maxWidth = "10%";
+    }
+  </script>
+
+ </div>
 
   <script src="dragdrop.js"></script>
   
 </body>
 </html>
-
-
- 

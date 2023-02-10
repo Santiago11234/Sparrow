@@ -99,22 +99,22 @@ rel="stylesheet"
 
 <body style = "background-color: rgb(130, 160, 130);">
   <div class="draggable-elements div1">
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="helloWorld">String var = "Hello World"</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="wave">wave()</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="adfasdf">asdfasdf</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="outprint">outprint(var)</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="run">run(5)</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="asdfds">asdfasdf(hello)</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="loop">loop(4)</i>
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';">wave(4)</i> 
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="list">List shopping = new List()</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="bread">shopping.add("bread")</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="bananas">shopping.add("bananas")</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="bird feed">shopping.add("Bird Feed")</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="cookies">shopping.add("Cookies")</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="index">print(shopping.indexOf("cookies"));</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="wrong">print(shopping.get(3));</i>
+    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="wrong">shopping.add("apples");</i> 
   </div>
 
   <p class="terminal" id="term-text">
-    assigning "Hello, World!" to a variable and printing it
+    Add the following items to a shopping list and print out the position of bananas on the list! <br> Bread, Bananas, Bird Feed, Cookies 
   </p>
   
   <a >
-    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next" onclick="window.location.href = 'BooleansHomePage.html';">next</button>
+    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next" onclick="window.location.href = 'ListsHomePage.html';">next</button>
   </a>
   
   <div class="droppable-elements div2">
@@ -125,13 +125,19 @@ rel="stylesheet"
     <a>
       <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.reload();">Restart</button>
     <div class="runCode" onclick="checkIfCorrect()"><span>Run code</span></div>
-    <div class="droppable" data-draggable-id="helloWorld"><span style="color:rgb(211, 214, 211)">String var = "Hello World</span></div>
-    <div class="droppable" data-draggable-id="outprint"><span style="color:rgb(211, 214, 211)">outprint(var)</span></div>
-    <div class="droppable" data-draggable-id="wave"><span style="color:rgb(211, 214, 211)"> wave()</span></div>
+    <div class="droppable" data-draggable-id="list"><span style="color:rgb(211, 214, 211)">List shopping = new List()</span></div>
+    <div class="droppable" data-draggable-id="bread"><span style="color:rgb(211, 214, 211)">shopping.add("bread")</span></div>
+    <div class="droppable" data-draggable-id="bananas"><span style="color:rgb(211, 214, 211)">shopping.add("bananas")</span></div>
+    <div class="droppable" data-draggable-id="bird feed"><span style="color:rgb(211, 214, 211)">shopping.add("Bird Feed")</span></div>
+    <div class="droppable" data-draggable-id="cookies"><span style="color:rgb(211, 214, 211)">shopping.add("Cookies")</span></div>
+    <div class="droppable" data-draggable-id="index"><span style="color:rgb(211, 214, 211)">print(shopping.indexOf("cookies"));</span></div>
     
   </div>
-  
-  
+
+  <div id="anim"></div>
+  <script src="Animationz/lottie.js"></script>
+  <script src="Animationz/script.js"></script>
+ </div>
 
   <script src="dragdrop.js"></script>
   
