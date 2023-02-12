@@ -97,6 +97,58 @@ rel="stylesheet"
 
 <html>
 
+
+<button type="button" id="next" class=" btn btn-outline-success, rounded-pill" data-toggle="modal" data-target="#exampleModalCenter">
+  Next Branch
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content" style="border-radius: 10px;">
+  <div class="modal-header" style="text-align: center;">
+    <h5 class="modal-title" id="exampleModalLongTitle">Congrats!</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div id="anim"></div>
+    <script src="Animationz/lottie.js"></script>
+    <script>
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById("anim"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "Animationz/birdfly.json"
+      });
+    </script>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-success rounded-pill"
+      onClick="window.location.reload();"
+      data-dismiss="modal"
+      style="color:#236f40"
+    >
+      Restart
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-success rounded-pill"
+      onClick="window.location = 'HomePage.html';"
+    >
+      Next Lesson
+    </button>
+  </div>
+</div>
+</div>
+</div>
+<!-- end modal -->
+
+
 <body style = "background-color: rgb(130, 160, 130);">
   <div class="draggable-elements div1">
     <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="helloWorld">String var = "Hello World"</i>
