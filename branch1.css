@@ -27,7 +27,7 @@
 }
 .test{
     width: 100%;
-
+    border: none;
     margin-top: 80px;
     align-items: center;
     margin-bottom: 10px;
@@ -81,4 +81,33 @@
 
 .slide-2 {
     height:60%;
+}
+#IntEgg{
+    width: 100px;
+    border: none;
+}
+#BoolEgg{
+    width: 110px;
+    border: none;
+}
+#StringEgg{
+    width: 110px;
+    border: none;
+}
+#bucket{
+    width: 150px;
+    margin-top: -20px;
+    margin-right: 150px;
+}
+#nest{
+    width: 100%;
+   
+}
+.text{
+    font-size: 100%;
+    padding-right: 0%;
+}
+.text2{
+    font-size: 100%;
+    padding-left: 30%;
 }

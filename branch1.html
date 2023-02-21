@@ -52,6 +52,51 @@
       margin-top: -3%;
     }
   </style>
+  <script>
+    var count = 0;
+    function changeInt() {
+      var bucket = document.getElementById("bucket");
+      var intEgg = document.getElementById("IntEgg");    
+        if (intEgg.src.match("Assets/intEgg.PNG")) {
+          bucket.src = "Assets/bucketWIntEgg.PNG"
+          intEgg.src = "Assets/blank.PNG"
+          return false
+        }
+  }
+  function changeBool() {
+
+      var bucket = document.getElementById("bucket");
+      var BoolEgg = document.getElementById("BoolEgg");
+        if (BoolEgg.src.match("Assets/BoolEgg.PNG")) {
+        bucket.src = "Assets/bucketWBool.PNG"
+        BoolEgg.src = "Assets/blank.PNG"
+        return false;
+         }
+  }
+  function reset() {
+
+      var bucket = document.getElementById("bucket");
+      var BoolEgg = document.getElementById("BoolEgg");
+      var IntEgg = document.getElementById("IntEgg");
+      var StringEgg = document.getElementById("StringEgg");
+        bucket.src = "Assets/bucket.PNG"
+        BoolEgg.src = "Assets/BoolEgg.PNG"
+        IntEgg.src = "Assets/intEgg.PNG"
+        StringEgg.src = "Assets/StringEgg.PNG"
+        return false;
+         
+  }
+  function changeString(){
+    var bucket = document.getElementById("bucket");
+    var StringEgg = document.getElementById("StringEgg");
+    if (StringEgg.src.match("Assets/StringEgg.PNG")) {
+        bucket.src = "Assets/bucketWString.PNG"
+        StringEgg.src = "Assets/blank.PNG"
+        return false;
+         }
+    
+  }
+    </script>
 </head>
 
 </html>
@@ -111,14 +156,30 @@
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Variables</h1>
-          <div class="image">
-            <img src="Assets/Variable.PNG">
+          <div class="test">
+            <img id="bucket" src="Assets/bucket.PNG" />
+            <button id="egg" style = "border:0" onclick="changeInt();">
+              <img id="IntEgg" src="Assets/intEgg.PNG" />
+             </button>
+            <button id="egg" style = "border:0; width:20%" onclick="reset();">
+              <img id="nest" src="Assets/dataNest.PNG" />
+            </button>
+            <button id="egg" style = "border:0" onclick="changeBool();">
+              <img id="BoolEgg" src="Assets/BoolEgg.PNG" />
+            </button>
+            <button id="egg" style = "border:0; transform: translate(-150%, 100%); " onclick="changeString();">
+              <img id="StringEgg" src="Assets/StringEgg.PNG" />
+            </button>
+            
           </div>
+          <p1 class = "text"> Click the "data eggs" to put them  <br>into the variable bucket!
+         <br> Click the "data nest" to reset</p1>
           <p id="slide0"></p>
-          
         </div>
+        
         <div class="swiper-slide" style="height: 60%"><img src="Assets/background lesson.png" alt="">
           <h1>Data Types</h1>
+
           <div class="image">
             <img src="Assets/Variable2.PNG">
           </div>
