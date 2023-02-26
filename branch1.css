@@ -27,7 +27,7 @@
 }
 .test{
     width: 100%;
-
+    border: none;
     margin-top: 80px;
     align-items: center;
     margin-bottom: 10px;
@@ -51,10 +51,10 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 2%;
-    font-size: 150%;
+    font-size: 130%;
     text-size-adjust: 50%;
     position: absolute;
-    top: 12%;
+    top: 10%;
 }
 .swiper-slide img{
     width:50%;
@@ -81,4 +81,33 @@
 
 .slide-2 {
     height:60%;
+}
+#IntEgg{
+    width: 80px;
+    border: none;
+}
+#BoolEgg{
+    width: 80px;
+    border: none;
+}
+#StringEgg{
+    width: 80px;
+    border: none;
+}
+#bucket{
+    width: 150px;
+    margin-top: -3  0px;
+    margin-right: 120px;
+}
+#nest{
+    width: 100%;
+   
+}
+.text{
+    font-size: 100%;
+    padding-right: 80%;
+}
+.text2{
+    font-size: 100%;
+    padding-left: 30%;
 }

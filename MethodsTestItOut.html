@@ -16,10 +16,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -113,15 +117,57 @@ rel="stylesheet"
     I am working at a bakery! Help me print out a receipt of the order by making a new method and passing in the item that they ordered and their name! 
   </p>
   
-  <a >
-    <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" id="next" onclick="window.location.href = 'ListsHomePage.html';">next</button>
-  </a>
+  <button type="button" id="next" class=" btn btn-outline-success, rounded-pill" data-toggle="modal" data-target="#exampleModalCenter">
+    Next Branch 
+  </button>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="border-radius: 10px;">
+      <div class="modal-header" style="text-align: center;">
+        <h5 class="modal-title" id="exampleModalLongTitle">Congrats!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="anim"></div>
+        <script src="Animationz/lottie.js"></script>
+        <script>
+          var animation = bodymovin.loadAnimation({
+            container: document.getElementById("anim"),
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            path: "Animationz/birdfly.json"
+          });
+        </script>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-success rounded-pill"
+          onClick="window.location.reload();"
+          data-dismiss="modal"
+          style="color:#236f40"
+        >
+          Restart
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success rounded-pill"
+          onClick="window.location = 'HomePage.html';"
+        >
+          Next Lesson
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
   
   <div class="droppable-elements div2">
-    <a class="box" id="A" onclick="hint('A')">
-      <i class="fa-solid fa-lightbulb"></i>
-      <span>Hint</span>
-    </a>
     <a>
       <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.reload();">Restart</button>
     <div class="runCode" onclick="checkIfCorrect()"><span>Run code</span></div>
@@ -133,10 +179,6 @@ rel="stylesheet"
     
   </div>
 
-  <div id="anim"></div>
-  <script src="Animationz/lottie.js"></script>
-  <script src="Animationz/script.js"></script>
- </div>
 
   <script src="dragdrop.js"></script>
   
