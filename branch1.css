@@ -75,7 +75,7 @@
     z-index: 9;
     top: -80%;
     left: -5%;
-    
+    height: 100%;
     clip-path: inset(120px 70px 120px 85px);
 }
 
