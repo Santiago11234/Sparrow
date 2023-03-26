@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- MDBootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+  rel="stylesheet"
+/>
+  <!-- Raleway Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+  <!--Hammersmith One Font-->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
+
+    <link rel="stylesheet" href="style.css" >
+
+    <link rel="stylesheet" href="Customize.css" >
+    <link rel="stylesheet" href="CustomizeCards.css" >
+    <style>
+      #anim{max-width: 15%;margin: 10% ; margin-top: 25%;}
+  </style>
+  </head>
+</html>
+
+
+
+<div id="alert"></div>
+<header>
+  <div class="header">  
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top ">
+
+        <a class="navbar-brand me-4 ml-4" href="HomePage.html">
+            <i class="fa-solid fa-home"></i>
+        </a>
+        <a class="navbar-brand me-4" href="SignUp.html">
+            <i class="fa-solid fa-crow"></i>
+        </a>
+        <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+            <a style="text-decoration: none" class="pt-0" href="HowToPlay.html">
+                <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
+            </a>
+        </div>
+
+        <div class="money-amount">
+          <i class="fas fa-seedling"></i>
+          <span style="color:white" id="money"></span>
+        </div>
+
+        <a class="navbar-brand me-4" href="SignUp.html">
+            <i class="fa-solid fa-gear"></i>
+        </a>
+
+        <div class="dropdown " style="margin-right:1%">
+          <a
+            class="dropdown-toggle hidden-arrow"
+            type="button"
+            id="dropdownMenuicon"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-sign-out" style="color:white; height:100%; width:100%;"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon">
+            <li><a class="dropdown-item" href="index.html"> <i class="fas fa-sign-out"></i> Are You Sure?</a></li>
+          </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        
+     
+    </nav>
+  </div>
+</header>
+
+
+
+<body>
+ 
+  
+<section>
+
+  <style>
+    #anim {
+      max-width: 300%;
+      margin: auto 0;
+      margin-bottom: -20%;;
+    }
+  </style>
+  <div class="row">
+
+    <div class="col-6 " >
+      <div class="customization-zone">
+        <div id="anim"></div>
+        <script src="Animationz/lottie.js"></script>
+      </div>
+    </div>
+
+
+    <div class="col-6">
+
+      <div class="row" style="margin-top: 10px">
+        <h1><u>Hat Accessories</u></h1>
+      
+        <div class="card">
+          <div class="imgBox">
+            <img src="Animationz/Accessories/headempty.png" alt="lolz" class="object">
+          </div>
+          <div class="contentBox">
+            <h3>Nothing</h3>
+            <a onclick="buyComponent(this, 'head', 'headempty.png', 0)" class="buy">Equip</a>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="imgBox">
+            <img src="Animationz/Accessories/clown.png" alt="lolz" class="object">
+          </div>
+          <div class="contentBox">
+            <h3>Clown</h3>
+            <a onclick="buyComponent(this, 'head', 'clown.png', 25)" class="buy">Buy Now $25</a>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="imgBox">
+            <img src="Animationz/Accessories/bowtie.png" alt="no" class="object">
+          </div>
+          <div class="contentBox">
+            <h3>Bow Tie</h3>
+            <a onclick="buyComponent(this, 'head', 'bowtie.png', 15)" class="buy">Buy Now $15</a>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="imgBox">
+            <img src="Animationz/Accessories/party.png" alt="no" class="object">
+          </div>
+          <div class="contentBox">
+            <h3>Party Hat</h3>
+            <a onclick="buyComponent(this, 'head', 'party.png', 15)" class="buy">Buy Now $15</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row" style="margin-top: 10px">
+   
+        <h1><u>Facial Accessories</u></h1>
+        
+        <div class="card">
+          <div class="imgBox">
+            <img src="Animationz/Accessories/eyesempty.png" alt="yes" class="object">
+          </div>
+          <div class="contentBox">
+            <h3>Nothing</h3>
+            <a onclick="buyComponent(this, 'eyes', 'eyesempty.png', 0)" class="buy">Equip</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="imgBox">
+            <img src="Animationz/Accessories/glasses.png" alt="lolz" class="object">
+          </div>
+          <div class="contentBox">
+            <h3>Glasses</h3>
+            <a onclick="buyComponent(this, 'eyes', 'glasses.png', 15)" class="buy">Buy Now $15</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="imgBox">
+            <img src="Animationz/Accessories/scuba.png" alt="lolz" class="object">
+          </div>
+          <div class="contentBox">
+            <h3>Scuba</h3>
+            <a onclick="buyComponent(this, 'head', 'scuba.png', 25)" class="buy">Buy Now $25</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="imgBox">
+            <img src="Animationz/Accessories/shades.png" alt="lolz" class="object">
+          </div>
+          <div class="contentBox">
+            <h3>Shades</h3>
+            <a onclick="buyComponent(this, 'eyes', 'shades.png', 30)" class="buy">Buy Now $30</a>
+          </div>
+        </div>
+        
+      </div> <!-- end of internal row -->
+
+      </div>  <!-- end of col6 -->
+  
+
+    </div>  <!-- end of row -->
+    
+ 
+
+</section>
+
+      <script src="customize.js"></script>
+</body>
+</html>

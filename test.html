@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- MDBootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+  rel="stylesheet"
+/>
+  <!-- Raleway Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+  <!--Hammersmith One Font-->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
+
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="hompage.css" >
+    <style>
+      #anim{max-width: 15%;margin: 10% ; margin-top: 25%;}
+  </style>
+  </head>
+</html>
+
+
+<header>
+  <div class="header">  
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top ">
+
+        <a class="navbar-brand me-4 ml-4" href="HomePage.html">
+            <i class="fa-solid fa-home"></i>
+        </a>
+        <a class="navbar-brand me-4" href="SignUp.html">
+            <i class="fa-solid fa-crow"></i>
+        </a>
+        <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+            <a style="text-decoration: none" class="pt-0" href="HowToPlay.html">
+                <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
+            </a>
+        </div>
+
+        <a class="navbar-brand me-4" href="SignUp.html">
+            <i class="fa-solid fa-gear"></i>
+        </a>
+
+        <div class="dropdown " style="margin-right:1%">
+          <a
+            class="dropdown-toggle hidden-arrow"
+            type="button"
+            id="dropdownMenuicon"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-sign-out" style="color:white; height:100%; width:100%;"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon">
+            <li><a class="dropdown-item" href="index.html"> <i class="fas fa-sign-out"></i> Are You Sure?</a></li>
+          </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        
+     
+    </nav>
+  </div>
+</header>
+
+<body>
+    <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<style>
+    /**
+  Setup for code demo only
+*/
+:root {
+    --card-width: 200px;
+    --card-margin: 15px;
+    --carousel-height: 240px;
+  }
+  
+  body {
+    margin: 10px;
+  }
+  
+  
+  /**
+    Container
+  */
+  .carousel {
+    position: relative;
+    max-width: 700px;
+    height: var(--carousel-height);
+  }
+  
+  
+  /**
+    Controls (previous/next buttons)
+  */
+  .button.is-control {
+    background: 0;
+    border: 0;
+    padding: 0 10px;
+    z-index: 1;
+    cursor: pointer;
+    
+    font-size: 40px;
+    color: rgba(0,0,0,.6);
+    
+    transition: all .2s linear;
+  }
+  
+    .button.is-control:hover {
+      color: rgba(0,0,0,1);
+    }
+  
+    .button.is-control:focus {
+      outline: none;
+      background-color: rgba(0,0,0,.8);
+      color: rgba(255,255,255,1);
+      border-radius: 5px;
+    }
+  
+  .previous-button {
+    position: absolute;
+    left: 0;
+    top: calc(var(--carousel-height) / 2 - 30px);
+  }
+  
+  .next-button {
+    position: absolute;
+    right: 0;
+    top: calc(var(--carousel-height) / 2 - 30px);
+  }
+  
+  
+  /**
+    Collection of all tiles
+  */
+  .cards {
+    overflow: hidden;
+    padding: 2px;
+    height: calc(var(--carousel-height) + 2px);
+    width: calc(100% - 100px);
+    margin-left: 50px;
+  }
+  
+  
+  /**
+    Single card
+  */
+  .card {
+    width: var(--card-width);
+    height: var(--carousel-height);
+  
+    margin-right: var(--card-margin);
+    margin-bottom: 10px;
+    margin-left: 3px;
+    position: relative;
+  
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.2);
+    
+    text-decoration: none;
+    color: rgba(0,0,0,.9);
+    
+    cursor: pointer;
+    transition: all .1s linear;
+  }
+  
+    .card a {
+      text-decoration: none;
+    }
+  
+    .card .image {
+      height: 100px;
+      padding: 2px;
+      overflow: hidden;
+    }
+  
+      .card .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(.5);
+      }
+  
+    .card .title {
+      margin: 0;
+      padding: 10px 10px 5px 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+    }
+  
+    .card .content {
+      padding: 0 10px 5px 10px;
+      transition: color .1s linear;
+    }
+  
+      .card .content p {
+        margin: 7px 0;
+        font-size: 14px;
+        opacity: .8;
+      }
+  
+      .card .content .price {
+        position: absolute;
+        bottom: 8px;
+      }
+  
+        .card .content .price .new-price {
+          font-weight: bold;
+        }
+  
+        .card .content .price .original-price {
+          margin-left: 5px;
+          font-size: 14px;
+          font-style: italic;
+          opacity: .5;
+          text-decoration: line-through;
+        }
+  
+    /* Hover state = add box shadow, underline the title */
+    .card:hover {
+      border-color: rgba(0,0,0,.4);
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    }
+  
+      .card:hover .image img,
+      .card:focus .image img {
+        filter: grayscale(0);
+      }
+  
+      .card:hover .title {
+        text-decoration: underline;
+      }
+  
+      .card a:focus {
+        outline: none;
+      }
+  
+    /* Focus state = turn text blue, add large blue outline */
+    /* NOTE: :focus-within is not supported in IE11 or Edge as of Jan 2020. To add support, use a polyfill such as https://github.com/matteobad/focus-within-polyfill */
+    .card:focus-within {
+      border-color: hsl(204, 86%, 53%);
+      box-shadow: 0 0 0 2px hsl(204, 86%, 53%);
+    }
+  
+      .card:focus-within .title,
+      .card:focus-within .content {
+        color: hsl(217, 71%, 53%);
+      }
+  
+      .card:focus-within .title {
+        text-decoration: underline;
+      }
+  
+  
+  /**
+    Utilities
+  */
+  .is-hidden {
+    display: none;
+  }
+  
+  /** Credits at bottom */
+  .credits {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    opacity: .7;
+  }
+  
+    .credits img {
+      height: 30px;
+      margin-left: 5px;
+      margin-top: -2px;
+      vertical-align: middle;
+    }
+  
+    .credits:hover,
+    .credits:focus {
+      opacity: 1;
+    }
+</style>
+
+<script>
+    var $carousel;
+var cardsContainer, cards;
+var previousButton, nextButton;
+
+// CSS variables with tile sizing parameters defined at :root
+var cardWidth, cardMargin
+var leftMostCardIndex = 0;
+
+window.addEventListener('DOMContentLoaded', function(e) {
+  cardWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-width'));
+  cardMargin = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-margin'));
+  
+  cardsContainer = document.querySelector('.carousel .cards');
+  previousButton = document.querySelector('.carousel .previous-button');
+  nextButton = document.querySelector('.carousel .next-button');
+
+  /**
+    Initialize Flickity with the recommend configuration options
+  */
+  $carousel = $('.carousel .cards').flickity({
+    // Default previous/next buttons are placed after the slides, so they are hard to find. They can't be moved using config options, so we'll create custom controls.
+    prevNextButtons: false,
+
+    // Disable keyboard navigation. Using the Left and Right arrow keys for navigation is not a problem, but this also makes the entire slide track focusable, which is awkward for keyboard-based users.
+    accessibility: false,
+    
+    // Never use wrap-around with multiple visible slides. DOM order will not match visual appearance due to absolute positioning of slides.
+    wrapAround: false,
+    
+    pageDots: false,
+    cellAlign: 'left',
+    
+    on: {
+      ready: handleReady,
+      settle: handleSettle
+    }
+  });
+  
+  // Go to the previous slide when the Previous button is activated
+  previousButton.addEventListener('click', function(e) {
+    $carousel.flickity('previous', true);
+  });
+  
+  // Go to the next slide when the Next button is activated
+  nextButton.addEventListener('click', function(e) {
+    $carousel.flickity('next', true);
+  });
+});
+
+
+/**
+  When Flickity is initialized, tweak the focusable track, fully hide all non-visible slides, and set up click handlers on all cards to make them act like big links.
+*/
+function handleReady() {
+  // Retrieve references to the most up-to-date elements
+  cards = document.querySelectorAll('.carousel .cards .card');
+  
+  // Add instructive ARIA label to the focusable track
+  cardsContainer.setAttribute('aria-label', 'Track of cards. Use arrow keys to navigate.');
+  
+  // Ensure that all the non-visible slides are fully hidden
+  hideNonVisibleCards();
+  
+  // Navigate to a card's intended URL when the card is activated
+  cards.forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      window.open(
+        card.querySelector('a').getAttribute('href'),
+        '_blank'
+      );
+    });
+  });
+}
+
+/**
+  After a transition is complete, make sure all non-visible slides are fully hidden
+*/
+function handleSettle(index) {
+  leftMostCardIndex = index;
+  
+  // Ensure that all the non-visible slides are fully hidden
+  hideNonVisibleCards();
+}
+
+
+/**
+  Fully hide non-visible slides for all users when they exit the view.
+*/
+function hideNonVisibleCards() {
+  // Hide all tiles from screen reader and keyboard users
+  cards.forEach(function(card) {
+    card.querySelectorAll('a').forEach(function(focusableElement) {
+      focusableElement.setAttribute('aria-hidden', true);
+      focusableElement.setAttribute('tabindex', -1);  
+    });
+  });
+
+  // Figure out how many slides are visible (or partially visible)
+  var containerWidth = $(cardsContainer).width();
+  
+  // How many tiles can fit into this container (including partially visible ones)?
+  // NOTE: this method assumes a constant slide width. Update as needed if you want to support variable slide width.
+  var numVisibleCards = Math.ceil(containerWidth / (cardWidth + cardMargin));
+  
+  // Make just the desired number of tiles available for screen reader and keyboard users  
+  for(var i = leftMostCardIndex; i < leftMostCardIndex + numVisibleCards; i++) {
+    if(i < cards.length) {
+      cards[i].querySelectorAll('a').forEach(function(focusableElement) {
+        focusableElement.removeAttribute('aria-hidden');
+        focusableElement.removeAttribute('tabindex');
+      });
+    }
+  }
+}
+</script>
+<body>
+    <section class="carousel" aria-label="carousel with cards">
+        <p class="sr-only">This is a carousel with product cards. Use the previous and next buttons to navigate.</p>
+      
+        <!-- Previous button -->
+        <button class="button is-control previous-button">
+          <span class="fas fa-angle-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous cards</span>
+        </button>
+      
+        <!-- Slide content -->
+        <div class="cards">
+          <div class="card" role="group" aria-label="card 1 of 5">
+            <a href="https://accessible360.com" target="_blank">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/galina-n-300x300.jpg" class="product-image" alt="">
+              </div>
+              <h2 class="title">First product</h2>
+            </a>
+      
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="price">
+                <!-- add "now"? -->
+                <span class="new-price">$9.99</span>
+                <span class="original-price">
+                  <span class="sr-only">Originally:</span>
+                  $100.00
+                </span>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card" role="group" aria-label="card 2 of 5">
+            <a href="https://accessible360.com" target="_blank">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/curology-300x300.jpg" class="product-image" alt="">
+              </div>
+              <h2 class="title">Second product</h2>
+            </a>
+      
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="price">
+                <span class="new-price">$9.99</span>
+                <span class="original-price">
+                  <span class="sr-only">Originally:</span>
+                  $100.00
+                </span>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card" role="group" aria-label="card 3 of 5">
+            <a href="https://accessible360.com" target="_blank">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/imani-clovis-300x300.jpg" class="product-image" alt="">
+              </div>
+              <h2 class="title">Third product</h2>
+            </a>
+      
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="price">
+                <span class="new-price">$9.99</span>
+                <span class="original-price">
+                  <span class="sr-only">Originally:</span>
+                  $100.00
+                </span>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card" role="group" aria-label="card 4 of 5">
+            <a href="https://accessible360.com" target="_blank">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/rachit-tank-300x300.jpg" class="product-image" alt="">
+              </div>
+              <h2 class="title">Fourth product</h2>
+            </a>
+      
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="price">
+                <span class="new-price">$9.99</span>
+                <span class="original-price">
+                  <span class="sr-only">Originally:</span>
+                  $100.00
+                </span>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card" role="group" aria-label="card 5 of 5">
+            <a href="https://accessible360.com" target="_blank">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/deanna-alys-300x300.jpg" class="product-image" alt="">
+              </div>
+              <h2 class="title">Fifth product</h2>
+            </a>
+      
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="price">
+                <span class="new-price">$9.99</span>
+                <span class="original-price">
+                  <span class="sr-only">Originally:</span>
+                  $100.00
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Next button -->
+        <button class="button is-control next-button">
+          <span class="fas fa-angle-right" aria-hidden="true"></span>
+          <span class="sr-only">Next cards</span>
+        </button>
+      </section>
+      
+      <a href="https://accessible360.com" class="credits" target="_blank">
+        Built by <b><u>Accessible360</u></b> <img src="https://assets.codepen.io/3609497/accessible360-logo-black.png" alt="">
+      </a>
+</body>
+
+
+
+</html> 
+

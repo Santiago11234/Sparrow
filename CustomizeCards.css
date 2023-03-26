@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Istok Web", sans-serif;
+}
+
+.money-amount {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  
+}
+
+.money-amount i {
+  margin-right: 5px;
+  color:white;
+}
+
+
+
+.card {
+  position: relative;
+  width: 180px;
+  height: 270px;
+  background: #C0C0C0;
+  border-radius: 20px;
+  overflow:show;
+  margin-top: 10px;
+  margin-right: 10px;
+ 
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+
+}
+
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top:-60px;
+  z-index: 1;
+}
+
+.card .imgBox img {
+    max-width: 100%;
+    max-height: 50%;
+    transition: .5s;
+}
+
+
+.card .contentBox {
+  position: relative;
+  padding: 5px;
+  top:-150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 20px;
+}
+
+
+.card .contentBox .buy {
+  position: relative;
+  opacity: 1;
+  padding: 10px 30px;
+  margin-top: 20px;
+  color: #000000;
+  text-decoration: none;
+  background: #ffce00;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-size: 12px;
+}
+.card .contentBox .buy:hover {
+    background: #947807;
+  
+}
+
+
+.object {
+  height: 300px;
+  width: auto;
+}
+
+.customization-zone {
+    width: 95%;
+    height: 100%;
+    background: #C0C0C0;
+    border-radius: 20px;
+    overflow:hidden;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+     
+}
