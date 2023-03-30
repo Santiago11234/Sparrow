@@ -136,7 +136,7 @@
     const db = getDatabase();
 
     function InsertData(){
-        set(ref(db, ""+document.getElementById('username').value), {Name: document.getElementById('username').value, Email: document.getElementById('email').value, Password: document.getElementById('password').value, Branch1: true, Branch2: false, Branch3: false, Branch4: false, Branch5: false})
+        set(ref(db, ""+document.getElementById('username').value), {Name: document.getElementById('username').value, Email: document.getElementById('email').value, Password: document.getElementById('password').value, Branch1: true, Branch2: false, Branch3: false, Branch4: false, Branch5: false, Money: 200, headempty: 2, clown: 0, bowtie: 0, party: 0, eyesempty: 2, glasses: 0, scuba: 0, shades: 0})
         .then((userCredential) => {
           window.location.href = "LogIn.html";
             // Signed up
