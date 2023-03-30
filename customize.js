@@ -282,7 +282,7 @@ return user;
       }else if(parseInt(localStorage.getItem('headempty'))==2&& c!='headempty.png'){
         setDefaultHat(1);
       }
-    }else{
+    }else if(cat == 'eyes'){
       if(parseInt(localStorage.getItem('eyesempty'))==2 && c!='eyesempty.png'){
         setDefaultFace(1);
       }else if(parseInt(localStorage.getItem('scuba'))==2&& c!='scuba.png'){
@@ -452,7 +452,7 @@ return user;
       if (btn.innerHTML == 'Equip') {
         changeComponent('eyes', 'scuba.png')
       } else {
-        buyComponent('scuba', 'head', 'scuba.png', 25)
+        buyComponent('scuba', 'eyes', 'scuba.png', 25)
       }
 
     })
