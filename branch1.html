@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="Assets/logo.png">
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 1</title>
-  <link rel="stylesheet" href="branch1.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-
-  <!-- Font Awesome -->
+      <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Bootstrap -->
@@ -36,15 +34,19 @@
 
   <!-- MDBootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+  rel="stylesheet"
+/>
   <!-- Raleway Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
   <!--Hammersmith One Font-->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="hompage.css" >
   <style>
     #anim {
       max-width: 30%;
@@ -103,14 +105,15 @@
 
 
 
+<div id="alert"></div>
 <header>
   <div class="header">  
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top ">
 
-        <a class="navbar-brand me-2" href="HomePage.html">
+        <a class="navbar-brand me-4 ml-4" href="HomePage.html">
             <i class="fa-solid fa-home"></i>
         </a>
-        <a class="navbar-brand me-2" href="SignUp.html">
+        <a class="navbar-brand me-4" href="SignUp.html">
             <i class="fa-solid fa-crow"></i>
         </a>
         <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
@@ -118,23 +121,37 @@
                 <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
             </a>
         </div>
+        <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+          <a style="text-decoration: none" class="pt-0" href="Customize.html">
+              <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">Customize</button>
+          </a>
+      </div>
 
-        <a class="navbar-brand me-2" href="SignUp.html">
+        <a class="navbar-brand me-4" href="settings.html">
             <i class="fa-solid fa-gear"></i>
         </a>
-        <a class="navbar-brand me-2" href="SignUp.html">
-            <i class="fa-solid fa-sign-out"></i>
-        </a>
+
+        <div class="dropdown " style="margin-right:1%">
+          <a
+            class="dropdown-toggle hidden-arrow"
+            type="button"
+            id="dropdownMenuicon"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-sign-out" style="color:white; height:100%; width:100%;"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon">
+            <li><a class="dropdown-item" href="index.html"> <i class="fas fa-sign-out"></i> Are You Sure?</a></li>
+          </ul>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
-
-
         
      
     </nav>
   </div>
-
 </header>
 
 

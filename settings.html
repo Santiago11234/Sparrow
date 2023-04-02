@@ -119,7 +119,8 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
   document.getElementById('username').value=data ; 
   var pass = localStorage.getItem("password");
   document.getElementById('pass').value = pass;
-  document.getElementById('email').value = data + '@gmail.com';
+  var email = localStorage.getItem("email");
+  document.getElementById('email').value = email;
 
 </script>
 <script>

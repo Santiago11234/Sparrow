@@ -61,6 +61,8 @@ function FindData() {
           document.getElementById('login').innerHTML = '<p>We\'re happy to see you again,</p><h1>' + username.value + '</h1> <a href="HomePage.html" class="start">Let\'s Code</a>';
           user = username.value;
           localStorage.setItem("person", user);
+          localStorage.setItem("email", snapshot.val().Email);
+          localStorage.setItem("password", snapshot.val().Password);
           localStorage.setItem('clown', snapshot.val().clown);
           localStorage.setItem('bowtie', snapshot.val().bowtie);
           localStorage.setItem('headempty', snapshot.val().headempty);
