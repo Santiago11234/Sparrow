@@ -105,99 +105,101 @@
     </nav>
   </div>
 </header>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+></script>
+<script type = 'module'>
   
+  var data = localStorage.getItem("person");
+  document.getElementById('username').value=data ; 
+  var pass = localStorage.getItem("password");
+  document.getElementById('pass').value = pass;
+  document.getElementById('email').value = data + '@gmail.com';
+
+</script>
+<script>
+  function change_text(text){
+    document.getElementById('language').innerHTML = text + "<i class='fa fa-arrow-down'></i>";
+  }
+  
+</script>
 <body>
-    
     <div class="container">
+
         <div class="leftbox">
             <nav class="settings">
               <a onclick="tabs(0)" class="tab active">
                   <i class="fa fa-user"></i>
               </a>
               <a onclick="tabs(1)" class="tab">
-                <i class="fa fa-credit-card"></i>
+                <i class="fa fa-id-card-o"></i>
               </a>
+              
               <a onclick="tabs(2)" class="tab">
-                <i class="fa fa-tv"></i>
-              </a>
-              <a onclick="tabs(3)" class="tab">
                 <i class="fa fa-tasks"></i>
               </a>
-              <a onclick="tabs(4)" class="tab">
+              <a onclick="tabs(3)" class="tab">
                 <i class="fa fa-cog"></i>
               </a>
             </nav>
         </div>
         <div class="rightbox">
+          
           <div class="profile tabShow">
-            <h1>Personal Info</h1>
+            <h1>Profile Info</h1>
              <h2>Username</h2>
-            <input type="text" class="input" value = "JavaSparrow">
+            <input type="text" class="input" id='username'>
             <h2>Birthday</h2>
             <input type="text" class="input" value = "April 20, 2000">
-            <h2>Gender</h2>
-            <input type="text" class="input" value = "Female">
-             <h2>Email</h2>
-            <input type="text" class="input" value = "janedoe@gmail.com">
-             <h2>Password</h2>
-            <input type="password" class="input" value = "bleh">
+             <h2>First Name</h2>
+            <input type="text" class="input" value = "Jane">
+            <h2>Last Name</h2>
+            <input type="text" class = "input" value = "Doe">
             <button class="bttn">Update</button>
           </div>
           <div class="payment tabShow">
-            <h1>Payment Info</h1>
-             <h2>Payment Method</h2>
-            <input type="text" class="input" value = "MasterCard">
-            <h2>Billing Address</h2>
-            <input type="text" class="input" value = "1234 urmom lane">
-            <h2>ZipCode</h2>
-            <input type="text" class="input" value = "732849">
-             <h2>Billing Date</h2>
-            <input type="text" class="input" value = "jan 20, 2017">
-             <h2>Redeem Card</h2>
-            <input type="password" class="input" value = "Enter Gift Code">
-            <button class="bttn">Update</button>
-          </div>
-          <div class="subscription tabShow">
-            <h1>Subscription Info</h1>
-             <h2>Payment Date</h2>
-             <p>May 12, 2019 </p>
-            <h2>Next Charge</h2>
-            <p>$80.56 <span>includes tax</span></p>
-            <h2>Plan</h2>
-            <p>Limited Plane</p>             
-            <h2>Monthly</h2>
-            <p>$107.00/month</p>
-            
+            <h1>Personal Info</h1>
+             <h2>Parent Email</h2>
+            <input type="text" class="input" id="email" value="hi">
+            <h2>Password</h2>
+            <input type="password" class="input" id="pass">
             <button class="bttn">Update</button>
           </div>
           <div class="privacy tabShow">
-            <h1>Privacy Settings</h1>
-             <h2>Manage Email Notifs</h2>
+            <h1>Utility</h1>
+             <h2>Language</h2>
+             <div class="dropdown">
+              <button class="dropbtn" type="button" id="language">English<i class="fa fa-arrow-down"></i></button>
+
+              <div class="dropdown-content">
+                <a href="#" onclick="change_text('English')">English</a>
+                <a href="#" onclick="change_text('Español')">Español</a>
+                <a href="#" onclick="change_text('中文')">中文</a>
+              </div>
+            </div>
              <p> </p>
-            <h2>Manage Privacy Settings</h2>
+             
+            <h2>Unlock All Levels<input type="checkbox" class="check"/>
+              <p></p>
+              <h2>Customization<input type="checkbox" checked class="check"/>
+              
+            </h2>
+            
             <p></p>
-            <h2>View Terms of Use</h2>
-            <p>Limited Plan</p>             
-            <h2>Personalized Ad Experience</h2>
-            <p></p><h2>Protect Account</h2>
-            <p></p>
+            
             
             <button class="bttn">Update</button>
           </div>
           <div class="settings tabShow">
             <h1>Account Settings</h1>
-             <h2>Sync watchlist</h2>
-             <p> </p>
-            <h2>Hold Subscription</h2>
-            <p></p>
-            <h2>Cancel Subscription</h2>
-            <p>Limited Plane</p>             
-            <h2>Your Devices</h2>
-            <p></p>
-            <h2>Referrals</h2>
-            <p></p>
+            <button class="reset">Reset Progress</button><br>
+            <button class="delete">Delete Account</button>
             
-            <button class="bttn">Update</button>
           </div>
 
         </div>
