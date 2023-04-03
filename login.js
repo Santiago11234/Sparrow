@@ -47,7 +47,7 @@ function InsertData() {
       // ...
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function FindData() {
@@ -81,7 +81,7 @@ function FindData() {
       }
     })
     .catch((error) => {
-      alert(error)
+      //alert(error)
     })
 
 }

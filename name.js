@@ -25,7 +25,7 @@ function UpdateData() {
       // ...
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function StartMoney() {
@@ -41,7 +41,7 @@ function StartMoney() {
       }
     })
     .catch((error) => {
-      alert(error)
+      //alert(error)
     })
 
 }

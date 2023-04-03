@@ -28,7 +28,7 @@ function setDefaultHat(value) {
       localStorage.setItem('headempty', value);
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function setClown(value) {
@@ -37,7 +37,7 @@ function setClown(value) {
       localStorage.setItem('clown', value);
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function setBowtie(value) {
@@ -46,7 +46,7 @@ function setBowtie(value) {
       localStorage.setItem('bowtie', value);
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function setParty(value) {
@@ -55,7 +55,7 @@ function setParty(value) {
       localStorage.setItem('party', value);
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 //facial accesories
@@ -65,7 +65,7 @@ function setDefaultFace(value) {
       localStorage.setItem('eyesempty', value);
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function setScuba(value) {
@@ -74,7 +74,7 @@ function setScuba(value) {
       localStorage.setItem('scuba', value);
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function setGlasses(value) {
@@ -83,7 +83,7 @@ function setGlasses(value) {
       localStorage.setItem('glasses', value);
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function setShades(value) {
@@ -92,7 +92,7 @@ function setShades(value) {
       localStorage.setItem('shades', value);
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function UpdateData() {
@@ -101,7 +101,7 @@ function UpdateData() {
       // ...
     })
     .catch((error) => {
-      alert(error);
+      //alert(error);
     });
 }
 function StartMoney() {
@@ -185,7 +185,7 @@ function StartMoney() {
       }
     })
     .catch((error) => {
-      alert(error)
+      //alert(error)
     })
 
 }

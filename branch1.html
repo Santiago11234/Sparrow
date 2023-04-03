@@ -161,10 +161,11 @@
 
 
 <html>
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'VariablesHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 14%; margin-top:6%; margin-bottom: -10%;">back</button>
-<body class="back" onload="typeWriter(0, 0)">
-
-  <div class="container">
+  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'VariablesHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 8%; margin-top:2%; margin-bottom: -5%;">back</button>
+<body class="back" onLoad="alert('hello world!')">
+  
+  <!-- onload="typeWriter(0, 0)" -->
+  <div class="container" >
 
     <div class="swiper-button-prev" onclick="decrease()"></div>
     <div class="swiper-button-next" onclick="increase()"></div>
@@ -324,7 +325,7 @@
           // ...
       })
       .catch((error) => {
-          alert(error);
+          // alert(error);
       });
     }
     </script>
