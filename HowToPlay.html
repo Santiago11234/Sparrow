@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="aboutMe.css" >
     <link rel="stylesheet" href="style.css" >
     <style>
-      #anim{max-width: 30%;margin: 0 auto; margin-top: -3%;}
+      #anim{max-width: 30%;margin: 0 auto; margin-top: -10%;}
   </style>
   </head>
 </html>
@@ -114,13 +114,18 @@
             <img src="Assets/logo.png" class = "pic2"> 
                    <p>  Our mission is to encourage exposure to computer science in not only an engaging but educational way for young children. Through "Sparrow", students are able to learn hands-on beginner programming with curated lessons and puzzles to create code and solve challenges.
                    </p>
-                   <video width =  "340" height = "200" controls>
-                    <source src = "Assets/Sparrow how to play.mp4" type = "video/mp4">
-                </video>
-                   <div id="anim"></div>
-                   <script src="Animationz/lottie.js"></script>
-                   <script src="Animationz/script.js"></script>
+                   <div id="vidandanimation">
+                    <video width =  "340" height = "200" controls style="display: inline-block;">
+                      <source src = "Assets/Sparrow how to play.mp4" type = "video/mp4">
+                        
+                   </video>
+                   <div id="anim"  style="display: inline-block; transform: translateY(-25%);"
+                   ></div>
+                     <script src="Animationz/lottie.js"></script>
+                    </div>
                   </div>
+                   
+                  
                   
     </div>
     <div class="col-6 col-md-4">
@@ -144,6 +149,7 @@
   </div>
 </div>
    
+    <script type = 'module' src="customize.js"></script>
 
 </body>
 
