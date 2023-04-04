@@ -1,12 +1,8 @@
-
 let money = 0;
-//finished();
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase, set, get, update, remove, ref, child } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyD-F4Lqjy9TjFxYmCmQpm4HSb74GSPE41I",
   authDomain: "newtest-561c2.firebaseapp.com",
@@ -17,11 +13,9 @@ const firebaseConfig = {
   appId: "1:841219402391:web:6d04ab18255508fcb217d2"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-import { getDatabase, set, get, update, remove, ref, child }
-  from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 const db = getDatabase();
+
 function setDefaultHat(value) {
   update(ref(db, "" + localStorage.getItem('person')), {headempty: value})
     .then((userCredential) => {
@@ -31,6 +25,7 @@ function setDefaultHat(value) {
       //alert(error);
     });
 }
+
 function setClown(value) {
   update(ref(db, "" + localStorage.getItem('person')), {clown: value})
     .then((userCredential) => {
@@ -40,6 +35,7 @@ function setClown(value) {
       //alert(error);
     });
 }
+
 function setBowtie(value) {
   update(ref(db, "" + localStorage.getItem('person')), {bowtie: value})
     .then((userCredential) => {
@@ -49,6 +45,7 @@ function setBowtie(value) {
       //alert(error);
     });
 }
+
 function setParty(value) {
   update(ref(db, "" + localStorage.getItem('person')), {party: value})
     .then((userCredential) => {
@@ -58,7 +55,7 @@ function setParty(value) {
       //alert(error);
     });
 }
-//facial accesories
+
 function setDefaultFace(value) {
   update(ref(db, "" + localStorage.getItem('person')), {eyesempty: value})
     .then((userCredential) => {
@@ -68,6 +65,7 @@ function setDefaultFace(value) {
       //alert(error);
     });
 }
+
 function setScuba(value) {
   update(ref(db, "" + localStorage.getItem('person')), {scuba: value})
     .then((userCredential) => {
@@ -77,6 +75,7 @@ function setScuba(value) {
       //alert(error);
     });
 }
+
 function setGlasses(value) {
   update(ref(db, "" + localStorage.getItem('person')), {glasses: value})
     .then((userCredential) => {
@@ -270,7 +269,10 @@ return user;
       autoplay: true,
       animationData: jsonData
     });
+
   }
+
+
   function unequip(c, cat){
     if(cat == 'head'){
       if(parseInt(localStorage.getItem('clown'))==2 && c!='clown.png'){
@@ -350,7 +352,28 @@ return user;
   }
 
   function changeComponents(list) {
-    fetch('Animationz/birdtalk.json')
+
+    
+    if (window.location.href.indexOf("HomePage.html") !== -1) { 
+      fetch('Animationz/wave.json')
+      .then(response => response.json())
+      .then(data => {
+        let myObject = data;
+        for (let i = 0; i < list.length; i++) {
+          const componentId = list[i].id;
+          const newImage = list[i].p; // fix here
+          for (let j = 10; j < myObject.assets.length; j++) {
+            if (myObject.assets[j].id === componentId) {
+              myObject.assets[j].p = `${newImage}`;
+              break;
+            }
+          }
+        }
+        loadAnimation(myObject);
+      });
+    }
+    else {
+      fetch('Animationz/birdtalk.json')
       .then(response => response.json())
       .then(data => {
         let myObject = data;
@@ -366,12 +389,27 @@ return user;
         }
         loadAnimation(myObject);
       });
+    }
+  
+
+
   }
 
 
 
   window.onload = function () {
-    fetch('Animationz/birdtalk.json')
+
+    if (window.location.href.indexOf("HomePage.html") !== -1) {
+      fetch('Animationz/wave.json')
+      .then(response => response.json())
+      .then(data => {
+        loadAnimation(data);
+      });
+    updateMoney();
+    }
+
+    else {
+      fetch('Animationz/birdtalk.json')
       .then(response => response.json())
       .then(data => {
         
@@ -379,92 +417,97 @@ return user;
         
       });
     updateMoney();
+    }
+    
   }
 
+  if (window.location.href.indexOf("Customize.html") !== -1)  {
 
-  document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('headempty')
-    btn.addEventListener('click', function (evt) {
-      if (btn.innerHTML == 'Equip') {
-        changeComponent('head', 'headempty.png')
-      } else {
-        buyComponent('headempty', 'head', 'headempty.png', 0)
-      }
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('headempty')
+      btn.addEventListener('click', function (evt) {
+        if (btn.innerHTML == 'Equip') {
+          changeComponent('head', 'headempty.png')
+        } else {
+          buyComponent('headempty', 'head', 'headempty.png', 0)
+        }
+      })
     })
-  })
-  document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('clown')
-    btn.addEventListener('click', function (evt) {
-      if (btn.innerHTML == 'Equip') {
-        changeComponent('head', 'clown.png')
-      } else {
-        buyComponent('clown', 'head', 'clown.png', 25)
-      }
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('clown')
+      btn.addEventListener('click', function (evt) {
+        if (btn.innerHTML == 'Equip') {
+          changeComponent('head', 'clown.png')
+        } else {
+          buyComponent('clown', 'head', 'clown.png', 25)
+        }
+  
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('bowtie')
+      btn.addEventListener('click', function (evt) {
+        if (btn.innerHTML == 'Equip') {
+          changeComponent('head', 'bowtie.png')
+        } else {
+          buyComponent('bowtie', 'head', 'bowtie.png', 15)
+        }
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('party')
+      btn.addEventListener('click', function (evt) {
+        if (btn.innerHTML == 'Equip') {
+          changeComponent('head', 'party.png')
+        } else {
+          buyComponent('party', 'head', 'party.png', 15)
+        }
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('eyesempty')
+      btn.addEventListener('click', function (evt) {
+        if (btn.innerHTML == 'Equip') {
+          changeComponent('eyes', 'eyesempty.png')
+        } else {
+          buyComponent('eyesempty', 'eyes', 'eyesempty.png', 0)
+        }
+  
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('glasses')
+      btn.addEventListener('click', function (evt) {
+        if (btn.innerHTML == 'Equip') {
+          changeComponent('eyes', 'glasses.png')
+        } else {
+          buyComponent('glasses', 'eyes', 'glasses.png', 15)
+        }
+  
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('scuba')
+      btn.addEventListener('click', function (evt) {
+        if (btn.innerHTML == 'Equip') {
+          changeComponent('eyes', 'scuba.png')
+        } else {
+          buyComponent('scuba', 'eyes', 'scuba.png', 25)
+        }
+  
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('shades')
+      btn.addEventListener('click', function (evt) {
+        if (btn.innerHTML == 'Equip') {
+          changeComponent('eyes', 'shades.png')
+        } else {
+          buyComponent('shades', 'eyes', 'shades.png', 30)
+        }
+  
+      })
+    })
+  }
 
-    })
-  })
-  document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('bowtie')
-    btn.addEventListener('click', function (evt) {
-      if (btn.innerHTML == 'Equip') {
-        changeComponent('head', 'bowtie.png')
-      } else {
-        buyComponent('bowtie', 'head', 'bowtie.png', 15)
-      }
-    })
-  })
-  document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('party')
-    btn.addEventListener('click', function (evt) {
-      if (btn.innerHTML == 'Equip') {
-        changeComponent('head', 'party.png')
-      } else {
-        buyComponent('party', 'head', 'party.png', 15)
-      }
-    })
-  })
-  document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('eyesempty')
-    btn.addEventListener('click', function (evt) {
-      if (btn.innerHTML == 'Equip') {
-        changeComponent('eyes', 'eyesempty.png')
-      } else {
-        buyComponent('eyesempty', 'eyes', 'eyesempty.png', 0)
-      }
-
-    })
-  })
-  document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('glasses')
-    btn.addEventListener('click', function (evt) {
-      if (btn.innerHTML == 'Equip') {
-        changeComponent('eyes', 'glasses.png')
-      } else {
-        buyComponent('glasses', 'eyes', 'glasses.png', 15)
-      }
-
-    })
-  })
-  document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('scuba')
-    btn.addEventListener('click', function (evt) {
-      if (btn.innerHTML == 'Equip') {
-        changeComponent('eyes', 'scuba.png')
-      } else {
-        buyComponent('scuba', 'eyes', 'scuba.png', 25)
-      }
-
-    })
-  })
-  document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('shades')
-    btn.addEventListener('click', function (evt) {
-      if (btn.innerHTML == 'Equip') {
-        changeComponent('eyes', 'shades.png')
-      } else {
-        buyComponent('shades', 'eyes', 'shades.png', 30)
-      }
-
-    })
-  })
 
