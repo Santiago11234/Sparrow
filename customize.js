@@ -350,7 +350,6 @@ return user;
   }
 
   function changeComponents(list) {
-
     fetch('Animationz/birdtalk.json')
       .then(response => response.json())
       .then(data => {
