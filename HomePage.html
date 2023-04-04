@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <link rel="icon" type="image/x-icon" href="Assets/logo.png">
-
+    <title>Home Page</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
@@ -65,22 +65,39 @@
             <i class="fa-solid fa-home"></i>
         </a>
         <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+          <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="AboutUs.html">
+              <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
+                <span  style="color: black" > About Us </span>
+              </button>
+          </a>
+          <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="Customize.html">
+            <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
+              <i class="fa-solid fa-crow" style="color: black"></i>
+              <span  style="color: black" > Customize </span>
+            </button>
+            <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="HowToPlay.html">
+              <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
+          </a>
+        </a>
+      </div>
+        <!-- <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
           <a style="text-decoration: none" class="pt-0" href="Customize.html">
               <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
                 <i class="fa-solid fa-crow" style="color: black"></i>
                 <span  style="color: black" > Customize </span>
               </button>
           </a>
-      </div>
-        <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+      </div> -->
+        <!-- <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
             <a style="text-decoration: none" class="pt-0" href="HowToPlay.html">
                 <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
             </a>
-        </div>
+        </div> -->
     
 
       <a class="navbar-brand me-4 style="color: white" >
-        <i class="fa-solid fa-seedling" style="color: white"></i>
+        <span id="username" style="text-decoration: none;float:left;margin-left:20px; color: white;">username</span>
+        <i class="fa-solid fa-seedling" style="text-decoration: none;float:left;margin-left:20px; color: white;"></i>
         <span  id="money" style="color: white" > , 200 </span>
     </a>
 
@@ -166,7 +183,10 @@
     
     var data = localStorage.getItem("person");
     document.getElementById('welcome').innerHTML = 'Welcome '+ data +'!';
-
+    document.getElementById('username').innerHTML = data;
+    var money = localStorage.getItem("money");
+    document.getElementById('money').innerHTML= money;
+    
 
      // Import the functions you need from the SDKs you need
      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
