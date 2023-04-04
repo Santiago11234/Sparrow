@@ -61,22 +61,33 @@ function drop(event) {
   }
 }
 
-function checkIfCorrect () {
-  for(var i = 0; i < arr.length; i++) {
-    if(!arr[i] || arr[i] == null) {
-      document.getElementById("term-text").innerText = 'wrong, try again';
-      
-      return;
+function checkIfCorrect() {
+  var droppables = document.querySelectorAll('.droppable');
+  var correctIds = ['helloWorld', 'outprint', 'wave']; // add the IDs of the correct droppable elements
+  var correctCount = 0;
+  for (var i = 0; i < droppables.length; i++) {
+    var droppable = droppables[i];
+    var draggableId = droppable.getAttribute('data-draggable-id');
+    if (correctIds.indexOf(draggableId) !== -1) {
+      // change the background color and text color of the droppable element
+      droppable.style.backgroundColor = 'rgb(211, 214, 211)';
+      droppable.querySelector('span').style.color = 'rgb(0, 0, 0)';
+      correctCount++;
     }
   }
-  let next = document.getElementById("next");
-  next.style.display = "inline";
-  let animation = document.getElementById("anim");
-  animation.style.display = "inline"
-  document.getElementById("anim").style.width = "200px";
-  document.getElementById("term-text").innerText = 'Good job!!';
-  //here
+  if (correctCount === correctIds.length) {
+    // show the modal and play the animation
+    $('#exampleModalCenter').modal('show');
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('anim'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Animationz/birdfly.json'
+    });
+  }
 }
+
 
 function hint() {
   let drop = document.getElementsByClassName("droppable");
@@ -84,13 +95,3 @@ function hint() {
 }
 
 
-
- // if(isCorrectMatching) {
-  //   const draggableElement = document.getElementById(draggableElementData);
-  //   event.target.classList.add("dropped");
-  //   // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
-  //   event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
-  //   draggableElement.classList.add("dragged");
-  //   draggableElement.setAttribute("draggable", "false");
-  //   event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
-  
