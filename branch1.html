@@ -166,13 +166,13 @@
 
 
 <html>
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'VariablesHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 8%; margin-top:2%; margin-bottom: -5%;">back</button>
-<body class="back" onLoad="alert('hello world!')">
+  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'VariablesHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 8%; margin-top:2%; margin-bottom: -2%;">back</button>
+<body class="back">
   
   <!-- onload="typeWriter(0, 0)" -->
   <div class="container" >
 
-    <div class="swiper-button-prev" onclick="decrease()"></div>
+    <div class="swiper-button-prev" onclick="decrease();"></div>
     <div class="swiper-button-next" onclick="increase()"></div>
     <!-- Slider main container -->
     <div class="swiper">
@@ -181,8 +181,7 @@
       <div class="swiper-wrapper">
 
         <!-- Slides -->
-
-        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
+        <div class="swiper-slide"><img src="Assets/background lesson.png" onload="typeWriter(0, 0)">
           <h1>Variables</h1>
           <div class="test">
             <img id="bucket" style = "width: 10%; transform: translateY(-80%); " src="Assets/bucket.PNG" />
@@ -200,8 +199,7 @@
             </button>
             
           </div>
-          <p1 class = "text"> Click the "data eggs" to put them  <br>into the variable bucket!
-         <br> Click the "data nest" to reset</p1>
+          
           <p id="slide0"></p>
         </div>
       
@@ -245,8 +243,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script >
      
-    const talk = ["Variables are a very important part of programming: they are used to assign a name to data, which you can reference elsewhere in the program. Variables are declared by giving it a name and a value using an equal sign “=”. Variables can be changed and reassigned to other values too!",
-    "Variables are a very important part of programming: they are used to assign a name to data, which you can reference elsewhere in the program. Variables are declared by giving it a name and a value using an equal sign “=”. Variables can be changed and reassigned to other values too!",
+    const talk = ["Variables are the most important part of programming because they help you store information. They can be used to name things that you want the computer to remember. Try placing the eggs into the variable bucket!",
+    "Let's learn how to make them! They are used to assign a name to data, which you can get elsewhere in the program. Variables are declared by giving a name and a value using an equal sign “=”. Variables can be changed and reassigned to other values too!",
      "How many data types do you know of? Data types are how computers classify information. They can include numbers, characters, words, or true/fase types! For example, if you have the number data type (8), the program will know that it can not be capitalized like a letter, but it can perform arithmetic (+, -, /, *) You can also combine variables if they’re the same type! All you have to do is add a plus sign (+) between your two variables! For example, Variable three = one + two",
       "A string is a very common data type. No, it is not the yarn string you may be thinking of. Think of a string of characters, a sequence of letters, spaces, numbers, or symbols, surrounded by double quotes. They are great for representing text and speech!",
        "Of course, we want our program to actually say what we want. We need input and output! We can take a user’s input and execute code with that input, then output what they need!"];
