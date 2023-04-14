@@ -1,110 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" type="image/x-icon" href="Assets/logo.png">
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Lesson 1</title>
-      <link rel="stylesheet" href="branch1.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-      <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+<head>
+  <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1</title>
+    <link rel="stylesheet" href="branch1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="icon" type="image/x-icon" href="Assets/logo.png">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-      <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- MDBootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-<!-- MDB -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
-  rel="stylesheet"
-/>
-  <!-- Raleway Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <!--Hammersmith One Font-->
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
+    <!-- MDBootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+    <!-- Raleway Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-    <link rel="stylesheet" href="style.css" >
-    <link rel="stylesheet" href="hompage.css" >
-  <style>
-    #anim {
-      max-width: 30%;
-      margin: 0 auto;
-      margin-top: -3%;
-    }
-  </style>
-  <script>
-    var count = 0;
-    function changeInt() {
-      var bucket = document.getElementById("bucket");
-      var intEgg = document.getElementById("IntEgg");    
+    <!--Hammersmith One Font-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hompage.css">
+    <style>
+      #anim {
+        max-width: 30%;
+        margin: 0 auto;
+        margin-top: -3%;
+      }
+    </style>
+    <script>
+      var count = 0;
+      function changeInt() {
+        var bucket = document.getElementById("bucket");
+        var intEgg = document.getElementById("IntEgg");
         if (intEgg.src.match("Assets/intEgg.PNG")) {
           bucket.src = "Assets/bucketWIntEgg.PNG"
           intEgg.src = "Assets/blank.PNG"
           return false
         }
-  }
-  function changeBool() {
+      }
+      function changeBool() {
 
-      var bucket = document.getElementById("bucket");
-      var BoolEgg = document.getElementById("BoolEgg");
+        var bucket = document.getElementById("bucket");
+        var BoolEgg = document.getElementById("BoolEgg");
         if (BoolEgg.src.match("Assets/BoolEgg.PNG")) {
-        bucket.src = "Assets/bucketWBool.PNG"
-        BoolEgg.src = "Assets/blank.PNG"
-        return false;
-         }
-  }
-  function reset() {
+          bucket.src = "Assets/bucketWBool.PNG"
+          BoolEgg.src = "Assets/blank.PNG"
+          return false;
+        }
+      }
+      function reset() {
 
-      var bucket = document.getElementById("bucket");
-      var BoolEgg = document.getElementById("BoolEgg");
-      var IntEgg = document.getElementById("IntEgg");
-      var StringEgg = document.getElementById("StringEgg");
+        var bucket = document.getElementById("bucket");
+        var BoolEgg = document.getElementById("BoolEgg");
+        var IntEgg = document.getElementById("IntEgg");
+        var StringEgg = document.getElementById("StringEgg");
         bucket.src = "Assets/bucket.PNG"
         BoolEgg.src = "Assets/BoolEgg.PNG"
         IntEgg.src = "Assets/intEgg.PNG"
         StringEgg.src = "Assets/StringEgg.PNG"
         return false;
-         
-  }
-  function changeString(){
-    var bucket = document.getElementById("bucket");
-    var StringEgg = document.getElementById("StringEgg");
-    if (StringEgg.src.match("Assets/StringEgg.PNG")) {
-        bucket.src = "Assets/bucketWString.PNG"
-        StringEgg.src = "Assets/blank.PNG"
-        return false;
-         }
-    
-  }
+
+      }
+      function changeString() {
+        var bucket = document.getElementById("bucket");
+        var StringEgg = document.getElementById("StringEgg");
+        if (StringEgg.src.match("Assets/StringEgg.PNG")) {
+          bucket.src = "Assets/bucketWString.PNG"
+          StringEgg.src = "Assets/blank.PNG"
+          return false;
+        }
+
+      }
     </script>
-</head>
+  </head>
 
 </html>
 
@@ -112,75 +108,72 @@
 
 <div id="alert"></div>
 <header>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
-></script>
-<script type = 'module'>
-    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+  <script type='module'>
+
     var data = localStorage.getItem("person");
     document.getElementById('username').innerHTML = data;
     var money = localStorage.getItem("money");
-    document.getElementById('money').innerHTML= money;
+    document.getElementById('money').innerHTML = money;
   </script>
-  <div class="header">  
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top" style="font-family: 'Roboto', sans-serif;">
+  <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top"
+      style="font-family: 'Roboto', sans-serif;">
 
-        <a class="navbar-brand me-4 ml-4" href="HomePage.html">
-            <i class="fa-solid fa-home"></i>
+      <a class="navbar-brand me-4 ml-4" href="HomePage.html">
+        <i class="fa-solid fa-home"></i>
+      </a>
+      <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+        <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="AboutUs.html">
+          <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
+            <span style="color: black"> About Us </span>
+          </button>
         </a>
-        <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
-          <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="AboutUs.html">
-              <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
-                <span  style="color: black" > About Us </span>
-              </button>
-          </a>
-          <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="Customize.html">
-            <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
-              <i class="fa-solid fa-crow" style="color:#74726B"></i>
-              <span  style="color: black" > Customize </span>
-            </button>
-            <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="HowToPlay.html">
-              <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
+        <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="Customize.html">
+          <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
+            <i class="fa-solid fa-crow" style="color:#74726B"></i>
+            <span style="color: black"> Customize </span>
+          </button>
+          <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="HowToPlay.html">
+            <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
           </a>
         </a>
       </div>
-       
-    
 
-      <a class="navbar-brand me-4 style="color: white" >
+
+
+      <a class="navbar-brand me-4 style=" color: white">
         <span id="username" style="text-decoration: none;float:left;margin-left:20px; color: white;">username</span>
         <i class="fa-solid fa-seedling" style="text-decoration: none;float:left;margin-left:20px; color: white;"></i>
-        <span  id="money" style="color: white" > , 200 </span>
-    </a>
+        <span id="money" style="color: white"> , 200 </span>
+      </a>
 
-        <a class="navbar-brand me-4" href="settings.html">
-            <i class="fa-solid fa-gear"></i>
+      <a class="navbar-brand me-4" href="settings.html">
+        <i class="fa-solid fa-gear"></i>
+      </a>
+
+      <div class="dropdown " style="margin-right:1%">
+        <a class="dropdown-toggle hidden-arrow" type="button" id="dropdownMenuicon" data-mdb-toggle="dropdown"
+          aria-expanded="false">
+          <i class="fa-solid fa-sign-out" style="color:white; height:100%; width:100%;"></i>
         </a>
-
-        <div class="dropdown " style="margin-right:1%">
-          <a
-            class="dropdown-toggle hidden-arrow"
-            type="button"
-            id="dropdownMenuicon"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fa-solid fa-sign-out" style="color:white; height:100%; width:100%;"></i>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon" style="position: relative; left: -125px;">
-            <li ><a class="dropdown-item" href="index.html"> <i class="fas fa-sign-out"></i> Are You Sure?</a></li>
-          </ul>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon" style="position: relative; left: -125px;">
+          <li><a class="dropdown-item" href="index.html"> <i class="fas fa-sign-out"></i> Are You Sure?</a></li>
+        </ul>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-        
-     
+
+
     </nav>
   </div>
 </header>
@@ -188,11 +181,14 @@
 
 
 <html>
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'VariablesHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 8%; margin-top:2%; margin-bottom: -2%;">back</button>
+<button type="button" class="how-to-play btn btn-outline-primary, rounded-pill"
+  onClick="window.location.href = 'VariablesHomePage.html'"
+  style=" max-height:40px; max-width: fit-content; margin-left: 8%; margin-top:2%; margin-bottom: -2%;">back</button>
+
 <body class="back">
-  
+
   <!-- onload="typeWriter(0, 0)" -->
-  <div class="container" >
+  <div class="container">
 
     <div class="swiper-button-prev" onclick="decrease();"></div>
     <div id="next" class="swiper-button-next" onclick="increase()"></div>
@@ -202,35 +198,53 @@
 
       <div class="swiper-wrapper">
 
+
         <!-- Slides -->
         <div class="swiper-slide"><img src="Assets/background lesson.png" onload="typeWriter(0, 0)">
           <h1>Variables</h1>
           <div class="test">
-            <img id="bucket" style = "width: 10%; transform: translateY(-80%); " src="Assets/bucket.PNG" />
-            <button id="egg" style = "border:0; transform: translateY(-100%); "  onclick="changeInt();">
+            <img id="bucket" style="width: 10%; transform: translateY(-80%); " src="Assets/bucket.PNG" />
+            <button id="egg" style="border:0; transform: translateY(-100%); " onclick="changeInt();">
               <img id="IntEgg" src="Assets/intEgg.PNG" />
-             </button>
-            <button id="egg" style = "border:0; width:15%; transform: translateY(-100%); " onclick="reset();">
+            </button>
+            <button id="egg" style="border:0; width:15%; transform: translateY(-100%); " onclick="reset();">
               <img id="nest" src="Assets/dataNest.PNG" />
             </button>
-            <button id="egg" style = "border:0; transform: translateY(-100%); " onclick="changeBool();">
+            <button id="egg" style="border:0; transform: translateY(-100%); " onclick="changeBool();">
               <img id="BoolEgg" src="Assets/BoolEgg.PNG" />
             </button>
-            <button id="egg" style = "border:0; transform: translate(-150%, -200%); " onclick="changeString();">
+            <button id="egg" style="border:0; transform: translate(-150%, -200%); " onclick="changeString();">
               <img id="StringEgg" src="Assets/StringEgg.PNG" />
             </button>
-            
+
           </div>
-          
+
+          <figure>
+            <figcaption>Play Audio Lesson:</figcaption>
+            <audio controls src="line1.mp3">
+              <a href="line1.mp3">
+                Download audio
+              </a>
+            </audio>
+          </figure>
           <p id="slide0"></p>
+
         </div>
-      
+
         <div class="swiper-slide" style="height: 60%"><img src="Assets/background lesson.png" alt="">
           <h1>What are variables?</h1>
 
           <div class="image">
             <img src="Assets/Variable.PNG">
           </div>
+          <figure>
+            <figcaption>Play Audio Lesson:</figcaption>
+            <audio controls src="line2.mp3">
+              <a href="line2.mp3">
+                Download audio
+              </a>
+            </audio>
+          </figure>
           <p id="slide1"></p>
         </div>
 
@@ -240,15 +254,31 @@
 
             <img src="Assets/Variable2.PNG">
           </div>
-            <p id="slide2"></p>
+          <figure>
+            <figcaption>Play Audio Lesson:</figcaption>
+            <audio controls src="line3.mp3">
+              <a href="line3.mp3">
+                Download audio
+              </a>
+            </audio>
+          </figure>
+          <p id="slide2"></p>
         </div>
-        
-        <div class="swiper-slide" ><img src="Assets/background lesson.png" alt="">
+
+        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
           <h1>Data Types - Strings</h1>
-       
+
           <div class="image2">
             <img src="Assets/Variables3.PNG">
           </div>
+          <figure>
+            <figcaption>Play Audio Lesson:</figcaption>
+            <audio controls src="line4.mp3">
+              <a href="line4.mp3">
+                Download audio
+              </a>
+            </audio>
+          </figure>
           <p id="slide3"></p>
         </div>
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
@@ -256,10 +286,18 @@
           <div class="image">
             <img src="Assets/Method2.PNG">
           </div>
-            <p id="slide4"></p>
+          <figure>
+            <figcaption>Play Audio Lesson:</figcaption>
+            <audio controls src="line5.mp3">
+              <a href="line5.mp3">
+                Download audio
+              </a>
+            </audio>
+          </figure>
+          <p id="slide4"></p>
         </div>
 
-      
+
         <!-- If we need pagination -->
 
         <!-- If we need navigation buttons -->
@@ -269,26 +307,26 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script >
-     
+  <script>
+
     const talk = ["Variables are the most important part of programming because they help you store information. They can be used to name things that you want the computer to remember. Try placing the eggs into the variable bucket!",
-    "Let's learn how to make them! They are used to assign a name to data, which you can get elsewhere in the program. Variables are declared by giving a name and a value using an equal sign “=”. Variables can be changed and reassigned to other values too!",
-     "How many data types do you know of? Data types are how computers classify information. They can include numbers, characters, words, or true/fase types! For example, if you have the number data type (8), the program will know that it can not be capitalized like a letter, but it can perform arithmetic (+, -, /, *) You can also combine variables if they’re the same type! All you have to do is add a plus sign (+) between your two variables! For example, Variable three = one + two",
+      "Let's learn how to make them! They are used to assign a name to data, which you can get elsewhere in the program. Variables are declared by giving a name and a value using an equal sign “=”. Variables can be changed and reassigned to other values too!",
+      "How many data types do you know of? Data types are how computers classify information. They can include numbers, characters, words, or true/fase types! For example, if you have the number data type (8), the program will know that it can not be capitalized like a letter, but it can perform arithmetic (+, -, /, *) You can also combine variables if they’re the same type! All you have to do is add a plus sign (+) between your two variables! For example, Variable three = one + two",
       "A string is a very common data type. No, it is not the yarn string you may be thinking of. Think of a string of characters, a sequence of letters, spaces, numbers, or symbols, surrounded by double quotes. They are great for representing text and speech!",
-       "Of course, we want our program to actually say what we want. We need input and output! We can take a user’s input and execute code with that input, then output what they need!"];
-       var slide = 0;
+      "Of course, we want our program to actually say what we want. We need input and output! We can take a user’s input and execute code with that input, then output what they need!"];
+    var slide = 0;
     var max = slide;
     function increase() {
       slide++;
-      localStorage.setItem("slide", ""+slide);
-      if(slide > max){
+      localStorage.setItem("slide", "" + slide);
+      if (slide > max) {
         max = slide;
-        typeWriter(slide, 0);        
+        typeWriter(slide, 0);
       }
       j = 0;
     }
 
-    function decrease(){
+    function decrease() {
       slide--;
     }
     var speed = 10;
@@ -303,7 +341,7 @@
       return false;
     }
 
-    
+
   </script>
   <script>const swiper = new Swiper('.swiper', {
       // Optional parameters
@@ -324,69 +362,69 @@
       // And if we need scrollbar
 
     });</script>
-    <div id="anim"></div>
-    <script src="Animationz/lottie.js"></script>
-    <script type = "module">
-      document.addEventListener('DOMContentLoaded', () => {
+  <div id="anim"></div>
+  <script src="Animationz/lottie.js"></script>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
       let btn = document.getElementById('next')
       btn.addEventListener('click', function (evt) {
         check();
       })
     })
-    function check(){
-      if(parseInt(localStorage.getItem("slide"))==3){
+    function check() {
+      if (parseInt(localStorage.getItem("slide")) == 3) {
         console.log(localStorage.getItem('money'));
         //addMoney();
       }
     }
-      // Import the functions you need from the SDKs you need
-     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-     // TODO: Add SDKs for Firebase products that you want to use
-     // https://firebase.google.com/docs/web/setup#available-libraries
-     
-     // Your web app's Firebase configuration
-     const firebaseConfig = {
-         apiKey: "AIzaSyD-F4Lqjy9TjFxYmCmQpm4HSb74GSPE41I",
-         authDomain: "newtest-561c2.firebaseapp.com",
-         databaseURL: "https://newtest-561c2-default-rtdb.firebaseio.com",
-         projectId: "newtest-561c2",
-         storageBucket: "newtest-561c2.appspot.com",
-         messagingSenderId: "841219402391",
-         appId: "1:841219402391:web:6d04ab18255508fcb217d2"
-     };
-     
-     // Initialize Firebase
-     const app = initializeApp(firebaseConfig);
-     import{getDatabase, set, get, update, remove, ref, child}
-     from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-     const db = getDatabase();
-     if(localStorage.getItem("Track")){
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyD-F4Lqjy9TjFxYmCmQpm4HSb74GSPE41I",
+      authDomain: "newtest-561c2.firebaseapp.com",
+      databaseURL: "https://newtest-561c2-default-rtdb.firebaseio.com",
+      projectId: "newtest-561c2",
+      storageBucket: "newtest-561c2.appspot.com",
+      messagingSenderId: "841219402391",
+      appId: "1:841219402391:web:6d04ab18255508fcb217d2"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    import { getDatabase, set, get, update, remove, ref, child }
+      from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+    const db = getDatabase();
+    if (localStorage.getItem("Track")) {
       updateData();
-     }
-     function addMoney(){
-      update(ref(db, ""+localStorage.getItem("person")), {Money: parseInt(localStorage.getItem("Money"))+20})
-      .then((userCredential) => {
-        localStorage.setItem("Money", parseInt(localStorage.getItem("Money"))+20)
-        console.log("update");
-          // Signed up
-          // ...
-      })
-      .catch((error) => {
-          // alert(error);
-      });
-     }
-      function updateData(){
-      update(ref(db, ""+localStorage.getItem("person")), {Branch2:true})
-      .then((userCredential) => {
-          // Signed up
-          // ...
-      })
-      .catch((error) => {
-          // alert(error);
-      });
     }
-    </script>
-    <script type = 'module' src="customize.js"></script>
+    function addMoney() {
+      update(ref(db, "" + localStorage.getItem("person")), { Money: parseInt(localStorage.getItem("Money")) + 20 })
+        .then((userCredential) => {
+          localStorage.setItem("Money", parseInt(localStorage.getItem("Money")) + 20)
+          console.log("update");
+          // Signed up
+          // ...
+        })
+        .catch((error) => {
+          // alert(error);
+        });
+    }
+    function updateData() {
+      update(ref(db, "" + localStorage.getItem("person")), { Branch2: true })
+        .then((userCredential) => {
+          // Signed up
+          // ...
+        })
+        .catch((error) => {
+          // alert(error);
+        });
+    }
+  </script>
+  <script type='module' src="customize.js"></script>
 
 </body>
 

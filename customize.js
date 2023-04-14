@@ -233,7 +233,7 @@ return user;
       "w": 1575,
       "h": 530,
       "u": "Animationz/Accessories/",
-      "p": "eyes.png",
+      "p": "eyesempty.png",
       "e": 0
     },
     {
@@ -268,6 +268,7 @@ return user;
     if (animation) {
       animation.destroy();
     }
+    console.log(jsonData);
     animation = bodymovin.loadAnimation({
       container: document.getElementById('anim'),
       rederer: 'svg',
@@ -371,6 +372,7 @@ return user;
           for (let j = 10; j < myObject.assets.length; j++) {
             if (myObject.assets[j].id === componentId) {
               myObject.assets[j].p = `${newImage}`;
+              //data.assets[j].p = `${newImage}`;
               break;
             }
           }
@@ -414,7 +416,7 @@ return user;
     updateMoney();
     }
 
-    else {
+    else if (window.location.href.indexOf("Customize.html") !== -1){
       fetch('Animationz/birdtalk.json')
       .then(response => response.json())
       .then(data => {
@@ -423,6 +425,8 @@ return user;
         
       });
     updateMoney();
+    }else{
+
     }
     
   }
@@ -474,7 +478,7 @@ return user;
       let btn = document.getElementById('eyesempty')
       btn.addEventListener('click', function (evt) {
         if (btn.innerHTML == 'Equip') {
-          changeComponent('eyes', 'eyesempty.png')
+          //changeComponent('eyes', 'eyesempty.png')
         } else {
           buyComponent('eyesempty', 'eyes', 'eyesempty.png', 0)
         }
@@ -512,6 +516,14 @@ return user;
           buyComponent('shades', 'eyes', 'shades.png', 30)
         }
   
+      })
+    })
+  } 
+  if (window.location.href.indexOf("dragtemp.html") !== -1){
+    document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('nextLesson')
+      btn.addEventListener('click', function (evt) {
+        addMoney(50);
       })
     })
   }
