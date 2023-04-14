@@ -491,7 +491,7 @@ return user;
         if (btn.innerHTML == 'Equip') {
           changeComponent('eyes', 'glasses.png')
         } else {
-          buyComponent('glasses', 'eyes', 'glasses.png', 15)
+          buyComponent('glasses', 'eyes', 'glasses.png', 10)
         }
   
       })
@@ -502,7 +502,7 @@ return user;
         if (btn.innerHTML == 'Equip') {
           changeComponent('eyes', 'scuba.png')
         } else {
-          buyComponent('scuba', 'eyes', 'scuba.png', 25)
+          buyComponent('scuba', 'eyes', 'scuba.png', 10)
         }
   
       })
@@ -513,7 +513,7 @@ return user;
         if (btn.innerHTML == 'Equip') {
           changeComponent('eyes', 'shades.png')
         } else {
-          buyComponent('shades', 'eyes', 'shades.png', 30)
+          buyComponent('shades', 'eyes', 'shades.png', 10)
         }
   
       })
