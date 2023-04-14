@@ -478,7 +478,7 @@ return user;
       let btn = document.getElementById('eyesempty')
       btn.addEventListener('click', function (evt) {
         if (btn.innerHTML == 'Equip') {
-          //changeComponent('eyes', 'eyesempty.png')
+          schangeComponent('eyes', 'eyesempty.png')
         } else {
           buyComponent('eyesempty', 'eyes', 'eyesempty.png', 0)
         }
