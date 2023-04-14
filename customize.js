@@ -103,6 +103,12 @@ function UpdateData() {
       //alert(error);
     });
 }
+
+function addMoney(addition) {
+  money += addition;
+  UpdateData();
+  updateMoney();
+}
 function StartMoney() {
   const dbref = ref(db);
   //console.log(document.getElementById('username').value);

@@ -62,6 +62,7 @@ function FindData() {
           user = username.value;
           localStorage.setItem("person", user);
           localStorage.setItem("email", snapshot.val().Email);
+          localStorage.setItem("money", snapshot.val().Money);
           localStorage.setItem("password", snapshot.val().Password);
           localStorage.setItem('clown', snapshot.val().clown);
           localStorage.setItem('bowtie', snapshot.val().bowtie);
@@ -81,7 +82,7 @@ function FindData() {
       }
     })
     .catch((error) => {
-      //alert(error)
+      alert("hi")
     })
 
 }
@@ -104,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(users); // Print users 
       */
     //});
-    console.log("clicked");
+    //console.log("clicked");
     FindData();
   })
 })

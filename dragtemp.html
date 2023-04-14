@@ -11,6 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="dragdrop.css">
 
+
   <link rel="icon" type="image/x-icon" href="Assets/logo.png">
 
   <!-- Required meta tags -->
@@ -150,7 +151,7 @@ rel="stylesheet"
 
 <body style = "background-color: rgb(130, 160, 130);">
   <div class="draggable-elements div1">
-    <i class="draggable" draggable="true" style="color: #000000;font-size: 120%;  font-family: 'Courier New';" id="helloWorld">String var = "Hello World"</i>
+    <i class="draggable" draggable="true" style="font-size: 120%;  font-family: 'Courier New';" id="helloWorld">String var = "Hello World"</i>
     <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="wave">wave()</i>
     <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="adfasdf">asdfasdf</i>
     <i class="draggable" draggable="true" style="color: #000000;font-size: 120%; font-family: 'Courier New';" id="outprint">outprint(var)</i>
@@ -161,7 +162,7 @@ rel="stylesheet"
   </div>
 
   <p class="terminal" id="term-text" style="color: black; text-align: center; font-family: 'Courier New';">
-    assigning "Hello, World!" to a variable and printing it
+    For this activity, you must assign "Hello, World!" to a variable and print it out. You will then wave by using the wave() function. Are you ready to start coding!
   </p>
   
   <button type="button" id="next" class=" btn btn-outline-success, rounded-pill" data-toggle="modal" data-target="#exampleModalCenter">
@@ -179,6 +180,7 @@ rel="stylesheet"
         </button>
       </div>
       <div class="modal-body">
+        <span> You Earned $20 bird seeds</span>
         <div id="anim"></div>
         <script src="Animationz/lottie.js"></script>
         <script>
@@ -191,6 +193,7 @@ rel="stylesheet"
           });
         </script>
       </div>
+     
       <div class="modal-footer">
         <button
           type="button"
@@ -217,8 +220,8 @@ rel="stylesheet"
   <div class="droppable-elements div2">
     <a>
       <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.reload();">Restart</button>
-    <div class="runCode" onclick="checkIfCorrect()"><span>Run code</span></div>
-    <div class="droppable" data-draggable-id="helloWorld"><span style="color:rgb(0, 0, 0)">String var = "Hello World</span></div>
+    <div class="runCode" onclick="checkIfCorrect()"  ><span>Run code</span></div>
+    <div class="droppable" data-draggable-id="helloWorld"><span style="color:rgb(211, 214, 211)">String var = "Hello World"</span></div>
     <div class="droppable" data-draggable-id="outprint"><span style="color:rgb(211, 214, 211)">outprint(var)</span></div>
     <div class="droppable" data-draggable-id="wave"><span style="color:rgb(211, 214, 211)"> wave()</span></div>
     
@@ -227,7 +230,7 @@ rel="stylesheet"
   
 
   <script src="dragdrop.js"></script>
-  
+  <script src="customize.js"></script>
 </body>
 </html>
 

@@ -67,7 +67,7 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
 ></script>
 <script type = 'module'>
-    
+    console.log(localStorage.getItem("money"));
     var data = localStorage.getItem("person");
     document.getElementById('username').innerHTML = data;
     var money = localStorage.getItem("money");
@@ -101,7 +101,7 @@
       <a class="navbar-brand me-4 style="color: white" >
         <span id="username" style="text-decoration: none;float:left;margin-left:20px; color: white;">username</span>
         <i class="fa-solid fa-seedling" style="text-decoration: none;float:left;margin-left:20px; color: white;"></i>
-        <span  id="money" style="color: white" > , 200 </span>
+        <span  id="money" style="color: white" > 200 </span>
     </a>
 
         <a class="navbar-brand me-4" href="settings.html">
@@ -114,7 +114,7 @@
             type="button"
             id="dropdownMenuicon"
             data-mdb-toggle="dropdown"
-            aria-expanded="false"
+            aria-expanded="true"
           >
             <i class="fa-solid fa-sign-out" style="color:white; height:100%; width:100%;"></i>
           </a>
@@ -206,6 +206,19 @@
          messagingSenderId: "841219402391",
          appId: "1:841219402391:web:6d04ab18255508fcb217d2"
      };
+     function addMoney(){
+      update(ref(db, ""+localStorage.getItem("person")), {Money: parseInt(localStorage.getItem("money"))+20})
+      .then((userCredential) => {
+        
+        localStorage.setItem("money", parseInt(localStorage.getItem("money"))+20)
+        console.log("update");
+          // Signed up
+          // ...
+      })
+      .catch((error) => {
+          // alert(error);
+      });
+     }
      
      // Initialize Firebase
      const app = initializeApp(firebaseConfig);
@@ -221,8 +234,11 @@
            .then((snapshot)=>{
                if(snapshot.exists()){
                    if(snapshot.val().Branch1 == true){
+                      addMoney();
                       window.location.href="VariablesHomePage.html";
                       localStorage.setItem("Track", true);
+                      
+                     
                    }else{
                     localStorage.setItem("Track", false);
                       confirm("You have not completed previous branches yet, it is advised to do so before accessing this lesson.");
@@ -247,6 +263,7 @@
                if(snapshot.exists()){
                    if(snapshot.val().Branch2 == true){
                     localStorage.setItem("Track", true);
+                    addMoney();
                       window.location.href="BooleansHomePage.html";
                    }else{
                     localStorage.setItem("Track", false);
@@ -273,6 +290,7 @@
            .then((snapshot)=>{
                if(snapshot.exists()){
                    if(snapshot.val().Branch3 == true){
+                    addMoney();
                     localStorage.setItem("Track", true);
                     window.location.href="MethodsHomePage.html";
                    }else{
@@ -300,6 +318,7 @@
            .then((snapshot)=>{
                if(snapshot.exists()){
                    if(snapshot.val().Branch4 == true){
+                    addMoney();
                     localStorage.setItem("Track", true);
                       window.location.href="ListsHomePage.html";
                    }else{
@@ -327,6 +346,7 @@
            .then((snapshot)=>{
                if(snapshot.exists()){
                    if(snapshot.val().Branch5 == true){
+                    addMoney();
                     localStorage.setItem("Track", true);
                       window.location.href="iterationHomePage.html";
                    }else{
