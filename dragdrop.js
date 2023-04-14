@@ -62,6 +62,7 @@ function drop(event) {
 }
 
 function checkIfCorrect() {
+  console.log("hi")
   var droppables = document.querySelectorAll('.droppable');
   var correctIds = ['helloWorld', 'outprint', 'wave']; // add the IDs of the correct droppable elements
   var correctCount = 0;
@@ -95,5 +96,3 @@ function hint() {
   let drop = document.getElementsByClassName("droppable");
   drop.style.border ="thin dotted black";
 }
-
-
