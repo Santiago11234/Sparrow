@@ -195,7 +195,7 @@
   <div class="container" >
 
     <div class="swiper-button-prev" onclick="decrease();"></div>
-    <div class="swiper-button-next" onclick="increase()"></div>
+    <div id="next" class="swiper-button-next" onclick="increase()"></div>
     <!-- Slider main container -->
     <div class="swiper">
       <!-- Additional required wrapper -->
@@ -280,12 +280,10 @@
     var max = slide;
     function increase() {
       slide++;
+      localStorage.setItem("slide", ""+slide);
       if(slide > max){
-
         max = slide;
-        typeWriter(slide, 0);
-        
-        
+        typeWriter(slide, 0);        
       }
       j = 0;
     }
@@ -329,7 +327,18 @@
     <div id="anim"></div>
     <script src="Animationz/lottie.js"></script>
     <script type = "module">
-      
+      document.addEventListener('DOMContentLoaded', () => {
+      let btn = document.getElementById('next')
+      btn.addEventListener('click', function (evt) {
+        check();
+      })
+    })
+    function check(){
+      if(parseInt(localStorage.getItem("slide"))==3){
+        console.log(localStorage.getItem('money'));
+        //addMoney();
+      }
+    }
       // Import the functions you need from the SDKs you need
      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
      // TODO: Add SDKs for Firebase products that you want to use
@@ -354,7 +363,18 @@
      if(localStorage.getItem("Track")){
       updateData();
      }
-     
+     function addMoney(){
+      update(ref(db, ""+localStorage.getItem("person")), {Money: parseInt(localStorage.getItem("Money"))+20})
+      .then((userCredential) => {
+        localStorage.setItem("Money", parseInt(localStorage.getItem("Money"))+20)
+        console.log("update");
+          // Signed up
+          // ...
+      })
+      .catch((error) => {
+          // alert(error);
+      });
+     }
       function updateData(){
       update(ref(db, ""+localStorage.getItem("person")), {Branch2:true})
       .then((userCredential) => {
