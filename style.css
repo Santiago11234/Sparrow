@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 .indexBody {
-  background-image: url(background1.png);     
+  background-image: url(Assets/background1.png);     
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -154,7 +154,7 @@ button.how-to-play:hover {
 /* end of login button */
 /*home page */
 .homeBody {
-  background-image: url(homeBackground1.png);     
+  background-image: url(Assets/homeBackground1.png);     
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
