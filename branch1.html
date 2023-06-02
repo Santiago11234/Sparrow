@@ -176,14 +176,31 @@
 
     </nav>
   </div>
+  
 </header>
 
 
 
 <html>
+    <style>
+   
+    /* Set additional styling options for the columns*/
+    .column {
+    float: left;
+    width: 50%;
+    padding-top: 5%;
+  
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    </style>
 <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill"
   onClick="window.location.href = 'VariablesHomePage.html'"
-  style=" max-height:40px; max-width: fit-content; margin-left: 8%; margin-top:2%; margin-bottom: -2%;">back</button>
+  style=" max-height:40px; max-width: fit-content; margin-left: 8%; margin-top:2%; margin-bottom: -1%;">back</button>
 
 <body class="back">
 
@@ -201,56 +218,87 @@
 
         <!-- Slides -->
         <div class="swiper-slide"><img src="Assets/background lesson.png" onload="typeWriter(0, 0)">
-          <h1>Variables</h1>
-          <div class="test">
-            <img id="bucket" style="width: 10%; transform: translateY(-80%); " src="Assets/bucket.PNG" />
-            <button id="egg" style="border:0; transform: translateY(-100%); " onclick="changeInt();">
-              <img id="IntEgg" src="Assets/intEgg.PNG" />
-            </button>
-            <button id="egg" style="border:0; width:15%; transform: translateY(-100%); " onclick="reset();">
-              <img id="nest" src="Assets/dataNest.PNG" />
-            </button>
-            <button id="egg" style="border:0; transform: translateY(-100%); " onclick="changeBool();">
-              <img id="BoolEgg" src="Assets/BoolEgg.PNG" />
-            </button>
-            <button id="egg" style="border:0; transform: translate(-150%, -200%); " onclick="changeString();">
-              <img id="StringEgg" src="Assets/StringEgg.PNG" />
-            </button>
+          <h1><u><strong> Introducing <em>Variables</em></strong></u></h1>
+          
+            
+        
+          <body>
+            <div class="row" style="padding-right: 2%">
+                <div class="column" style="background-color: #dad7cd;">
+                    <h2><strong><em>Example</em></strong></h2>
+                    <div class="test">
+                      <img id="bucket" style="width: 15%; transform: translateY(-80%); " src="Assets/bucket.PNG" />
+                      <button id="egg" style="border:0; transform: translateY(-100%); " onclick="changeInt();">
+                        <img id="IntEgg" src="Assets/intEgg.PNG" />
+                      </button>
+                      <button id="egg" style="border:0; width:20%; transform: translateY(-100%); " onclick="reset();">
+                        <img id="nest" src="Assets/dataNest.PNG" />
+                      </button>
+                      <button id="egg" style="border:0; width:12%;transform: translateY(-100%); " onclick="changeBool();">
+                        <img id="BoolEgg" src="Assets/BoolEgg.PNG" />
+                      </button>
+                      <button id="egg" style="border:0; width:12%;transform: translate(-150%, -200%); " onclick="changeString();">
+                        <img id="StringEgg" src="Assets/StringEgg.PNG" />
+                      </button>
+          
+                    </div>
+                </div>
+                <div class="column" style="background-color:#e4e6e4;">
+                    <h2>Audio</h2>
+                    <figure class = "audio">
+                      <figcaption>Play Audio Lesson:</figcaption>
+                      <audio controls src="lines/line1.mp3">
+                        <a href="lines/line1.mp3">
+                          Download audio
+                        </a>
+                      </audio>
+                    </figure>
+                </div>
+            </div>
 
-          </div>
+         </body>
+          
+          
 
-          <figure>
-            <figcaption>Play Audio Lesson:</figcaption>
-            <audio controls src="lines/line1.mp3">
-              <a href="lines/line1.mp3">
-                Download audio
-              </a>
-            </audio>
-          </figure>
+         
           <p id="slide0"></p>
 
         </div>
 
         <div class="swiper-slide" style="height: 60%"><img src="Assets/background lesson.png" alt="">
-          <h1>What are variables?</h1>
+          <h1><u><strong> What are <em>Variables</em></strong></u></h1>
 
-          <div class="image">
-            <img src="Assets/Variable.PNG">
-          </div>
-          <figure>
-            <figcaption>Play Audio Lesson:</figcaption>
-            <audio controls src="lines/line2.mp3">
-              <a href="lines/line2.mp3">
-                Download audio
-              </a>
-            </audio>
-          </figure>
+          
+        
+          <body>
+            <div class="row">
+                <div class="column" style="background-color:#e4e4e3;">
+                    <h2>Example</h2>
+                    <div class="image">
+                      <img src="Assets/Variable.PNG">
+                    </div>
+                </div>
+                <div class="column" style="background-color:#bec1be;">
+                    <h2>Audio</h2>
+                    <figure class = "audio">
+                      <figcaption>Play Audio Lesson:</figcaption>
+                      <audio controls src="lines/line2.mp3">
+                        <a href="lines/line2.mp3">
+                          Download audio
+                        </a>
+                      </audio>
+                    </figure>
+                </div>
+            </div>
+
+         </body>
+        
           <p id="slide1"></p>
         </div>
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Data Types</h1>
-          <div class="image">
+<h1><u><strong> Data <em> Types</em></strong></u></h1>
+          <div class="image" style="width:40%;">
 
             <img src="Assets/Variable2.PNG">
           </div>
