@@ -44,11 +44,10 @@
     margin-bottom: 10px;
 }
 .image2{
-    padding-left: 5%;
-
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
+    padding-right: 120%;
+    width: 220%;
+    margin-bottom: 0px;
+    padding-bottom: 8%;
 }
 
 .swiper p{
@@ -121,6 +120,27 @@
 }
 
 .audio{
-    padding-bottom: 20x;
+    padding-top: 30px;
 }
 
+
+
+
+
+#switch{
+    width: 100px;
+    margin-top: -100%;
+
+}
+#lightbulb1, #lightbulb2, #lightbulb3, #lightbulb4, #lightbulb5{
+
+    padding-left: 4%;
+    height: 60x;
+    width: 220px;
+}
+#light{
+    width: 180px;
+    margin-top: -27%;
+    margin-right: 150px;
+    
+}
