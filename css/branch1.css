@@ -132,15 +132,42 @@
     margin-top: -100%;
 
 }
-#lightbulb1, #lightbulb2, #lightbulb3, #lightbulb4, #lightbulb5{
+#lightbulb1{
 
     padding-left: 4%;
     height: 60x;
     width: 220px;
 }
+#lightbulb2, #lightbulb3, #lightbulb4, #lightbulb5{
+
+    padding-left: 4%;
+    height: 60x;
+    width: 300px;
+}
+
 #light{
     width: 180px;
     margin-top: -27%;
     margin-right: 150px;
     
+}
+#andswitch2, #andswitch1{
+    width: 100px;
+}
+.testand, .testor, .testgreat{
+    margin-top: -5%;
+}
+#light2, #light3, #light4, #light5{
+    width: 150px;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+#orswitch1, #orswitch2{
+    width: 100px;
+}
+#gswitch1, #gswitch2,  #gswitch3,  #gswitch4{
+    width: 80px;
+}
+#sswitch1, #sswitch2,#sswitch3, #sswitch4{
+    width: 80px;
 }
