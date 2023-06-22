@@ -134,6 +134,25 @@
 
 
 <html>
+  <style>
+    /* Set additional styling options for the columns*/
+    .column {
+      float: left;
+      width: 48%;
+  
+    }
+  
+    .row {
+      width: 90%;
+    }
+  
+    .row:after {
+  
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
   <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'ListsHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 13%; margin-top:1%; margin-bottom: -1%; padding: 10px 20px;">back</button>
 <body class="back" onload="typeWriter(0, 0)">
 
@@ -150,9 +169,25 @@
         <!-- Slides -->
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" onload="typeWriter(0, 0)">
-          <h1>Lists</h1>
-          <div class="image">
-            <img src="Assets/List.png">
+          <h1><u><strong>Lists</strong></u></h1>
+          <div class="row" style="padding-top: 10%">
+            <div class="column" style="background-color:#dad7cd; border-radius: 8%; ">
+              <h2>Example</h2>
+              <div class="image">
+                <img src="Assets/List.png">
+              </div>
+            </div>
+            <div class="column" style="background-color:#b8c3a6;border-radius: 8%;">
+              <h2 class="audio">Audio</h2>
+              <figure">
+                <figcaption>Play Audio Lesson:</figcaption>
+                <audio controls src="lines/line2.mp3">
+                  <a href="lines/line2.mp3">
+                    Download audio
+                  </a>
+                </audio>
+                </figure>
+            </div>
           </div>
           <p id="slide0"></p>
         </div>

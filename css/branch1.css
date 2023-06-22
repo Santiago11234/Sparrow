@@ -26,9 +26,11 @@
 }
 .test{
     width: 100%;
-    transform: translateY(110px);
+    transform: translateY(90px);
+
 
 }
+
 .swiper h1{
     position: absolute;
     top: 12%;
@@ -132,6 +134,10 @@
     margin-top: -100%;
 
 }
+#switchM{
+    width: 120px;
+
+}
 #lightbulb1{
 
     padding-left: 4%;
@@ -149,7 +155,13 @@
     width: 180px;
     margin-top: -27%;
     margin-right: 150px;
-    
+
+}
+#lightM{
+    width: 180px;
+    margin-top: -27%;
+    margin-right: 150px;
+
 }
 #andswitch2, #andswitch1{
     width: 100px;
