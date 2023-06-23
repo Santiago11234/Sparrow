@@ -13,11 +13,23 @@
     border: 2px dashed white;
 }
 .list {
-    background: #e91e63;
+    background: #47eb96;
     height: 60px;
     margin: 10px;
     color: #fff;
     display: flex;
     align-items: center;
     cursor: grab;
+    color: black;
+    padding-left: 12px;
+    border-radius: 5px;
 }
+
+.delete-button {
+    background-color: #2b6b03;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

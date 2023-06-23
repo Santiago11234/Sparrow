@@ -13,6 +13,7 @@ for (let list of lists) {
   list.addEventListener("dragstart", function(e) {
     e.dataTransfer.setData("text/plain", e.target.id);
   });
+  //disable delete button
 
 }
 
@@ -72,7 +73,7 @@ rightBox.addEventListener("drop", function(e) {
       e.dataTransfer.setData("text/plain", e.target.id);
     });
 
-  
+    //delete button crap
     let deleteButton = clonedBlock.querySelector("button");
     if (!deleteButton) {
       // create a delete button for the cloned block if it doesn't exist i give up man this sucks
@@ -93,13 +94,15 @@ rightBox.addEventListener("drop", function(e) {
     }
     rightBox.appendChild(clonedBlock);
     final.push(clonedBlock);
-    //code    
+    //delete button crap
+
+    //mouse hover crap    
     for(let list of final) {
       list.addEventListener("mouseover", function(e) {
         e.preventDefault();
         let selectedId = e.target.id;
         let selected = document.getElementById(selectedId);
-          selected.deleteButton.color = "red";
+          selected.style.color = "red";
           console.log("y dis goofy ahh code not running")
       });
       list.addEventListener("mouseout", function(e) {
@@ -109,7 +112,7 @@ rightBox.addEventListener("drop", function(e) {
         selected.style.color = "";
       });
     }
-    //code
+    //mouse hover crap
   }
 
       
