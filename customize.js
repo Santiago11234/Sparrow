@@ -115,6 +115,7 @@ function StartMoney() {
   //console.log(document.getElementById('password').value);
   get(child(dbref, "" + localStorage.getItem('person')))
     .then((snapshot) => {
+      
       if (snapshot.exists()) {
         console.log(snapshot.val().Money);
         localStorage.setItem('Money', ""+snapshot.val().Money);
@@ -124,7 +125,7 @@ function StartMoney() {
         localStorage.setItem('bowtie', snapshot.val().bowtie);
         localStorage.setItem('headempty', snapshot.val().headempty);
         localStorage.setItem('party', snapshot.val().party);
-
+        console.log(snapshot.val().scuba + " hello");
         localStorage.setItem('scuba', snapshot.val().scuba);
         localStorage.setItem('glasses', snapshot.val().glasses);
         localStorage.setItem('shades', snapshot.val().shades);
