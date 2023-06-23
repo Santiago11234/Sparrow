@@ -102,7 +102,7 @@ rightBox.addEventListener("drop", function(e) {
         e.preventDefault();
         let selectedId = e.target.id;
         let selected = document.getElementById(selectedId);
-          selected.style.color = "red";
+          selected.
           console.log("y dis goofy ahh code not running")
       });
       list.addEventListener("mouseout", function(e) {
