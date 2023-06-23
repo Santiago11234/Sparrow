@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 .indexBody {
-  background-image: url(/Assets/background1.png);  
+  background-image: url('/Assets/background1.png');  
   background-color: #138e51;   
   background-size: cover;
   background-repeat: no-repeat;

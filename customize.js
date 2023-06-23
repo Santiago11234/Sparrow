@@ -345,9 +345,7 @@ return user;
       updateMoney();
       UpdateData();
       button.innerHTML = 'Equip';
-      button.onclick = function () {
-        changeComponent(componentId, newImage);
-      }
+      
       changeComponent(componentId, newImage);
     } else {
       alert('You do not have enough money to buy this item.');
