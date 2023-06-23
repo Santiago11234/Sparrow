@@ -89,27 +89,27 @@
             "e": 0
         },
         {
-            "id": "image_10",
+            "id": "head",
             "w": 2080,
             "h": 1924,
             "u": "images/",
-            "p": "img_10.png",
+            "p": "head.png",
             "e": 0
         },
         {
-            "id": "image_11",
+            "id": "body",
             "w": 2012,
             "h": 1539,
             "u": "images/",
-            "p": "img_11.png",
+            "p": "body.png",
             "e": 0
         },
         {
-            "id": "image_12",
+            "id": "shoe",
             "w": 1157,
             "h": 334,
             "u": "images/",
-            "p": "img_12.png",
+            "p": "shoe.png",
             "e": 0
         }
     ],
@@ -1063,7 +1063,7 @@
             "ind": 11,
             "ty": 2,
             "nm": "head box",
-            "refId": "image_10",
+            "refId": "head",
             "sr": 1,
             "ks": {
                 "o": {
@@ -1118,7 +1118,7 @@
             "ind": 12,
             "ty": 2,
             "nm": "body box",
-            "refId": "image_11",
+            "refId": "body",
             "sr": 1,
             "ks": {
                 "o": {
@@ -1173,7 +1173,7 @@
             "ind": 13,
             "ty": 2,
             "nm": "shoe box",
-            "refId": "image_12",
+            "refId": "shoe",
             "sr": 1,
             "ks": {
                 "o": {
