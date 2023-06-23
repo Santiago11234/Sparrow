@@ -150,7 +150,26 @@
 
 
 <html>
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'VariablesHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 11%; margin-top:2%; margin-bottom: -2%;">back</button>
+  <style>
+    /* Set additional styling options for the columns*/
+    .column {
+      float: left;
+      width: 48%;
+  
+    }
+  
+    .row {
+      width: 100%;
+    }
+  
+    .row:after {
+  
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'VariablesHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 12%; margin-top:1%; margin-bottom: -1%;">back</button>
 <body class="back" onload="typeWriter(0, 0)">
 
   <div class="container">
@@ -166,19 +185,58 @@
         <!-- Slides -->
 
         <div class="swiper-slide"><img src="Assets/background lesson.png" onload="typeWriter(0, 0)">
-          <h1>Methods Intro</h1>
-          <div class="test"><img id="light" src="Assets/blank.PNG" /><button id="switchbutton"
-            onclick="changeImage();"><img id="switch" src="Assets/Methods1.PNG"  /></button></div>
+          <h1><u><strong> Methods <em>Intro</em></strong></u></h1>
+         
+          <body>
+            <div class="row" style = "padding-top: 7%">
+              <div class="column" style="background-color:#dad7cd; border-radius: 8%; ">
+                <h2>Example</h2>
+                <div class="test"><img id="light" src="Assets/blank.PNG" /><button id="switchbutton"
+                  onclick="changeImage();"><img id="switchM" src="Assets/Methods1.PNG"  /></button></div>
+      
+              </div>
+              <div class="column" style="background-color:#b8c3a6;border-radius: 8%;">
+                <h2 class="audio">Audio</h2>
+                <figure">
+                  <figcaption>Play Audio Lesson:</figcaption>
+                  <audio controls src="lines/line2.mp3">
+                    <a href="lines/line2.mp3">
+                      Download audio
+                    </a>
+                  </audio>
+                  </figure>
+              </div>
+            </div>
 
+          </body>
 
           <p id="slide0"></p>
         </div>
         <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Methods parameters</h1>
+          <h1><u><strong> Method <em>Parameters</em></strong></u></h1>
           <p id="slide1"></p>
-        </div>
+          <div class="row">
+            <div class="column" style="background-color:#dad7cd; border-radius: 8%; ">
+              <h2>Example</h2>
+              <div class="image">
+                <img src="Assets/Variable.PNG">
+              </div>
+            </div>
+            <div class="column" style="background-color:#b8c3a6;border-radius: 8%;">
+              <h2 class="audio">Audio</h2>
+              <figure">
+                <figcaption>Play Audio Lesson:</figcaption>
+                <audio controls src="lines/line2.mp3">
+                  <a href="lines/line2.mp3">
+                    Download audio
+                  </a>
+                </audio>
+                </figure>
+            </div>
 
-    >
+     
+
+  
        
 
         <!-- If we need pagination -->

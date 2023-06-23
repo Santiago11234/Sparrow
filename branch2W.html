@@ -55,51 +55,178 @@
         margin-top: -3%;
       }
     </style>
-    <script>
+<script>
+    var count = 0;
+    function changeImage() {
+      var swtch = document.getElementById("switch");
+      var lght = document.getElementById("light")
+      if (swtch.src.match("Assets/off.png")) {
+        lght.src = "Assets/openlightbulb.png";
+        swtch.src = "Assets/on.png"
+      } else {
+        swtch.src = "Assets/off.png";
+        lght.src = "Assets/dark lightbulb.png"
+      }
+      return false;
+    }
+    function changeImage2(num) {
+      var switch1 = document.getElementById("andswitch1");
+      var switch2 = document.getElementById("andswitch2");
+      if (num == 1) {
+        if (switch1.src.match("Assets/off.png")) {
+          switch1.src = "Assets/on.png"
+        } else {
+          switch1.src = "Assets/off.png";
+          light2.src = "Assets/dark lightbulb.png"
+        }
+      }
+      if (num == 2) {
+        if (switch2.src.match("Assets/off.png")) {
+          switch2.src = "Assets/on.png"
+        } else {
+          switch2.src = "Assets/off.png";
+          light2.src = "Assets/dark lightbulb.png"
+        }
+      }
+      if (switch2.src.match("Assets/on.png") && switch1.src.match("Assets/on.png")) {
+        light2.src = "Assets/openlightbulb.png";
+      }
+    }
+    function changeImage3(num) {
+      var switch1 = document.getElementById("orswitch1");
+      var switch2 = document.getElementById("orswitch2");
+      if (num == 1) {
+        if (switch1.src.match("Assets/off.png")) {
+          switch1.src = "Assets/on.png"
+        } else {
+          switch1.src = "Assets/off.png";
+          light3.src = "Assets/dark lightbulb.png"
+        }
+      }
+      if (num == 2) {
+        if (switch2.src.match("Assets/off.png")) {
+          switch2.src = "Assets/on.png"
+        } else {
+          switch2.src = "Assets/off.png";
+          light3.src = "Assets/dark lightbulb.png"
+        }
+      }
+      if (switch2.src.match("Assets/on.png") || switch1.src.match("Assets/on.png")) {
+        light3.src = "Assets/openlightbulb.png";
+      }
+    }
+    function changeImage4(num) {
+      var switch1 = document.getElementById("gswitch1");
+      var switch2 = document.getElementById("gswitch2");
+      var switch3 = document.getElementById("gswitch3");
+      var switch4 = document.getElementById("gswitch4");
+
       var count = 0;
-      function changeInt() {
-        var bucket = document.getElementById("bucket");
-        var intEgg = document.getElementById("IntEgg");
-        if (intEgg.src.match("Assets/intEgg.PNG")) {
-          bucket.src = "Assets/bucketWIntEgg.PNG"
-          intEgg.src = "Assets/blank.PNG"
-          return false
+      if (num == 1) {
+        if (switch1.src.match("Assets/off.png")) {
+          switch1.src = "Assets/on.png"
+        } else {
+          switch1.src = "Assets/off.png";
         }
       }
-      function changeBool() {
-
-        var bucket = document.getElementById("bucket");
-        var BoolEgg = document.getElementById("BoolEgg");
-        if (BoolEgg.src.match("Assets/BoolEgg.PNG")) {
-          bucket.src = "Assets/bucketWBool.PNG"
-          BoolEgg.src = "Assets/blank.PNG"
-          return false;
+      if (num == 2) {
+        if (switch2.src.match("Assets/off.png")) {
+          switch2.src = "Assets/on.png"
+        } else {
+          switch2.src = "Assets/off.png";
         }
       }
-      function reset() {
-
-        var bucket = document.getElementById("bucket");
-        var BoolEgg = document.getElementById("BoolEgg");
-        var IntEgg = document.getElementById("IntEgg");
-        var StringEgg = document.getElementById("StringEgg");
-        bucket.src = "Assets/bucket.PNG"
-        BoolEgg.src = "Assets/BoolEgg.PNG"
-        IntEgg.src = "Assets/intEgg.PNG"
-        StringEgg.src = "Assets/StringEgg.PNG"
-        return false;
-
-      }
-      function changeString() {
-        var bucket = document.getElementById("bucket");
-        var StringEgg = document.getElementById("StringEgg");
-        if (StringEgg.src.match("Assets/StringEgg.PNG")) {
-          bucket.src = "Assets/bucketWString.PNG"
-          StringEgg.src = "Assets/blank.PNG"
-          return false;
+      if (num == 3) {
+        if (switch3.src.match("Assets/off.png")) {
+          switch3.src = "Assets/on.png"
+        } else {
+          switch3.src = "Assets/off.png";
         }
+      }
+      if (num == 4) {
+        if (switch4.src.match("Assets/off.png")) {
+          switch4.src = "Assets/on.png"
+        } else {
+          switch4.src = "Assets/off.png";
+        }
+      }
+      if (switch1.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch2.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch3.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch4.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (count>2) {
+        light4.src = "Assets/openlightbulb.png";
+      }
+      else{
+        light4.src = "Assets/dark lightbulb.png";
 
       }
-    </script>
+    }
+    function changeImage5(num) {
+      var switch1 = document.getElementById("sswitch1");
+      var switch2 = document.getElementById("sswitch2");
+      var switch3 = document.getElementById("sswitch3");
+      var switch4 = document.getElementById("sswitch4");
+
+      var count = 0;
+      if (num == 1) {
+        if (switch1.src.match("Assets/off.png")) {
+          switch1.src = "Assets/on.png"
+        } else {
+          switch1.src = "Assets/off.png";
+        }
+      }
+      if (num == 2) {
+        if (switch2.src.match("Assets/off.png")) {
+          switch2.src = "Assets/on.png"
+        } else {
+          switch2.src = "Assets/off.png";
+        }
+      }
+      if (num == 3) {
+        if (switch3.src.match("Assets/off.png")) {
+          switch3.src = "Assets/on.png"
+        } else {
+          switch3.src = "Assets/off.png";
+        }
+      }
+      if (num == 4) {
+        if (switch4.src.match("Assets/off.png")) {
+          switch4.src = "Assets/on.png"
+        } else {
+          switch4.src = "Assets/off.png";
+        }
+      }
+      if (switch1.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch2.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch3.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (switch4.src.match("Assets/on.png")) {
+        count++;
+      }
+      if (count==2) {
+        light5.src = "Assets/openlightbulb.png";
+      }
+      else{
+        light5.src = "Assets/dark lightbulb.png";
+
+      }
+    }
+    
+  </script>
   </head>
 
 </html>
@@ -211,7 +338,7 @@
   <div class="container">
 
     <div class="swiper-button-prev" onclick="decrease();"></div>
-    <div class="swiper-button-next" onclick="increase()"></div>
+    <div id="next" class="swiper-button-next" onclick="increase()"></div>
     <!-- Slider main container -->
     <div class="swiper">
       <!-- Additional required wrapper -->
@@ -221,7 +348,7 @@
 
         <!-- Slides -->
         <div class="swiper-slide"><img src="Assets/background lesson.png" onload="typeWriter(0, 0)">
-          <h1><u><strong> Introducing <em>Variables</em></strong></u></h1>
+          <h1><u><strong> Booleans</strong></u></h1>
 
 
 
@@ -229,35 +356,25 @@
             <div class="row" style="padding-right: 2%">
               <div class="column" style="background-color: #dad7cd;">
                 <h2><strong><em>Example</em></strong></h2>
-                <div class="test">
-                  <img id="bucket" style="width: 15%; padding-bottom: 10%;transform: translateX(100px); "
-                    src="Assets/bucket.PNG" />
-                  <button id="egg" style="border:0; transform: translateY(-100%); " onclick="changeInt();">
-                    <img id="IntEgg" src="Assets/intEgg.PNG" />
-                  </button>
-                  <button id="egg" style="border:0; width:20%; transform: translateY(-100%); " onclick="reset();">
-                    <img id="nest" src="Assets/dataNest.PNG" />
-                  </button>
-                  <button id="egg" style="border:0; width:12%;transform: translateY(-100%); " onclick="changeBool();">
-                    <img id="BoolEgg" src="Assets/BoolEgg.PNG" />
-                  </button>
-                  <button id="egg" style="border:0; width:12%;transform: translate(-150%, -200%); "
-                    onclick="changeString();">
-                    <img id="StringEgg" src="Assets/StringEgg.PNG" />
-                  </button>
-
+             
+                <div class="test"><img id="light" src="Assets/dark lightbulb.png" />
+                  <button id="switchbutton"
+                    onclick="changeImage();"><img id="switch" src="Assets/off.png" border="0" /></button>
                 </div>
+              
+                    <img id="lightbulb1" src="Assets/lightbulb1.png" />
+      
               </div>
               <div class="column" style="background-color:#b8c3a6; border-radius: 8%;">
                 <h2 class="audio">Audio</h2>
                 <figure>
-                  <figcaption>Play Audio Lesson:</figcaption>
-                  <audio controls src="lines/line1.mp3">
-                    <a href="lines/line1.mp3">
-                      Download audio
-                    </a>
-                  </audio>
-                </figure>
+                    <figcaption>Play Audio Lesson:</figcaption>
+                    <audio controls src="lines/line21.mp3">
+                      <a href="lines/line21.mp3">
+                        Download audio
+                      </a>
+                    </audio>
+                  </figure>
               </div>
             </div>
 

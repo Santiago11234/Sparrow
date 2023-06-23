@@ -2,229 +2,232 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 2</title>
-  <link rel="stylesheet" href="css/branch2.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+ <link rel="icon" type="image/x-icon" href="Assets/logo.png">
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lesson 2</title>
+ <link rel="stylesheet" href="css/branch1.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+ <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+ crossorigin="anonymous"></script>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Font Awesome -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <!-- Bootstrap -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <!-- MDBootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+ <!-- MDBootstrap -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+ <!-- MDB -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+ <!-- Raleway Font -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-  <!-- Raleway Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+ <!--Hammersmith One Font-->
+ <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
 
-  <!--Hammersmith One Font-->
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hammersmith+One" />
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/hompage.css">
+ <style>
+ #anim {
+ max-width: 30%;
+ margin: 0 auto;
+ margin-top: -3%;
+ }
+ </style>
+<script>
+ var count = 0;
+ function changeImage() {
+ var swtch = document.getElementById("switch");
+ var lght = document.getElementById("light")
+ if (swtch.src.match("Assets/off.png")) {
+ lght.src = "Assets/openlightbulb.png";
+ swtch.src = "Assets/on.png"
+ } else {
+ swtch.src = "Assets/off.png";
+ lght.src = "Assets/dark lightbulb.png"
+ }
+ return false;
+ }
+ function changeImage2(num) {
+ var switch1 = document.getElementById("andswitch1");
+ var switch2 = document.getElementById("andswitch2");
+ if (num == 1) {
+ if (switch1.src.match("Assets/off.png")) {
+ switch1.src = "Assets/on.png"
+ } else {
+ switch1.src = "Assets/off.png";
+ light2.src = "Assets/dark lightbulb.png"
+ }
+ }
+ if (num == 2) {
+ if (switch2.src.match("Assets/off.png")) {
+ switch2.src = "Assets/on.png"
+ } else {
+ switch2.src = "Assets/off.png";
+ light2.src = "Assets/dark lightbulb.png"
+ }
+ }
+ if (switch2.src.match("Assets/on.png") && switch1.src.match("Assets/on.png")) {
+ light2.src = "Assets/openlightbulb.png";
+ }
+ }
+ function changeImage3(num) {
+ var switch1 = document.getElementById("orswitch1");
+ var switch2 = document.getElementById("orswitch2");
+ if (num == 1) {
+ if (switch1.src.match("Assets/off.png")) {
+ switch1.src = "Assets/on.png"
+ } else {
+ switch1.src = "Assets/off.png";
+ light3.src = "Assets/dark lightbulb.png"
+ }
+ }
+ if (num == 2) {
+ if (switch2.src.match("Assets/off.png")) {
+ switch2.src = "Assets/on.png"
+ } else {
+ switch2.src = "Assets/off.png";
+ light3.src = "Assets/dark lightbulb.png"
+ }
+ }
+ if (switch2.src.match("Assets/on.png") || switch1.src.match("Assets/on.png")) {
+ light3.src = "Assets/openlightbulb.png";
+ }
+ }
+ function changeImage4(num) {
+ var switch1 = document.getElementById("gswitch1");
+ var switch2 = document.getElementById("gswitch2");
+ var switch3 = document.getElementById("gswitch3");
+ var switch4 = document.getElementById("gswitch4");
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/hompage.css">
-  <style>
-    #anim {
-      max-width: 30%;
-      margin: 0 auto;
-      margin-top: -10%;
-    }
-  </style>
-  <script>
-    var count = 0;
-    function changeImage() {
-      var swtch = document.getElementById("switch");
-      var lght = document.getElementById("light")
-      if (swtch.src.match("Assets/off.png")) {
-        lght.src = "Assets/openlightbulb.png";
-        swtch.src = "Assets/on.png"
-      } else {
-        swtch.src = "Assets/off.png";
-        lght.src = "Assets/dark lightbulb.png"
-      }
-      return false;
-    }
-    function changeImage2(num) {
-      var switch1 = document.getElementById("andswitch1");
-      var switch2 = document.getElementById("andswitch2");
-      if (num == 1) {
-        if (switch1.src.match("Assets/off.png")) {
-          switch1.src = "Assets/on.png"
-        } else {
-          switch1.src = "Assets/off.png";
-          light2.src = "Assets/dark lightbulb.png"
-        }
-      }
-      if (num == 2) {
-        if (switch2.src.match("Assets/off.png")) {
-          switch2.src = "Assets/on.png"
-        } else {
-          switch2.src = "Assets/off.png";
-          light2.src = "Assets/dark lightbulb.png"
-        }
-      }
-      if (switch2.src.match("Assets/on.png") && switch1.src.match("Assets/on.png")) {
-        light2.src = "Assets/openlightbulb.png";
-      }
-    }
-    function changeImage3(num) {
-      var switch1 = document.getElementById("orswitch1");
-      var switch2 = document.getElementById("orswitch2");
-      if (num == 1) {
-        if (switch1.src.match("Assets/off.png")) {
-          switch1.src = "Assets/on.png"
-        } else {
-          switch1.src = "Assets/off.png";
-          light3.src = "Assets/dark lightbulb.png"
-        }
-      }
-      if (num == 2) {
-        if (switch2.src.match("Assets/off.png")) {
-          switch2.src = "Assets/on.png"
-        } else {
-          switch2.src = "Assets/off.png";
-          light3.src = "Assets/dark lightbulb.png"
-        }
-      }
-      if (switch2.src.match("Assets/on.png") || switch1.src.match("Assets/on.png")) {
-        light3.src = "Assets/openlightbulb.png";
-      }
-    }
-    function changeImage4(num) {
-      var switch1 = document.getElementById("gswitch1");
-      var switch2 = document.getElementById("gswitch2");
-      var switch3 = document.getElementById("gswitch3");
-      var switch4 = document.getElementById("gswitch4");
+ var count = 0;
+ if (num == 1) {
+ if (switch1.src.match("Assets/off.png")) {
+ switch1.src = "Assets/on.png"
+ } else {
+ switch1.src = "Assets/off.png";
+ }
+ }
+ if (num == 2) {
+ if (switch2.src.match("Assets/off.png")) {
+ switch2.src = "Assets/on.png"
+ } else {
+ switch2.src = "Assets/off.png";
+ }
+ }
+ if (num == 3) {
+ if (switch3.src.match("Assets/off.png")) {
+ switch3.src = "Assets/on.png"
+ } else {
+ switch3.src = "Assets/off.png";
+ }
+ }
+ if (num == 4) {
+ if (switch4.src.match("Assets/off.png")) {
+ switch4.src = "Assets/on.png"
+ } else {
+ switch4.src = "Assets/off.png";
+ }
+ }
+ if (switch1.src.match("Assets/on.png")) {
+ count++;
+ }
+ if (switch2.src.match("Assets/on.png")) {
+ count++;
+ }
+ if (switch3.src.match("Assets/on.png")) {
+ count++;
+ }
+ if (switch4.src.match("Assets/on.png")) {
+ count++;
+ }
+ if (count>2) {
+ light4.src = "Assets/openlightbulb.png";
+ }
+ else{
+ light4.src = "Assets/dark lightbulb.png";
 
-      var count = 0;
-      if (num == 1) {
-        if (switch1.src.match("Assets/off.png")) {
-          switch1.src = "Assets/on.png"
-        } else {
-          switch1.src = "Assets/off.png";
-        }
-      }
-      if (num == 2) {
-        if (switch2.src.match("Assets/off.png")) {
-          switch2.src = "Assets/on.png"
-        } else {
-          switch2.src = "Assets/off.png";
-        }
-      }
-      if (num == 3) {
-        if (switch3.src.match("Assets/off.png")) {
-          switch3.src = "Assets/on.png"
-        } else {
-          switch3.src = "Assets/off.png";
-        }
-      }
-      if (num == 4) {
-        if (switch4.src.match("Assets/off.png")) {
-          switch4.src = "Assets/on.png"
-        } else {
-          switch4.src = "Assets/off.png";
-        }
-      }
-      if (switch1.src.match("Assets/on.png")) {
-        count++;
-      }
-      if (switch2.src.match("Assets/on.png")) {
-        count++;
-      }
-      if (switch3.src.match("Assets/on.png")) {
-        count++;
-      }
-      if (switch4.src.match("Assets/on.png")) {
-        count++;
-      }
-      if (count>2) {
-        light4.src = "Assets/openlightbulb.png";
-      }
-      else{
-        light4.src = "Assets/dark lightbulb.png";
+ }
+ }
+ function changeImage5(num) {
+ var switch1 = document.getElementById("sswitch1");
+ var switch2 = document.getElementById("sswitch2");
+ var switch3 = document.getElementById("sswitch3");
+ var switch4 = document.getElementById("sswitch4");
 
-      }
-    }
-    function changeImage5(num) {
-      var switch1 = document.getElementById("sswitch1");
-      var switch2 = document.getElementById("sswitch2");
-      var switch3 = document.getElementById("sswitch3");
-      var switch4 = document.getElementById("sswitch4");
+ var count = 0;
+ if (num == 1) {
+ if (switch1.src.match("Assets/off.png")) {
+ switch1.src = "Assets/on.png"
+ } else {
+ switch1.src = "Assets/off.png";
+ }
+ }
+ if (num == 2) {
+ if (switch2.src.match("Assets/off.png")) {
+ switch2.src = "Assets/on.png"
+ } else {
+ switch2.src = "Assets/off.png";
+ }
+ }
+ if (num == 3) {
+ if (switch3.src.match("Assets/off.png")) {
+ switch3.src = "Assets/on.png"
+ } else {
+ switch3.src = "Assets/off.png";
+ }
+ }
+ if (num == 4) {
+ if (switch4.src.match("Assets/off.png")) {
+ switch4.src = "Assets/on.png"
+ } else {
+ switch4.src = "Assets/off.png";
+ }
+ }
+ if (switch1.src.match("Assets/on.png")) {
+ count++;
+ }
+ if (switch2.src.match("Assets/on.png")) {
+ count++;
+ }
+ if (switch3.src.match("Assets/on.png")) {
+ count++;
+ }
+ if (switch4.src.match("Assets/on.png")) {
+ count++;
+ }
+ if (count==2) {
+ light5.src = "Assets/openlightbulb.png";
+ }
+ else{
+ light5.src = "Assets/dark lightbulb.png";
 
-      var count = 0;
-      if (num == 1) {
-        if (switch1.src.match("Assets/off.png")) {
-          switch1.src = "Assets/on.png"
-        } else {
-          switch1.src = "Assets/off.png";
-        }
-      }
-      if (num == 2) {
-        if (switch2.src.match("Assets/off.png")) {
-          switch2.src = "Assets/on.png"
-        } else {
-          switch2.src = "Assets/off.png";
-        }
-      }
-      if (num == 3) {
-        if (switch3.src.match("Assets/off.png")) {
-          switch3.src = "Assets/on.png"
-        } else {
-          switch3.src = "Assets/off.png";
-        }
-      }
-      if (num == 4) {
-        if (switch4.src.match("Assets/off.png")) {
-          switch4.src = "Assets/on.png"
-        } else {
-          switch4.src = "Assets/off.png";
-        }
-      }
-      if (switch1.src.match("Assets/on.png")) {
-        count++;
-      }
-      if (switch2.src.match("Assets/on.png")) {
-        count++;
-      }
-      if (switch3.src.match("Assets/on.png")) {
-        count++;
-      }
-      if (switch4.src.match("Assets/on.png")) {
-        count++;
-      }
-      if (count==2) {
-        light5.src = "Assets/openlightbulb.png";
-      }
-      else{
-        light5.src = "Assets/dark lightbulb.png";
-
-      }
-    }
-    
-  </script>
-</head>
+ }
+ }
+ 
+ </script>
+ </head>
 
 </html>
 
@@ -232,326 +235,420 @@
 
 <div id="alert"></div>
 <header>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
-></script>
-<script type = 'module'>
-    
-    var data = localStorage.getItem("person");
-    document.getElementById('username').innerHTML = data;
-    var money = localStorage.getItem("money");
-    document.getElementById('money').innerHTML= money;
-  </script>
-  <div class="header">  
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top" style="font-family: 'Roboto', sans-serif;">
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+ integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+ crossorigin="anonymous"></script>
+ <!-- MDB -->
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+ <script type='module'>
 
-        <a class="navbar-brand me-4 ml-4" href="HomePage.html">
-            <i class="fa-solid fa-home"></i>
-        </a>
-        <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
-          <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="AboutUs.html">
-              <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
-                <span  style="color: black" > About Us </span>
-              </button>
-          </a>
-          <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="Customize.html">
-            <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
-              <i class="fa-solid fa-crow" style="color:#74726B"></i>
-              <span  style="color: black" > Customize </span>
-            </button>
-            <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="HowToPlay.html">
-              <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
-          </a>
-        </a>
-      </div>
-       
-    
+ var data = localStorage.getItem("person");
+ document.getElementById('username').innerHTML = data;
+ var money = localStorage.getItem("money");
+ document.getElementById('money').innerHTML = money;
+ </script>
+ <div class="header">
+ <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top"
+ style="font-family: 'Roboto', sans-serif;">
 
-      <a class="navbar-brand me-4 style="color: white" >
-        <span id="username" style="text-decoration: none;float:left;margin-left:20px; color: white;">username</span>
-        <i class="fa-solid fa-seedling" style="text-decoration: none;float:left;margin-left:20px; color: white;"></i>
-        <span  id="money" style="color: white" > , 200 </span>
-    </a>
+ <a class="navbar-brand me-4 ml-4" href="HomePage.html">
+ <i class="fa-solid fa-home"></i>
+ </a>
+ <div class="collapse navbar-collapse" style="padding-top: 0em;" id="navbarSupportedContent">
+ <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="AboutUs.html">
+ <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
+ <span style="color: black"> About Us </span>
+ </button>
+ </a>
+ <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="Customize.html">
+ <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">
+ <i class="fa-solid fa-crow" style="color:#74726B"></i>
+ <span style="color: black"> Customize </span>
+ </button>
+ <a style="text-decoration: none;float:right;margin-left:20px;" class="pt-0" href="HowToPlay.html">
+ <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill">How To Play</button>
+ </a>
+ </a>
+ </div>
 
-        <a class="navbar-brand me-4" href="settings.html">
-            <i class="fa-solid fa-gear"></i>
-        </a>
 
-        <div class="dropdown " style="margin-right:1%">
-          <a
-            class="dropdown-toggle hidden-arrow"
-            type="button"
-            id="dropdownMenuicon"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fa-solid fa-sign-out" style="color:white; height:100%; width:100%;"></i>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon" style="position: relative; left: -125px;">
-            <li ><a class="dropdown-item" href="index.html"> <i class="fas fa-sign-out"></i> Are You Sure?</a></li>
-          </ul>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-        
-     
-    </nav>
-  </div>
+
+ <a class="navbar-brand me-4 style=" color: white">
+ <span id="username" style="text-decoration: none;float:left;margin-left:20px; color: white;">username</span>
+ <i class="fa-solid fa-seedling" style="text-decoration: none;float:left;margin-left:20px; color: white;"></i>
+ <span id="money" style="color: white"> , 200 </span>
+ </a>
+
+ <a class="navbar-brand me-4" href="settings.html">
+ <i class="fa-solid fa-gear"></i>
+ </a>
+
+ <div class="dropdown " style="margin-right:1%">
+ <a class="dropdown-toggle hidden-arrow" type="button" id="dropdownMenuicon" data-mdb-toggle="dropdown"
+ aria-expanded="false">
+ <i class="fa-solid fa-sign-out" style="color:white; height:100%; width:100%;"></i>
+ </a>
+ <ul class="dropdown-menu" aria-labelledby="dropdownMenuicon" style="position: relative; left: -125px;">
+ <li><a class="dropdown-item" href="index.html"> <i class="fas fa-sign-out"></i> Are You Sure?</a></li>
+ </ul>
+ </div>
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+
+
+ </nav>
+ </div>
+
 </header>
 
+
+
 <html>
-  <button type="button" class="how-to-play btn btn-outline-primary, rounded-pill" onClick="window.location.href = 'BooleansHomePage.html'" style=" max-height:40px; max-width: fit-content; margin-left: 14%; margin-top:1%; margin-bottom: -12%">back</button>
-<body class="back" >
+<style>
+ /* Set additional styling options for the columns*/
+ .column {
+ float: left;
+ width: 48%;
 
-  <div class="container">
+ }
 
-    <div class="swiper-button-prev" onclick="decrease()"></div>
-    <div class="swiper-button-next" onclick="increase()"></div>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
+ .row {
+ width: 100%;
+ }
 
-      <div class="swiper-wrapper">
+ .row:after {
 
-        <!-- Slides -->
+ content: "";
+ display: table;
+ clear: both;
+ }
+</style>
+<button type="button" class="how-to-play btn btn-outline-primary, rounded-pill"
+ onClick="window.location.href = 'VariablesHomePage.html'"
+ style=" max-height:40px; max-width: fit-content; margin-left: 6%; margin-top:2%; margin-bottom: -1.5%;">back</button>
 
-        <div class="swiper-slide"><img src="Assets/background lesson.png" onload="typeWriter(0, 0)">
-          <h1>Booleans</h1>
+<body class="back">
 
-          <div class="test"><img id="light" src="Assets/dark lightbulb.png" />
-            <button id="switchbutton"
-              onclick="changeImage();"><img id="switch" src="Assets/off.png" border="0" /></button>
-          </div>
-          <figure>
-            <figcaption>Play Audio Lesson:</figcaption>
-            <audio controls src="lines/line21.mp3">
-              <a href="lines/line21.mp3">
-                Download audio
-              </a>
-            </audio>
-          </figure>
-              <img id="lightbulb1" src="Assets/lightbulb1.png" />
+ <!-- onload="typeWriter(0, 0)" -->
+ <div class="container">
 
-             
-          <p id="slide0"></p>
-        </div>
-        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Operators</h1>
+ <div class="swiper-button-prev" onclick="decrease();"></div>
+ <div id="next" class="swiper-button-next" onclick="increase()"></div>
+ <!-- Slider main container -->
+ <div class="swiper">
+ <!-- Additional required wrapper -->
 
-          <div class="testand"><img id="light2" src="Assets/dark lightbulb.png" />
-            <button id="andbutton1" onclick="changeImage2(1);"><img id="andswitch1" src="Assets/off.png"
-                border="0" /></button>
-            <button id="andbutton2" onclick="changeImage2(2);"><img id="andswitch2" src="Assets/off.png"
-                border="0" /></button>
-          </div>
-          <img id="lightbulb2" src="Assets/lightbulb2.png" />
-          <figure>
-            <figcaption>Play Audio Lesson:</figcaption>
-            <audio controls src="lines/line22.mp3">
-              <a href="lines/line22.mp3">
-                Download audio
-              </a>
-            </audio>
-          </figure>
-          <p id="slide1"></p>
-        </div>
-
-        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Operators</h1>
-          <div class="testor"><img id="light3" src="Assets/dark lightbulb.png" />
-            <button id="orbutton1" onclick="changeImage3(1);"><img id="orswitch1" src="Assets/off.png"
-                border="0" /></button>
-            <button id="orbutton2" onclick="changeImage3(2);"><img id="orswitch2" src="Assets/off.png"
-                border="0" /></button>
-          </div>
-          <img id="lightbulb3" src="Assets/lightbulb3.png" />
-          <figure>
-            <figcaption>Play Audio Lesson:</figcaption>
-            <audio controls src="lines/line23.mp3">
-              <a href="lines/line23.mp3">
-                Download audio
-              </a>
-            </audio>
-          </figure>
-            <p id="slide2"></p>
-        </div>
-        
-        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Operators</h1>
-          <div class="testgreat"><img id="light4" src="Assets/dark lightbulb.png" />
-            <button id="gbutton1" onclick="changeImage4(1);"><img id="gswitch1" src="Assets/off.png"
-                border="0" /></button>
-            <button id="gbutton2" onclick="changeImage4(2);"><img id="gswitch2" src="Assets/off.png"
-                border="0" /></button>
-            <button id="gbutton3" onclick="changeImage4(3);"><img id="gswitch3" src="Assets/off.png"
-                  border="0" /></button>
-            <button id="gbutton4" onclick="changeImage4(4);"><img id="gswitch4" src="Assets/off.png"
-                    border="0" /></button>
-            
-          </div>
-          <img id="lightbulb4" src="Assets/lightbulb4.png" />
-          <figure>
-            <figcaption>Play Audio Lesson:</figcaption>
-            <audio controls src="lines/line24.mp3">
-              <a href="lines/line24.mp3">
-                Download audio
-              </a>
-            </audio>
-          </figure>
-          <p id="slide3"></p>
-        </div>
-        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Operators</h1>
-          <div class="testequal"><img id="light5" src="Assets/dark lightbulb.png" />
-            <button id="sbutton1" onclick="changeImage5(1);"><img id="sswitch1" src="Assets/off.png"
-                border="0" /></button>
-            <button id="sbutton2" onclick="changeImage5(2);"><img id="sswitch2" src="Assets/off.png"
-                border="0" /></button>
-            <button id="sbutton3" onclick="changeImage5(3);"><img id="sswitch3" src="Assets/off.png"
-                  border="0" /></button>
-            <button id="sbutton4" onclick="changeImage5(4);"><img id="sswitch4" src="Assets/off.png"
-                    border="0" /></button>
-            
-          </div>
-          <img id="lightbulb5" src="Assets/lightbulb5.png" />
-          <figure>
-            <figcaption>Play Audio Lesson:</figcaption>
-            <audio controls src="lines/line25.mp3">
-              <a href="lines/line25.mp3">
-                Download audio
-              </a>
-            </audio>
-          </figure>
-          <p id="slide4">
-          </p>
-        </div>
-        <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
-          <h1>Operators</h1>
-          <div class="test"></div>
-          <img id="lightbulb6" src="Assets/lightbulb6.png" />
-          <figure>
-            <figcaption>Play Audio Lesson:</figcaption>
-            <audio controls src="lines/line26.mp3">
-              <a href="lines/line26.mp3">
-                Download audio
-              </a>
-            </audio>
-          </figure>
-          <p id="slide5">
-          </p>
-        </div>
-
-        <!-- If we need pagination -->
-
-        <!-- If we need navigation buttons -->
-
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-    const talk = ["On to branch 2, where you’ll be learning about booleans. Booleans are a type of variable. Think of a boolean as a light switch- it can be on or off, but never both!\nBooleans can be either true or false depending on how you set them, and programmers use booleans to check conditions. There are some tools we can use to set them. Why don't you try setting the lightbulb to true or false?",
-      "The AND operator (&&) means that both conditions must be true in order to make the boolean true. For example, a lightbulb that will only turn on if both light switches are on. If either of them are off, the lightbulb will be dark.",
-      "On the other hand, the OR operator (||) means that only one of the conditions must be true. It can be a little hard to find, so all you have to do is hold shift and “\\” (it’s under backspace). For example, a lightbulb that will light up as long as a lightswitch is on. ",
-      "The greater and less than operators (< and >) are only used for comparing two numbers. For example, a lightbulb will turn on only if the amount of switches that are on is greater than the amount that is off.",
-      "Last but not least, we have the equal operator (==). This is used to check if two variables are the same. For example, a lightbulb will turn on only if the amount of “off” switches is equal to the amount of “on” switches. On the other hand, the NOT operator (!=) is used to check if two variables are unequal.",
-      "Conditional statements are used to control our program by executing blocks of code. This way, computers can make decisions and we can control how we want them to run. If statements will only run if the condition inside is true. However, if the condition is false, we can execute another block"];
-    var slide = 0;
-    var max = slide;
-    function increase() {
-      slide++;
-      if(slide > max){
-        max = slide;
-        typeWriter(slide, 0);
-      }
-      j = 0;
-    }
-
-    function decrease(){
-      slide--;
-    }
+ <div class="swiper-wrapper">
 
 
-    var speed = 10;
-    var j = 0;
-
-    function typeWriter(num, j) {
-      if (j < talk[num].length) {
-        document.getElementById('slide' + num).innerHTML += talk[num].charAt(j);
-        j++;
-        setTimeout(typeWriter.bind(null, num, j), speed);
-      }
-      return false;
-    }
+ <!-- Slides -->
+ <div class="swiper-slide"><img src="Assets/background lesson.png" onload="typeWriter(0, 0)">
+ <h1><u><strong> Booleans</strong></u></h1>
 
 
-  </script>
-  <script>const swiper = new Swiper('.swiper', {
-      // Optional parameters
-      loop: false,
 
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+ <body>
+ <div class="row" style="padding-right: 2%">
+ <div class="column" style="background-color: #dad7cd;">
+ <h2><strong><em>Example</em></strong></h2>
+ 
+ <div class="test"><img id="light" src="Assets/dark lightbulb.png" />
+ <button id="switchbutton"
+ onclick="changeImage();"><img id="switch" src="Assets/off.png" border="0" /></button>
+ </div>
+ 
+ <img id="lightbulb1" src="Assets/lightbulb1.png" />
+ 
+ </div>
+ <div class="column" style="background-color:#b8c3a6; border-radius: 8%;">
+ <h2 class="audio">Audio</h2>
+ <figure>
+ <figcaption>Play Audio Lesson:</figcaption>
+ <audio controls src="lines/line21.mp3">
+ <a href="lines/line21.mp3">
+ Download audio
+ </a>
+ </audio>
+ </figure>
+ </div>
+ </div>
 
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+ </body>
 
-      // And if we need scrollbar
 
-    });</script>
+
+
+ <p id="slide0"></p>
+
+ </div>
+
+ <div class="swiper-slide" style="height: 60%"><img src="Assets/background lesson.png" alt="">
+ <h1><u><strong> Operators</strong></u></h1>
+
+
+
+ <body>
+ <div class="row">
+ <div class="column" style="background-color:#dad7cd; border-radius: 8%; ">
+ <h2><strong><em>Example </em></strong> </h2>
+ 
+ <div class="testand"><img id="light2" src="Assets/dark lightbulb.png" />
+ <button id="andbutton1" onclick="changeImage2(1);"><img id="andswitch1" src="Assets/off.png"
+ border="0" /></button>
+ <button id="andbutton2" onclick="changeImage2(2);"><img id="andswitch2" src="Assets/off.png"
+ border="0" /></button>
+ </div>
+ <img id="lightbulb2" src="Assets/lightbulb2.png" />
+ </div>
+ <div class="column" style="background-color:#b8c3a6;border-radius: 8%;">
+ <h2 class="audio">Audio</h2>
+ <figure>
+ <figcaption>Play Audio Lesson:</figcaption>
+ <audio controls src="lines/line22.mp3">
+ <a href="lines/line22.mp3">
+ Download audio
+ </a>
+ </audio>
+ </figure>
+ </div>
+ </div>
+
+ </body>
+
+ <p id="slide1"></p>
+ </div>
+
+ <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
+ <h1><u><strong> Operators</strong></u></h1>
+ <div class="row">
+ <div class="column" style="background-color:#dad7cd; border-radius: 8%; ">
+    <h2><strong><em>Example </em></strong> </h2>
+    <div class="testor"><img id="light3" src="Assets/dark lightbulb.png" />
+ <button id="orbutton1" onclick="changeImage3(1);"><img id="orswitch1" src="Assets/off.png"
+ border="0" /></button>
+ <button id="orbutton2" onclick="changeImage3(2);"><img id="orswitch2" src="Assets/off.png"
+ border="0" /></button>
+ </div>
+ <img id="lightbulb3" src="Assets/lightbulb3.png" />
+ </div>
+ <div class="column" style="background-color:#b8c3a6;border-radius: 8%; ">
+ <h2 class="audio">Audio</h2>
+ <figure>
+ <figcaption>Play Audio Lesson:</figcaption>
+ <audio controls src="lines/line23.mp3">
+ <a href="lines/line23.mp3">
+ Download audio
+ </a>
+ </audio>
+ </figure>
+ </div>
+ </div>
+ <p id="slide2"></p>
+ </div>
+
+ <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
+ <h1><u><strong> Operators</strong></u></h1>
+
+ <div class="row">
+ <div class="column" style="background-color:#dad7cd;border-radius: 8%; ">
+ <h2><strong><em>Example </em></strong> </h2>
+ <div class="testgreat"><img id="light4" src="Assets/dark lightbulb.png" />
+ <button id="gbutton1" onclick="changeImage4(1);"><img id="gswitch1" src="Assets/off.png"
+ border="0" /></button>
+ <button id="gbutton2" onclick="changeImage4(2);"><img id="gswitch2" src="Assets/off.png"
+ border="0" /></button>
+ <button id="gbutton3" onclick="changeImage4(3);"><img id="gswitch3" src="Assets/off.png"
+ border="0" /></button>
+ <button id="gbutton4" onclick="changeImage4(4);"><img id="gswitch4" src="Assets/off.png"
+ border="0" /></button>
+ 
+ </div>
+ <img id="lightbulb4" src="Assets/lightbulb4.png" />
+
+ </div>
+ <div class="column" style="background-color:#b8c3a6;border-radius: 8%; ">
+ <h2 class="audio">Audio</h2>
+ <figure>
+ <figcaption>Play Audio Lesson:</figcaption>
+ <audio controls src="lines/line24.mp3">
+ <a href="lines/line24.mp3">
+ Download audio
+ </a>
+ </audio>
+ </figure>
+ </div>
+ </div>
+ <p id="slide3"></p>
+ </div>
+ <div class="swiper-slide"><img src="Assets/background lesson.png" alt="">
+ <h1><u><strong> Printing <em> and output </em></strong></u></h1>
+
+ <div class="row">
+ <div class="column" style="background-color:#dad7cd; border-radius: 8%; ">
+ <h2><strong><em>Example </em></strong> </h2>
+ <div class="testequal"><img id="light5" src="Assets/dark lightbulb.png" />
+ <button id="sbutton1" onclick="changeImage5(1);"><img id="sswitch1" src="Assets/off.png"
+ border="0" /></button>
+ <button id="sbutton2" onclick="changeImage5(2);"><img id="sswitch2" src="Assets/off.png"
+ border="0" /></button>
+ <button id="sbutton3" onclick="changeImage5(3);"><img id="sswitch3" src="Assets/off.png"
+ border="0" /></button>
+ <button id="sbutton4" onclick="changeImage5(4);"><img id="sswitch4" src="Assets/off.png"
+ border="0" /></button>
+ 
+ </div>
+ <img id="lightbulb5" src="Assets/lightbulb5.png" />
+
+ </div>
+ <div class="column" style="background-color:#b8c3a6;border-radius: 8%; ">
+ <h2 class="audio">Audio</h2>
+ <figure>
+ <figcaption>Play Audio Lesson:</figcaption>
+ <audio controls src="lines/line25.mp3">
+ <a href="lines/line25.mp3">
+ Download audio
+ </a>
+ </audio>
+ </figure>
+ </div>
+ </div>
+ <p id="slide4"></p>
+ </div>
+
+
+ <!-- If we need pagination -->
+
+ <!-- If we need navigation buttons -->
+
+ </div>
+ <div class="swiper-pagination"></div>
+ </div>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+ <script>
+
+const talk = ["On to branch 2, where you’ll be learning about booleans. Booleans are a type of variable. Think of a boolean as a light switch- it can be on or off, but never both!\nBooleans can be either true or false depending on how you set them, and programmers use booleans to check conditions. There are some tools we can use to set them. Why don't you try setting the lightbulb to true or false?",
+"The AND operator (&&) means that both conditions must be true in order to make the boolean true. For example, a lightbulb that will only turn on if both light switches are on. If either of them are off, the lightbulb will be dark.",
+"On the other hand, the OR operator (||) means that only one of the conditions must be true. It can be a little hard to find, so all you have to do is hold shift and “\\” (it’s under backspace). For example, a lightbulb that will light up as long as a lightswitch is on. ",
+"The greater and less than operators (< and >) are only used for comparing two numbers. For example, a lightbulb will turn on only if the amount of switches that are on is greater than the amount that is off.",
+"Last but not least, we have the equal operator (==). This is used to check if two variables are the same. For example, a lightbulb will turn on only if the amount of “off” switches is equal to the amount of “on” switches. On the other hand, the NOT operator (!=) is used to check if two variables are unequal."];
+ var slide = 0;
+ var max = slide;
+ function increase() {
+ slide++;
+ localStorage.setItem("slide", "" + slide);
+ if (slide > max) {
+ max = slide;
+ typeWriter(slide, 0);
+ }
+ j = 0;
+ }
+
+ function decrease() {
+ slide--;
+ }
+ var speed = 10;
+ var j = 0;
+
+ function typeWriter(num, j) {
+ if (j < talk[num].length) {
+ document.getElementById('slide' + num).innerHTML += talk[num].charAt(j);
+ j++;
+ setTimeout(typeWriter.bind(null, num, j), speed);
+ }
+ return false;
+ }
+
+
+ </script>
+ <script>const swiper = new Swiper('.swiper', {
+ // Optional parameters
+ loop: false,
+
+ // If we need pagination
+ pagination: {
+ el: '.swiper-pagination',
+ clickable: true,
+ },
+
+ // Navigation arrows
+ navigation: {
+ nextEl: '.swiper-button-next',
+ prevEl: '.swiper-button-prev',
+ },
+
+ // And if we need scrollbar
+
+ });</script>
  <div id="anim"></div>
  <script src="Animationz/lottie.js"></script>
-    <script type = "module">
-      // Import the functions you need from the SDKs you need
-     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-     // TODO: Add SDKs for Firebase products that you want to use
-     // https://firebase.google.com/docs/web/setup#available-libraries
-     
-     // Your web app's Firebase configuration
-     const firebaseConfig = {
-         apiKey: "AIzaSyD-F4Lqjy9TjFxYmCmQpm4HSb74GSPE41I",
-         authDomain: "newtest-561c2.firebaseapp.com",
-         databaseURL: "https://newtest-561c2-default-rtdb.firebaseio.com",
-         projectId: "newtest-561c2",
-         storageBucket: "newtest-561c2.appspot.com",
-         messagingSenderId: "841219402391",
-         appId: "1:841219402391:web:6d04ab18255508fcb217d2"
-     };
-     
-     // Initialize Firebase
-     const app = initializeApp(firebaseConfig);
-     import{getDatabase, set, get, update, remove, ref, child}
-     from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-     const db = getDatabase();
-     console.log(localStorage.getItem("Track"));
-     if(localStorage.getItem("Track") == "true"){
-      updateData();
-     }
-      function updateData(){
-      update(ref(db, ""+localStorage.getItem("person")), {Branch3:true})
-      .then((userCredential) => {
-          // Signed up
-          // ...
-      })
-      .catch((error) => {
-          // alert(error);
-      });
-    }
-    </script>
-    <script type = 'module' src="customize.js"></script>
-  </body>
+ <script type="module">
+ document.addEventListener('DOMContentLoaded', () => {
+ let btn = document.getElementById('next')
+ btn.addEventListener('click', function (evt) {
+ check();
+ })
+ })
+ function check() {
+ if (parseInt(localStorage.getItem("slide")) == 3) {
+ console.log(localStorage.getItem('money'));
+ //addMoney();
+ }
+ }
+ // Import the functions you need from the SDKs you need
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+ // TODO: Add SDKs for Firebase products that you want to use
+ // https://firebase.google.com/docs/web/setup#available-libraries
+
+ // Your web app's Firebase configuration
+ const firebaseConfig = {
+ apiKey: "AIzaSyD-F4Lqjy9TjFxYmCmQpm4HSb74GSPE41I",
+ authDomain: "newtest-561c2.firebaseapp.com",
+ databaseURL: "https://newtest-561c2-default-rtdb.firebaseio.com",
+ projectId: "newtest-561c2",
+ storageBucket: "newtest-561c2.appspot.com",
+ messagingSenderId: "841219402391",
+ appId: "1:841219402391:web:6d04ab18255508fcb217d2"
+ };
+
+ // Initialize Firebase
+ const app = initializeApp(firebaseConfig);
+ import { getDatabase, set, get, update, remove, ref, child }
+ from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+ const db = getDatabase();
+ if (localStorage.getItem("Track")) {
+ updateData();
+ }
+ function addMoney() {
+ update(ref(db, "" + localStorage.getItem("person")), { Money: parseInt(localStorage.getItem("Money")) + 20 })
+ .then((userCredential) => {
+ localStorage.setItem("Money", parseInt(localStorage.getItem("Money")) + 20)
+ console.log("update");
+ // Signed up
+ // ...
+ })
+ .catch((error) => {
+ // alert(error);
+ });
+ }
+ function updateData() {
+ update(ref(db, "" + localStorage.getItem("person")), { Branch2: true })
+ .then((userCredential) => {
+ // Signed up
+ // ...
+ })
+ .catch((error) => {
+ // alert(error);
+ });
+ }
+ </script>
+ <script type='module' src="customize.js"></script>
+
+</body>
 
 </html>
