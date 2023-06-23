@@ -13,6 +13,7 @@ for (let list of lists) {
   list.addEventListener("dragstart", function(e) {
     e.dataTransfer.setData("text/plain", e.target.id);
   });
+
 }
 
 // add dragover event listener to the left box to allow dropping
@@ -45,13 +46,14 @@ leftBox.addEventListener("dragend", function(e) {
     // the block is being moved within the left side (no action needed)
   }
 
-  console.log(final);
+  
 });
 
 // add dragover event listener to the right box to allow dropping
 rightBox.addEventListener("dragover", function(e) {
   e.preventDefault();
 });
+
 
 // add drop event listener to the right box to handle block placement
 rightBox.addEventListener("drop", function(e) {
@@ -86,23 +88,41 @@ rightBox.addEventListener("drop", function(e) {
         for (let i = 0; i < final.length; i++) {
           final[i].style.top = `${i * 40}px`;
         }
-
-        console.log(final);
       });
-
       clonedBlock.appendChild(deleteButton); // delete button
     }
-
     rightBox.appendChild(clonedBlock);
     final.push(clonedBlock);
+    //code    
+    for(let list of final) {
+      list.addEventListener("mouseover", function(e) {
+        e.preventDefault();
+        let selectedId = e.target.id;
+        let selected = document.getElementById(selectedId);
+          selected.deleteButton.color = "red";
+          console.log("y dis goofy ahh code not running")
+      });
+      list.addEventListener("mouseout", function(e) {
+        e.preventDefault();
+        let selectedId = e.target.id;
+        let selected = document.getElementById(selectedId);
+        selected.style.color = "";
+      });
+    }
+    //code
   }
 
-  console.log(final);
+      
 });
 
 button.addEventListener("click", function() {
-  const correct = final.every((item, index) => item.id === (index + 1).toString());
-
+  for(let i = 0; i < final.length; i++) {
+    console.log(final[i].id.substring(0, 1));
+    if(final[i].id.substring(0, 1) != (i + 1) ) {
+      correct = false;
+    }
+  }
+  
   if (correct) {
     alert("Correct");
   } else {
