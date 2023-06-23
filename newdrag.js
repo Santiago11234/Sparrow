@@ -73,45 +73,38 @@ rightBox.addEventListener("drop", function(e) {
       e.dataTransfer.setData("text/plain", e.target.id);
     });
 
-    //delete button crap
-    let deleteButton = clonedBlock.querySelector("button");
-    if (!deleteButton) {
-      // create a delete button for the cloned block if it doesn't exist i give up man this sucks
-      deleteButton = document.createElement("button");
-      deleteButton.innerText = "Delete";
-      deleteButton.addEventListener("click", function() {
-        let index = final.indexOf(clonedBlock);
-
-        rightBox.removeChild(clonedBlock); // remove from right
-        final.splice(index, 1); // remove from final list
-
-        // move things up
-        for (let i = 0; i < final.length; i++) {
-          final[i].style.top = `${i * 40}px`;
-        }
-      });
-      clonedBlock.appendChild(deleteButton); // delete button
-    }
     rightBox.appendChild(clonedBlock);
     final.push(clonedBlock);
     //delete button crap
 
     //mouse hover crap    
-    for(let list of final) {
-      list.addEventListener("mouseover", function(e) {
-        e.preventDefault();
-        let selectedId = e.target.id;
-        let selected = document.getElementById(selectedId);
-          selected.
-          console.log("y dis goofy ahh code not running")
+    for (let list of final) {
+      let deleteButton = list.querySelector(".delete-button");
+    
+      list.addEventListener("mouseover", function() {
+        deleteButton.style.display = "block";
       });
+    
       list.addEventListener("mouseout", function(e) {
-        e.preventDefault();
-        let selectedId = e.target.id;
-        let selected = document.getElementById(selectedId);
-        selected.style.color = "";
+        if (!list.contains(e.relatedTarget) && !deleteButton.contains(e.relatedTarget)) {
+          deleteButton.style.display = "none";
+        }
+      });
+    
+      deleteButton.addEventListener("click", function(e) {
+        e.stopPropagation();
+        let index = final.indexOf(list);
+    
+        rightBox.removeChild(list); // Remove from right
+        final.splice(index, 1); // Remove from final list
+    
+        // Move things up
+        for (let i = 0; i < final.length; i++) {
+          final[i].style.top = `${i * 40}px`;
+        }
       });
     }
+    
     //mouse hover crap
   }
 

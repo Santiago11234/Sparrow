@@ -358,8 +358,6 @@ function updateMoney() {
 }
 
 function changeComponents(list) {
-
-
   if (window.location.href.indexOf("HomePage.html") !== -1) {
     fetch('Animationz/wave.json')
       .then(response => response.json())
