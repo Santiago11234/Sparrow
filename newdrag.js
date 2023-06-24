@@ -240,7 +240,7 @@ function turnLeft(direction) {
   } else if (direction === 'down') {
     turnPlayer('right');
     return 'right';
-  } else if (direction === 'left') {
+  } else if (direction === 'left') { =
     turnPlayer('down');
     return 'down';
   }
@@ -249,5 +249,6 @@ function turnLeft(direction) {
 function turnPlayer(direction) {
   player.style.transform = 'rotate(90deg)';
   if (direction === 'right') {
-    direction
+    
+  }
 }
