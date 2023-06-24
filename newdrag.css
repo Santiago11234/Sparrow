@@ -3,15 +3,19 @@
     min-height: 100vh;
     background: #0b0423;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;  
 }
+
 #left, #right {
     width: 300px;
-    height: 400px;
+    height: 1000px;
     margin: 20px;
     border: 2px dashed white;
 }
+#check {
+    background: orange;
+}
+
 .list {
     background: #47eb96;
     height: 60px;
@@ -23,6 +27,7 @@
     color: black;
     padding-left: 12px;
     border-radius: 5px;
+    
 }
 
 .delete-button {

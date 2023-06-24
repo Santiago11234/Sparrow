@@ -90,24 +90,19 @@ rightBox.addEventListener("drop", function(e) {
           deleteButton.style.display = "none";
         }
       });
-    
       deleteButton.addEventListener("click", function(e) {
         e.stopPropagation();
         let index = final.indexOf(list);
-    
         rightBox.removeChild(list); // Remove from right
         final.splice(index, 1); // Remove from final list
-    
         // Move things up
         for (let i = 0; i < final.length; i++) {
           final[i].style.top = `${i * 40}px`;
         }
       });
     }
-    
     //mouse hover crap
   }
-
       
 });
 
