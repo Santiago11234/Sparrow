@@ -276,3 +276,77 @@ function turnLeft() {
   }
   birdIcon.style.transform = `rotate(${rotationAngle}deg)`;
 }
+
+
+//the special items u place things ykwim
+
+// Get the item element
+const itemElement = document.getElementById('item');
+
+// Get the player element
+const playerElement = document.getElementById('player');
+
+// Add a dragstart event listener to the item element
+itemElement.addEventListener('dragstart', dragStart);
+
+// Add a drop event listener to the grid items
+const gridItems = document.getElementsByClassName('grid-item');
+for (const gridItem of gridItems) {
+  gridItem.addEventListener('drop', drop);
+  gridItem.addEventListener('dragover', dragOver);
+}
+
+// Drag start event handler
+function dragStart(event) {
+  // Set the ID of the dragged item to a unique value
+  const itemId = 'dragged-item-' + Date.now();
+  event.target.setAttribute('id', itemId);
+
+  // Set the data being dragged to the ID of the dragged item
+  event.dataTransfer.setData('text/plain', itemId);
+
+  // Hide the original item while dragging
+  event.target.style.opacity = '0';
+
+  // Adjust the size of the dragged item
+  event.target.style.width = `${event.target.offsetWidth}px`;
+  event.target.style.height = `${event.target.offsetHeight}px`;
+}
+
+// Drag over event handler
+function dragOver(event) {
+  event.preventDefault();
+}
+
+// Drop event handler
+function drop(event) {
+  event.preventDefault();
+
+  // Get the ID of the dragged item
+  const itemId = event.dataTransfer.getData('text/plain');
+
+  // Check if the dropped element is a valid grid item and not the player
+  if (event.target.classList.contains('grid-item') && !event.target.contains(playerElement)) {
+    // Create a new item element
+    const newItemElement = document.createElement('div');
+    newItemElement.classList.add('grid-item');
+
+    // Create a new bird image element
+    const newBirdImage = document.createElement('img');
+    newBirdImage.src = 'Assets/topView.png';
+    newBirdImage.alt = 'Bird Icon';
+    newBirdImage.classList.add('bird-icon');
+
+    // Append the new bird image to the new item element
+    newItemElement.appendChild(newBirdImage);
+
+    // Append the new item element to the dropped grid item
+    event.target.appendChild(newItemElement);
+  }
+
+  // Reset the style of the dragged item
+  const draggedItem = document.getElementById(itemId);
+  draggedItem.style.opacity = '';
+  draggedItem.style.width = '';
+  draggedItem.style.height = '';
+}

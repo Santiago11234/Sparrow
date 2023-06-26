@@ -62,8 +62,19 @@
     align-items: center;
     border-radius: 5px;
     padding: 3px;
+    
 }
   
+.buy-item {
+  background-color: #dad7cd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    cursor: pointer;
+}
   #bird-icon {
     max-width: 80%;
     max-height: 80%;
