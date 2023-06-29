@@ -328,19 +328,16 @@ function drop(event) {
   // Check if the dropped element is a valid grid item and not the player
   if (event.target.classList.contains('grid-item') && !event.target.contains(playerElement)) {
     // Create a new item element
+
     const newItemElement = document.createElement('div');
     newItemElement.classList.add('grid-item');
 
-    // Create a new bird image element
     const newBirdImage = document.createElement('img');
     newBirdImage.src = 'Assets/topView.png';
     newBirdImage.alt = 'Bird Icon';
-    newBirdImage.classList.add('bird-icon');
+    newBirdImage.id = "bird-icon";
 
-    // Append the new bird image to the new item element
     newItemElement.appendChild(newBirdImage);
-
-    // Append the new item element to the dropped grid item
     event.target.appendChild(newItemElement);
   }
 
@@ -349,4 +346,6 @@ function drop(event) {
   draggedItem.style.opacity = '';
   draggedItem.style.width = '';
   draggedItem.style.height = '';
+  draggedItem.id = 'bird-icon';
+
 }
