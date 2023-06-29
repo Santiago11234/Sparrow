@@ -79,7 +79,7 @@
     overflow: hidden;
     z-index: 9;
     top: -70%;
-    left: -5%;
+    right: -10%;
     height: 100%;
     clip-path: inset(120px 70px 120px 85px);
 }

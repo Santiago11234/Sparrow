@@ -8,13 +8,16 @@ let correct = true;
 let cloneCount = 1; // initialize the clone counter
 let player = document.getElementById("player");
 let grid = document.getElementById("playground");
+let birdIcon = document.getElementById('bird-icon');
 
+console.log(birdIcon.style.transform)
 // add event listener to each block to enable dragging
 // when a block is dragged, its ID will be the data transferred
 for (let list of lists) {
   list.addEventListener("dragstart", function(e) {
     e.dataTransfer.setData("text/plain", e.target.id);
   });
+
   //disable delete button
 
 }
@@ -125,14 +128,29 @@ rightBox.addEventListener("drop", function(e) {
 //   }
 // });
 
+//reset stuff
+let resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', resetCode);
+
+function resetCode() {
+  for(let list of final) {
+    rightBox.removeChild(list); 
+  }
+  final = [];
+  movePlayer(1, 1); 
+  direction = 'down'; 
+  rotationAngle = 0;
+  birdIcon.style.transform = `rotate(${rotationAngle}deg)`;
+}
+
+//PLAYGROUND BELOW DONT TOUCH IF U WANT TO LIVE
 //running code section
 // Define the initial direction
-let direction = 'up';
+let direction = 'down';
+let rotationAngle = 0;
 
 button.addEventListener("click", function() {
   let commands = [];
-  
-  // Get the current player position
   let currentPosition = getPlayerPosition();
   let currentColumn = currentPosition.gridColumn;
   let currentRow = currentPosition.gridRow;
@@ -141,39 +159,18 @@ button.addEventListener("click", function() {
     let blockId = "" + final[i].id.substring(0, 1);
     switch (blockId) {
       case '1':
-        // Move forward by 1 grid based on the current direction
-        if (direction === 'up') {
-          commands.push('forward');
-        } else if (direction === 'right') {
-          commands.push('right');
-        } else if (direction === 'down') {
-          commands.push('back');
-        } else if (direction === 'left') {
-          commands.push('left');
-        }
+        commands.push('forward');
         break;
       case '2':
-        // Turn right
         commands.push('right');
         break;
       case '3':
-        // Turn left
         commands.push('left');
         break;
       case '4':
-        // Move back by 1 grid based on the current direction
-        if (direction === 'up') {
-          commands.push('back');
-        } else if (direction === 'right') {
-          commands.push('left');
-        } else if (direction === 'down') {
-          commands.push('forward');
-        } else if (direction === 'left') {
-          commands.push('right');
-        }
+        commands.push('back');
         break;
       default:
-        console.log("Invalid command");
         break;
     }
   }
@@ -192,63 +189,163 @@ function getPlayerPosition() {
 }
 
 function executeCommands(commands) {
-  let delay = 500; // Adjust the delay as needed (in milliseconds)
+  let delay = 500; 
 
-  for (let i = 0; i < commands.length; i++) {
+  for (let i = 0; i < commands.length + 1; i++) {
     setTimeout(function () {
       let command = commands[i];
       let currentPosition = getPlayerPosition();
 
       if (command === 'forward') {
-        movePlayer(currentPosition.gridColumn+1, currentPosition.gridRow);
+        moveForward(currentPosition);
       } else if (command === 'right') {
-        direction = turnRight(direction);
-        movePlayer(currentPosition.gridColumn, currentPosition.gridRow);
+        turnRight();
       } else if (command === 'left') {
-        direction = turnLeft(direction);
-        movePlayer(currentPosition.gridColumn, currentPosition.gridRow);
+        turnLeft();
       } else if (command === 'back') {
-        movePlayer(currentPosition.gridColumn-1, currentPosition.gridRow);
+        moveBackward(currentPosition);
       }
     }, delay * i);
-  }
+  }  
+  //go back to start pos
+  setTimeout(function () {
+    movePlayer(1, 1); 
+    direction = 'down'; 
+    rotationAngle = 0;
+    birdIcon.style.transform = `rotate(${rotationAngle}deg)`;
+  }, delay * commands.length);
 }
 
-function turnRight(direction) {
+function moveForward(currentPosition) {
+  let { gridColumn, gridRow } = currentPosition;
   if (direction === 'up') {
-    turnPlayer('right');
-    return 'right';
+    movePlayer(gridColumn, gridRow - 1);
   } else if (direction === 'right') {
-    turnPlayer('down');
-    return 'down';
+    movePlayer(gridColumn + 1, gridRow);
   } else if (direction === 'down') {
-    turnPlayer('left');
-    return 'left';
+    movePlayer(gridColumn, gridRow + 1);
   } else if (direction === 'left') {
-    turnPlayer('up');
-    return 'up';
+    movePlayer(gridColumn - 1, gridRow);
   }
 }
 
-function turnLeft(direction) {
+function moveBackward(currentPosition) {
+  let { gridColumn, gridRow } = currentPosition;
   if (direction === 'up') {
-    turnPlayer('left');
-    return 'left';
+    movePlayer(gridColumn, gridRow + 1);
   } else if (direction === 'right') {
-    turnPlayer('up');
-    return 'up';
+    movePlayer(gridColumn - 1, gridRow);
   } else if (direction === 'down') {
-    turnPlayer('right');
-    return 'right';
-  } else if (direction === 'left') { =
-    turnPlayer('down');
-    return 'down';
+    movePlayer(gridColumn, gridRow - 1);
+  } else if (direction === 'left') {
+    movePlayer(gridColumn + 1, gridRow);
   }
 }
 
-function turnPlayer(direction) {
-  player.style.transform = 'rotate(90deg)';
-  if (direction === 'right') {
-    
+function turnRight() {
+  if (direction === 'up') {
+    direction = 'right';
+    rotationAngle += 90;
+  } else if (direction === 'right') {
+    direction = 'down';
+    rotationAngle += 90;
+  } else if (direction === 'down') {
+    direction = 'left';
+    rotationAngle += 90;
+  } else if (direction === 'left') {
+    direction = 'up';
+    rotationAngle += 90;
   }
+
+  birdIcon.style.transform = `rotate(${rotationAngle}deg)`;
+}
+
+function turnLeft() {
+  if (direction === 'up') {
+    direction = 'left';
+    rotationAngle -= 90;
+  } else if (direction === 'right') {
+    direction = 'up';
+    rotationAngle -= 90;
+  } else if (direction === 'down') {
+    direction = 'right';
+    rotationAngle -= 90;
+  } else if (direction === 'left') {
+    direction = 'down';
+    rotationAngle -= 90;
+  }
+  birdIcon.style.transform = `rotate(${rotationAngle}deg)`;
+}
+
+
+//the special items u place things ykwim
+
+// Get the item element
+const itemElement = document.getElementById('item');
+
+// Get the player element
+const playerElement = document.getElementById('player');
+
+// Add a dragstart event listener to the item element
+itemElement.addEventListener('dragstart', dragStart);
+
+// Add a drop event listener to the grid items
+const gridItems = document.getElementsByClassName('grid-item');
+for (const gridItem of gridItems) {
+  gridItem.addEventListener('drop', drop);
+  gridItem.addEventListener('dragover', dragOver);
+}
+
+// Drag start event handler
+function dragStart(event) {
+  // Set the ID of the dragged item to a unique value
+  const itemId = 'dragged-item-' + Date.now();
+  event.target.setAttribute('id', itemId);
+
+  // Set the data being dragged to the ID of the dragged item
+  event.dataTransfer.setData('text/plain', itemId);
+
+  // Hide the original item while dragging
+  event.target.style.opacity = '0';
+
+  // Adjust the size of the dragged item
+  event.target.style.width = `${event.target.offsetWidth}px`;
+  event.target.style.height = `${event.target.offsetHeight}px`;
+}
+
+// Drag over event handler
+function dragOver(event) {
+  event.preventDefault();
+}
+
+// Drop event handler
+function drop(event) {
+  event.preventDefault();
+
+  // Get the ID of the dragged item
+  const itemId = event.dataTransfer.getData('text/plain');
+
+  // Check if the dropped element is a valid grid item and not the player
+  if (event.target.classList.contains('grid-item') && !event.target.contains(playerElement)) {
+    // Create a new item element
+
+    const newItemElement = document.createElement('div');
+    newItemElement.classList.add('grid-item');
+
+    const newBirdImage = document.createElement('img');
+    newBirdImage.src = 'Assets/topView.png';
+    newBirdImage.alt = 'Bird Icon';
+    newBirdImage.id = "bird-icon";
+
+    newItemElement.appendChild(newBirdImage);
+    event.target.appendChild(newItemElement);
+  }
+
+  // Reset the style of the dragged item
+  const draggedItem = document.getElementById(itemId);
+  draggedItem.style.opacity = '';
+  draggedItem.style.width = '';
+  draggedItem.style.height = '';
+  draggedItem.id = 'bird-icon';
+
 }

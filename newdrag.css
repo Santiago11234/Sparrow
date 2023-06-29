@@ -1,6 +1,6 @@
 .container-2 {
-    width: 100%;
-    min-height: 100vh;
+    width: 1496px;
+    height: 972px;
     background: #66946d;
     display: flex;
     align-items: flex-start;
@@ -10,45 +10,80 @@
   
 
 #left, #right {
-    width: 300px;
+    width: 220px;
     height: 750px;
     margin: 10px;
     border: white 4px solid;
     border-radius: 5px;
-    
 }
+#items-right {
+    width: 220px;
+    height: 750px;
+    margin: 10px;
+    border: white 4px solid;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
 #check {
     background: rgb(255, 193, 77);
     border-radius: 50% 50% 0 0;
 }
+
+#reset-button {
+    background: #CDC2AE;
+    border-radius: 50% 50% 0 0;
+}
+
 .run-button {
     text-align: center; 
 }
 
+
+
 #playground {
+    width: min(100%, 750px);
+    height: min(100%, 750px);
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr); 
-    grid-gap: 4px; 
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 4px;
     padding: 4px;
     border: white 4px solid;
     border-radius: 5px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-top: 10px; 
   }
-
-  .grid-item {
+  
+.grid-item {
     background-color: #969c72;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    padding: 4px;
-  }
+    padding: 3px; 
+}
   
-  .bird-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.buy-item {
+  background-color: #dad7cd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#item {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+  #bird-icon {
+    max-width: 80%;
+    max-height: 80%;
+
   }
   #player {
     grid-column-start: 1;
@@ -71,6 +106,7 @@
 .listDragDrop {
     background: #dad7cd;
     height: 60px;
+    width: 200px;
     margin: 5px;
     color: #fff;
     display: flex;
