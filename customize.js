@@ -420,7 +420,7 @@ window.onload = function () {
         loadAnimation(data);
 
       });
-  } 
+  }
   //updateMoney();
 }
 

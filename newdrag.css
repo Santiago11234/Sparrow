@@ -1,5 +1,5 @@
 .container-2 {
-  width: 1496px;
+  width: 1550px;
   height: 972px;
   background: #66946d;
   display: flex;
@@ -13,14 +13,14 @@
   width: 220px;
   height: 750px;
   margin: 10px;
-  border: white 4px solid;
+  border: rgba(255, 255, 255, 0.31415926535) 4px solid;
   border-radius: 5px;
 }
 #items-right {
   width: 220px;
   height: 750px;
   margin: 10px;
-  border: white 4px solid;
+  border: rgba(255, 255, 255, 0.31415926535) 4px solid;
   border-radius: 5px;
   margin-left: 20px;
 }
@@ -49,7 +49,7 @@
   grid-template-rows: repeat(8, 1fr);
   grid-gap: 4px;
   padding: 4px;
-  border: white 4px solid;
+  border: rgba(255, 255, 255, 0.31415926535) 4px solid;
   border-radius: 5px;
   margin-left: 10px;
   margin-top: 10px; 

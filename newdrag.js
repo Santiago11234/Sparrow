@@ -184,6 +184,7 @@ button.addEventListener("click", function() {
 function movePlayer(column, row) {
   player.style.gridColumnStart = column;
   player.style.gridRowStart = row;
+
 }
 
 function getPlayerPosition() {
@@ -305,6 +306,7 @@ function dragStart(event) {
   // Set the ID of the dragged item to a unique value
   const itemId = 'dragged-item-' + Date.now();
   event.target.setAttribute('id', itemId);
+  
 
   // Set the data being dragged to the ID of the dragged item
   event.dataTransfer.setData('text/plain', itemId);
@@ -313,8 +315,8 @@ function dragStart(event) {
   event.target.style.opacity = '0';
 
   // Adjust the size of the dragged item
-  event.target.style.width = `${event.target.offsetWidth}px`;
-  event.target.style.height = `${event.target.offsetHeight}px`;
+  event.target.style.width = `80%`;
+  event.target.style.height = `80%`;
 }
 
 // Drag over event handler
