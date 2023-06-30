@@ -10,7 +10,8 @@ let cloneCount = 1; // initialize the clone counter
 let player = document.getElementById("player");
 let grid = document.getElementById("playground");
 let birdIcon = document.getElementById('bird-icon');
-
+let lessonTerminal = document.getElementById('lesson-terminal');
+lessonTerminal.innerHTML = "Believe in your coding abilities!";
 console.log(birdIcon.style.transform)
 // add event listener to each block to enable dragging
 // when a block is dragged, its ID will be the data transferred
@@ -19,7 +20,6 @@ for (let list of lists) {
     e.dataTransfer.setData("text/plain", e.target.id);
   });
 
-  //disable delete button
 
 }
 
@@ -113,24 +113,23 @@ rightBox.addEventListener("drop", function(e) {
 });
 
 
-//ignore this for the playground
-if(lessonButton != null) {
-  lessonButton.addEventListener("click", runLessonButton);
-}
-function runLessonButton() {
+//ignore this for the playground!!!!!!!!!!!!!!!
+lessonButton.addEventListener("click", function() {
   for(let i = 0; i < final.length; i++) {
     console.log(final[i].id.substring(0, 1));
     if(final[i].id.substring(0, 1) != (i + 1) ) {
       correct = false;
     }
   }
+  
   if (correct) {
-    alert("Correct");
+    lessonTerminal.innerHTML = "Congratulations!";
   } else {
-    alert("Incorrect");
+    lessonTerminal.innerHTML = "Try again!";
   }
-}
-//end of normal learning
+});
+//stuff for lessons
+
 
 //reset stuff
 let resetButton = document.getElementById('reset-button');
@@ -184,7 +183,6 @@ button.addEventListener("click", function() {
 function movePlayer(column, row) {
   player.style.gridColumnStart = column;
   player.style.gridRowStart = row;
-
 }
 
 function getPlayerPosition() {
@@ -306,7 +304,6 @@ function dragStart(event) {
   // Set the ID of the dragged item to a unique value
   const itemId = 'dragged-item-' + Date.now();
   event.target.setAttribute('id', itemId);
-  
 
   // Set the data being dragged to the ID of the dragged item
   event.dataTransfer.setData('text/plain', itemId);
@@ -315,8 +312,8 @@ function dragStart(event) {
   event.target.style.opacity = '0';
 
   // Adjust the size of the dragged item
-  event.target.style.width = `80%`;
-  event.target.style.height = `80%`;
+  event.target.style.width = `${event.target.offsetWidth}px`;
+  event.target.style.height = `${event.target.offsetHeight}px`;
 }
 
 // Drag over event handler
@@ -328,7 +325,6 @@ function dragOver(event) {
 function drop(event) {
   event.preventDefault();
 
-  
   // Get the ID of the dragged item
   const itemId = event.dataTransfer.getData('text/plain');
 
@@ -340,7 +336,7 @@ function drop(event) {
     newItemElement.classList.add('grid-item');
 
     const newBirdImage = document.createElement('img');
-    newBirdImage.src = 'Assets/seed.png';
+    newBirdImage.src = 'Assets/topView.png';
     newBirdImage.alt = 'Bird Icon';
     newBirdImage.id = "bird-icon";
 
