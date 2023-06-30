@@ -4,6 +4,7 @@ let rightBox = document.getElementById("right");
 let leftBox = document.getElementById("left");
 let final = [];
 let button = document.getElementById("check");
+let lessonButton = document.getElementById("lesson-check");
 let correct = true;
 let cloneCount = 1; // initialize the clone counter
 let player = document.getElementById("player");
@@ -113,20 +114,23 @@ rightBox.addEventListener("drop", function(e) {
 
 
 //ignore this for the playground
-// button.addEventListener("click", function() {
-//   for(let i = 0; i < final.length; i++) {
-//     console.log(final[i].id.substring(0, 1));
-//     if(final[i].id.substring(0, 1) != (i + 1) ) {
-//       correct = false;
-//     }
-//   }
-  
-//   if (correct) {
-//     alert("Correct");
-//   } else {
-//     alert("Incorrect");
-//   }
-// });
+if(lessonButton != null) {
+  lessonButton.addEventListener("click", runLessonButton);
+}
+function runLessonButton() {
+  for(let i = 0; i < final.length; i++) {
+    console.log(final[i].id.substring(0, 1));
+    if(final[i].id.substring(0, 1) != (i + 1) ) {
+      correct = false;
+    }
+  }
+  if (correct) {
+    alert("Correct");
+  } else {
+    alert("Incorrect");
+  }
+}
+//end of normal learning
 
 //reset stuff
 let resetButton = document.getElementById('reset-button');
@@ -322,6 +326,7 @@ function dragOver(event) {
 function drop(event) {
   event.preventDefault();
 
+  
   // Get the ID of the dragged item
   const itemId = event.dataTransfer.getData('text/plain');
 
@@ -333,7 +338,7 @@ function drop(event) {
     newItemElement.classList.add('grid-item');
 
     const newBirdImage = document.createElement('img');
-    newBirdImage.src = 'Assets/topView.png';
+    newBirdImage.src = 'Assets/seed.png';
     newBirdImage.alt = 'Bird Icon';
     newBirdImage.id = "bird-icon";
 
